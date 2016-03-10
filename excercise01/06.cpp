@@ -4,17 +4,19 @@
 
 #define MAX_INPUT_SIZE 100
 
-bool is_palindrome(const char *string, const int begin = 0, int end = -1)
+bool is_palindrome(const char *word)
 {
-    /* initialise parameter */
-    if(end == -1) end = strlen(string) - 1;
+    int length = strlen(word);
+    char string[length]; /* Should not modify the value of ptr arg. */
+    strcpy(string, word);
 
     /* base case */
-    if(string[begin] != string[end]) return false;
-    if(begin >= end) return true;
+    if(length <= 1) return true;
+    if(string[0] != string[length - 1]) return false;
 
     /* recursive case */
-    return is_palindrome(string, begin + 1, end - 1);
+    string[length - 1] = '\0';
+    return is_palindrome(string + 1);
 }
 
 int main(void)
