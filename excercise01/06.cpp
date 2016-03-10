@@ -7,4 +7,5 @@ char *palindrome(char *string)
 
 int main(void)
 {
+    return 0;
 }
