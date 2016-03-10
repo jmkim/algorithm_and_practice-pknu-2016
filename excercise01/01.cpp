@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int calc(const int n)
+int sum_of_odd_number(const int n)
 {
-    if(n < 2) /* base case: calc(n-2) must be greater than zero */
-        return n;
-    else if((n % 2) == 0)
-        return calc(n - 1);
-    else /* recursive case */
-        return n + calc(n - 2);
+    /* base case */
+    if(n < 2) return n; /* calc(n-2) must be greater than zero */
+    if((n % 2) == 0) return sum_of_odd_number(n - 1);
+
+    /* recursive case */
+    return n + sum_of_odd_number(n - 2);
 }
 
 int main(void)
@@ -18,6 +18,6 @@ int main(void)
     int n;
     printf("Enter n= "); scanf("%d", &n);
 
-    printf("Result is %d\n", calc(n));
+    printf("Result is %d\n", sum_of_odd_number(n));
     return 0;
 }
