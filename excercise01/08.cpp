@@ -26,11 +26,10 @@ int main(void)
 
     int sum, size_of_array;
     printf("Enter sum= "); scanf("%d", &sum);
-    printf("Enter size_of_array= "); scanf("%d", &size_of_array);
 
+    printf("Enter size_of_array= "); scanf("%d", &size_of_array);
     int array[size_of_array];
     printf("Enter in ascending order\n");
-
     for(int i = 0; i < size_of_array; i++)
     {
         printf("Enter array[%d]= ", i); scanf("%d", &array[i]);
