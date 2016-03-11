@@ -1,17 +1,20 @@
 #include <stdio.h>
 
-int binary_search(const int *numbers, const int find, const int index_a, const int index_b)
+int binary_search(const int *nums, const int find, const int pos_a, const int pos_b)
 {
-    if(index_a == index_b) return index_a;
-    if(index_b - index_a / 2 == 0) return index_a;
-    if(numbers[(index_b - index_a) / 2] == find) return (index_b - index_a) / 2;
+    if(pos_b - pos_a <= 1) return pos_a;
 
-    if(numbers[(index_b - index_a) / 2] < find) return binary_search(numbers, find, 0, (index_b - index_a) / 2);
-    if(numbers[(index_b - index_a) / 2] > find) return binary_search(numbers, find, (index_b - index_b) / 2, index_b);
+    int mid = ((pos_b - pos_a) / 2) + pos_a;
+    if(nums[mid] == find) return mid;
+
+    if(nums[mid] < find)
+        binary_search(nums, find, mid, pos_b);
+    else
+        binary_search(nums, find, 0, mid);
 }
 
 int main(void)
 {
-    int num[10] = { 0, 1, 4, 6, 7, 10, 14, 16, 18, 19 };
-    printf("Result: %d\n", binary_search(num, 9, 0, 10));
+    int num[10] = { 0, 1, 4, 6, 7, 10, 14, 16, 16, 19 };
+    printf("Result: %d\n", binary_search(num, 18, 0, 10));
 }
