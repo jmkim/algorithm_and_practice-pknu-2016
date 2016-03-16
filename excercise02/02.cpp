@@ -105,7 +105,7 @@ int main(void)
 {
     int startx, starty;
     struct board *game;
-    game = make_board("resources/01input.txt", &startx, &starty);
+    game = make_board("resources/02input.txt", &startx, &starty);
 
     printf("%d\n", is_canon_able_to_move(game, startx, starty));
 
