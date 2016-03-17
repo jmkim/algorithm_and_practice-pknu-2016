@@ -7,10 +7,28 @@
 #define DIR_S   4
 #define DIR_SW  5
 
+bool is_able_to_set(const int x, const int y, const int dir = -1);
+int shift_left(const int x, const int y);
+int shift_up(const int x, const int y);
+
 int n;
 int *board;
 
-bool is_able_to_set(const int x, const int y, const int dir = -1)
+int main(void)
+{
+    for(n = 1; n <= 15; n++)
+    {
+        board = (int *)malloc(sizeof(int) * n);
+        memset(board, 0, sizeof(int) * n);
+
+        printf("N(%d) Result=%d\n", n, shift_left(n, n));
+        free(board);
+    }
+
+    return 0;
+}
+
+bool is_able_to_set(const int x, const int y, const int dir)
 {
     /* base case */
     if(x < 1 || x > n || y < 1 || y > n) return true;
@@ -32,7 +50,6 @@ bool is_able_to_set(const int x, const int y, const int dir = -1)
     }
 }
 
-int shift_up(const int x, const int y);
 int shift_left(const int x, const int y)
 {
     if(y < 1) return 0;
@@ -54,18 +71,4 @@ int shift_up(const int x, const int y)
     if(x - 1 < 1) return 0;
 
     return shift_left(x - 1, y);
-}
-
-int main(void)
-{
-    for(n = 1; n <= 15; n++)
-    {
-        board = (int *)malloc(sizeof(int) * n);
-        memset(board, 0, sizeof(int) * n);
-
-        printf("N(%d) Result=%d\n", n, shift_left(n, n));
-        free(board);
-    }
-
-    return 0;
 }
