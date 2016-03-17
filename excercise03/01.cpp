@@ -22,24 +22,14 @@ bool is_able_to_set(const int x, const int y, const int dir = -1)
     /* recursive case */
     switch(dir)
     {
-    //case DIR_N : return is_able_to_set(x - 1, y    , DIR_N );
-    //case DIR_NE: return is_able_to_set(x - 1, y + 1, DIR_NE);
-    //case DIR_E : return is_able_to_set(x    , y + 1, DIR_E );
     case DIR_SE: return is_able_to_set(x + 1, y + 1, DIR_SE);
     case DIR_S : return is_able_to_set(x + 1, y    , DIR_S );
     case DIR_SW: return is_able_to_set(x + 1, y - 1, DIR_SW);
-    //case DIR_W : return is_able_to_set(x   1, y - 1, DIR_W );
-    //case DIR_NW: return is_able_to_set(x - 1, y - 1, DIR_NW);
     default: /* re-call with a direction */
         if(
-            //is_able_to_set(x, y, DIR_N )
-            //is_able_to_set(x, y, DIR_NE)
-            //is_able_to_set(x, y, DIR_E )
             is_able_to_set(x, y, DIR_SE) &&
             is_able_to_set(x, y, DIR_S ) &&
             is_able_to_set(x, y, DIR_SW)
-            //is_able_to_set(x, y, DIR_W )
-            //is_able_to_set(x, y, DIR_NW)
         ) return true;
         return false;
     }
