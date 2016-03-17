@@ -1,17 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <stdbool.h>
 
-#define DIR_N   0
-#define DIR_NE  1
-#define DIR_E   2
 #define DIR_SE  3
 #define DIR_S   4
 #define DIR_SW  5
-#define DIR_W   6
-#define DIR_NW  7
 
-const int n = 8;
-int board[n] = {0, };
+int n;
+int *board;
 
 bool is_able_to_set(const int x, const int y, const int dir = -1)
 {
@@ -61,8 +58,11 @@ int shift_up(const int x, const int y)
 
 int main(void)
 {
-    int count = shift_left(n, n);
-    printf("%d\n", count);
+    printf("Enter n= "); scanf("%d", &n);
+    board = (int *)malloc(sizeof(int) * n);
+    memset(board, 0, sizeof(int) * n);
+
+    printf("%d\n", shift_left(n, n));
 
     return 0;
 }
