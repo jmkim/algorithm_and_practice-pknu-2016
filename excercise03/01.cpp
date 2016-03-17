@@ -11,12 +11,12 @@
 #define DIR_NW  7
 
 const int n = 8;
-int board[n] = {5, 5, 5, 5, 5, 5, 5, 5};
+int board[n] = {n, n, n, n, n, n, n, n};
 
 bool is_able_to_set(const int x, const int y, const int dir = -1)
 {
     /* base case */
-    if(x < 0 || x >= n || y < 0 || y <= n) return true;
+    if(x < 0 || x >= n || y < 0 || y >= n) return true;
     if(board[x] == y) return false; /* queen is exist */
 
     /* recursive case */
@@ -45,29 +45,34 @@ bool is_able_to_set(const int x, const int y, const int dir = -1)
     }
 }
 
-int count_one(const int x, const int y);
-int count_two(const int x, const int y)
+int shift_up(const int x, const int y);
+int shift_left(const int x, const int y)
 {
     if(y < 0) return 0;
 
-    if(! is_able_to_set(x, y)) return 0;
-    board[x] = y;
-    return 1 + count_one(x, y - 1);
+    int rc = 0;
+    if(is_able_to_set(x, y))
+    {
+        board[x] = y;
+        rc += shift_up(x, ::n - 1);
+        board[x] = ::n;
+    }
+    rc += shift_left(x, y - 1);
+    return rc;
 }
 
-int count_one(const int x, const int y)
+int shift_up(const int x, const int y)
 {
-    if(y < 0) return 0;
-    if(x < 0) return 1;
+    if(x - 1 < 0 && is_able_to_set(x - 1, y)) return 1;
+    if(x - 1 < 0) return 0;
 
-    if(! is_able_to_set(x, y)) return count_two(x, y - 1);
-    board[x] = y;
-    return 1 + count_one(x - 1, ::n - 1);
+    return shift_left(x - 1, y);
 }
 
 int main(void)
 {
-    int count = count_one(n - 1, n - 1);
+    int count = shift_left(n - 1, n - 1);
     printf("%d\n", count);
+
     return 0;
 }
