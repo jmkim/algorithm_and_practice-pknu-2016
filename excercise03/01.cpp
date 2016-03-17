@@ -58,11 +58,14 @@ int shift_up(const int x, const int y)
 
 int main(void)
 {
-    printf("Enter n= "); scanf("%d", &n);
-    board = (int *)malloc(sizeof(int) * n);
-    memset(board, 0, sizeof(int) * n);
+    for(n = 1; n <= 15; n++)
+    {
+        board = (int *)malloc(sizeof(int) * n);
+        memset(board, 0, sizeof(int) * n);
 
-    printf("%d\n", shift_left(n, n));
+        printf("N(%d) Result=%d\n", n, shift_left(n, n));
+        free(board);
+    }
 
     return 0;
 }
