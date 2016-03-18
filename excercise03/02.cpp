@@ -44,13 +44,5 @@ int shift_right(const int idx, const int sum)
     if(idx < 0 && sum == ::sum) return 1;
     if(idx < 0) return 0;
 
-    return shift_right(idx - 1, sum + list[idx]) + shift_down(idx - 1, sum);
-}
-
-int shift_down(const int idx, const int sum)
-{
-    if(idx < 0 && sum == ::sum) return 1;
-    if(idx < 0) return 0;
-
-    return shift_right(idx, sum);
+    return shift_right(idx - 1, sum + list[idx]) + shift_right(idx - 1, sum);
 }
