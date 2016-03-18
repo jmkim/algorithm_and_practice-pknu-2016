@@ -24,39 +24,39 @@ int *board; /* 0 MEANS EMPTY */
     board[1] = 0; means queen is not exist at line 1.
 */
 
-bool is_able_to_set_se(const int x, const int y)
+bool is_setable_se(const int x, const int y)
 {
     /* base case */
     if(x < 1 || x > n || y < 1 || y > n) return true;
     if(board[x - 1] == y) return false; /* queen is exist */
 
     /* recursive case */
-    return is_able_to_set_se(x + 1, y + 1);
+    return is_setable_se(x + 1, y + 1);
 }
 
-bool is_able_to_set_s(const int x, const int y)
+bool is_setable_s(const int x, const int y)
 {
     /* base case */
     if(x < 1 || x > n || y < 1 || y > n) return true;
     if(board[x - 1] == y) return false; /* queen is exist */
 
     /* recursive case */
-    return is_able_to_set_s(x + 1, y);
+    return is_setable_s(x + 1, y);
 }
 
-bool is_able_to_set_sw(const int x, const int y)
+bool is_setable_sw(const int x, const int y)
 {
     /* base case */
     if(x < 1 || x > n || y < 1 || y > n) return true;
     if(board[x - 1] == y) return false; /* queen is exist */
 
     /* recursive case */
-    return is_able_to_set_sw(x + 1, y - 1);
+    return is_setable_sw(x + 1, y - 1);
 }
 
-bool is_able_to_set(const int x, const int y)
+bool is_setable(const int x, const int y)
 {
-    if(is_able_to_set_se(x, y) && is_able_to_set_s(x, y) && is_able_to_set_sw(x, y)) return true;
+    if(is_setable_se(x, y) && is_setable_s(x, y) && is_setable_sw(x, y)) return true;
     return false;
 }
 
@@ -80,10 +80,10 @@ int count_n_queens(const int x, const int y)
     if(y < 1) return 0; /* y reached left side */
 
     /* recursive case */
-    if(is_able_to_set(x, y))
+    if(is_setable(x, y))
     {
-        if(x - 1 >= 1)                  return count_n_queens(x, y - 1) + b_set(x, y) + count_n_queens(x - 1, ::n) + b_unset(x);
-        if(is_able_to_set(x - 1, ::n))  return count_n_queens(x, y - 1) + 1; /* x reached top side; Queen can be here! */
+        if(x - 1 >= 1)              return count_n_queens(x, y - 1) + b_set(x, y) + count_n_queens(x - 1, ::n) + b_unset(x);
+        if(is_setable(x - 1, ::n))  return count_n_queens(x, y - 1) + 1; /* x reached top side; Queen can be here! */
     }
     return count_n_queens(x, y - 1);
 }
