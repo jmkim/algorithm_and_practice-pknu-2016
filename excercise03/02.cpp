@@ -3,7 +3,6 @@
 
 void trim_out_of_range(void);
 int shift_right(const int idx, const int sum = 0);
-int shift_down(const int idx, const int sum = 0);
 
 int *list;
 int size;
