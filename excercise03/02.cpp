@@ -49,6 +49,8 @@ int shift_right(const int idx, const int sum)
 
 int shift_down(const int idx, const int sum)
 {
+    if(idx - 1 < 0 && sum == ::sum) return 1;
     if(idx - 1 < 0) return 0;
+
     return shift_right(idx - 1, sum);
 }
