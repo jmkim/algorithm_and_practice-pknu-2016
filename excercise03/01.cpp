@@ -8,7 +8,7 @@
 #define DIR_SW  5
 
 bool is_able_to_set(const int x, const int y, const int dir = -1);
-int shift_left(const int x, const int y);
+int count_n_queens(const int x, const int y);
 int shift_up(const int x);
 
 int n;
@@ -21,7 +21,7 @@ int main(void)
         board = (int *)malloc(sizeof(int) * n);
         memset(board, 0, sizeof(int) * n);
 
-        printf("N(%d) Result=%d\n", n, shift_left(n, n));
+        printf("N(%d) Result=%d\n", n, count_n_queens(n, n));
         free(board);
     }
 
@@ -50,7 +50,7 @@ bool is_able_to_set(const int x, const int y, const int dir)
     }
 }
 
-int shift_left(const int x, const int y)
+int count_n_queens(const int x, const int y)
 {
     if(y < 1) return 0;
 
@@ -61,7 +61,7 @@ int shift_left(const int x, const int y)
         rc += shift_up(x - 1);
         board[x - 1] = 0;
     }
-    rc += shift_left(x, y - 1);
+    rc += count_n_queens(x, y - 1);
     return rc;
 }
 
@@ -70,5 +70,5 @@ int shift_up(const int x)
     if(x < 1 && is_able_to_set(x, ::n)) return 1;
     if(x < 1) return 0;
 
-    return shift_left(x, ::n);
+    return count_n_queens(x, ::n);
 }
