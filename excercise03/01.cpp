@@ -9,7 +9,7 @@
 
 bool is_able_to_set(const int x, const int y, const int dir = -1);
 int shift_left(const int x, const int y);
-int shift_up(const int x, const int y);
+int shift_up(const int x);
 
 int n;
 int *board;
@@ -58,17 +58,17 @@ int shift_left(const int x, const int y)
     if(is_able_to_set(x, y))
     {
         board[x - 1] = y;
-        rc += shift_up(x, ::n);
+        rc += shift_up(x - 1);
         board[x - 1] = 0;
     }
     rc += shift_left(x, y - 1);
     return rc;
 }
 
-int shift_up(const int x, const int y)
+int shift_up(const int x)
 {
-    if(x - 1 < 1 && is_able_to_set(x - 1, y)) return 1;
-    if(x - 1 < 1) return 0;
+    if(x < 1 && is_able_to_set(x, ::n)) return 1;
+    if(x < 1) return 0;
 
-    return shift_left(x - 1, y);
+    return shift_left(x, ::n);
 }
