@@ -49,24 +49,28 @@ bool is_able_to_set(const int x, const int y, const int dir)
     }
 }
 
+int b_add(const int x, const int y)
+{
+    board[x - 1] = y; /* 0 MEANS EMPTY */
+    return 0;
+}
+
+int b_rm(const int x)
+{
+    board[x - 1] = 0; /* 0 MEANS EMPTY */
+    return 0;
+}
+
 int count_n_queens(const int x, const int y)
 {
+    /* base case */
     if(y < 1) return 0;
 
-    int rc = 0;
+    /* recursive case */
     if(is_able_to_set(x, y))
     {
-        board[x - 1] = y;
-
-        if(x - 1 < 1 && is_able_to_set(x - 1, ::n))
-            rc += 1;
-        if(x - 1 < 1)
-            rc += 0;
-        else
-            rc += count_n_queens(x - 1, ::n);
-
-        board[x - 1] = 0;
+        if(x - 1 >= 1)                  return count_n_queens(x, y - 1) + b_add(x, y) + count_n_queens(x - 1, ::n) + b_rm(x);
+        if(is_able_to_set(x - 1, ::n))  return count_n_queens(x, y - 1) + 1;
     }
-    rc += count_n_queens(x, y - 1);
-    return rc;
+    return count_n_queens(x, y - 1);
 }
