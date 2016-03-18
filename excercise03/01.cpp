@@ -10,7 +10,25 @@
 bool is_able_to_set(const int x, const int y, const int dir = -1);
 int count_n_queens(const int x, const int y);
 
-int n;
+/*
+    Coordinates of the board
+
+      1 2 3 4
+    1 +------- y (cell)
+    2 |
+    3 |
+    4 |
+      x (line)
+
+    x starts with 1; 0 is not used
+    y starts with 1; 0 MEANS EMPTY
+
+    board[0] is not used.
+    board[1] = 3; means queen is at line 1, cell 3.
+    board[1] = 0; means queen is not exist at line 1.
+*/
+
+int n; /* size of the board */
 int *board; /* 0 MEANS EMPTY */
 
 int main(void)
