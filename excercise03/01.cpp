@@ -7,9 +7,6 @@
 #define DIR_S   4
 #define DIR_SW  5
 
-bool is_able_to_set(const int x, const int y, const int dir = -1);
-int count_n_queens(const int x, const int y);
-
 /*
     Coordinates of the board
 
@@ -31,21 +28,7 @@ int count_n_queens(const int x, const int y);
 int n; /* size of the board */
 int *board; /* 0 MEANS EMPTY */
 
-int main(void)
-{
-    for(n = 1; n <= 15; n++)
-    {
-        board = (int *)malloc(sizeof(int) * n);
-        memset(board, 0, sizeof(int) * n); /* 0 MEANS EMPTY */
-
-        printf("N(%d) Result=%d\n", n, count_n_queens(n, n));
-        free(board);
-    }
-
-    return 0;
-}
-
-bool is_able_to_set(const int x, const int y, const int dir)
+bool is_able_to_set(const int x, const int y, const int dir = -1)
 {
     /* base case */
     if(x < 1 || x > n || y < 1 || y > n) return true;
@@ -93,4 +76,18 @@ int count_n_queens(const int x, const int y)
         if(is_able_to_set(x - 1, ::n))  return count_n_queens(x, y - 1) + 1; /* x reached top side */
     }
     return count_n_queens(x, y - 1);
+}
+
+int main(void)
+{
+    for(n = 1; n <= 15; n++)
+    {
+        board = (int *)malloc(sizeof(int) * n);
+        memset(board, 0, sizeof(int) * n); /* 0 MEANS EMPTY */
+
+        printf("N(%d) Result=%d\n", n, count_n_queens(n, n));
+        free(board);
+    }
+
+    return 0;
 }
