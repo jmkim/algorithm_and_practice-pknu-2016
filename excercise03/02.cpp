@@ -1,12 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void trim_out_of_range(void);
-int count_sum(const int idx, const int sum = 0);
-
 int *list;
 int size;
 int sum;
+
+void trim_out_of_range(void)
+{
+    for(int i = size - 1; i >= 0; i--)
+        if(list[i] > sum)
+        {
+            for(int j = i; j < size; j++) list[j] = list[j + 1];
+            size--;
+        }
+}
+
+int count_sum(const int idx, const int sum = 0)
+{
+    if(idx < 0 && sum == ::sum) return 1;
+    if(idx < 0) return 0;
+
+    return count_sum(idx - 1, sum + list[idx]) + count_sum(idx - 1, sum);
+}
 
 int main(void)
 {
@@ -26,22 +41,4 @@ int main(void)
     free(list);
 
     return 0;
-}
-
-void trim_out_of_range(void)
-{
-    for(int i = size - 1; i >= 0; i--)
-        if(list[i] > sum)
-        {
-            for(int j = i; j < size; j++) list[j] = list[j + 1];
-            size--;
-        }
-}
-
-int count_sum(const int idx, const int sum)
-{
-    if(idx < 0 && sum == ::sum) return 1;
-    if(idx < 0) return 0;
-
-    return count_sum(idx - 1, sum + list[idx]) + count_sum(idx - 1, sum);
 }

@@ -7,28 +7,28 @@
 #define DIR_S   4
 #define DIR_SW  5
 
-bool is_able_to_set(const int x, const int y, const int dir = -1);
-int shift_left(const int x, const int y);
-int shift_up(const int x, const int y);
+/*
+    Coordinates of the board
 
-int n;
-int *board;
+      1 2 3 4
+    1 +------- y (cell)
+    2 |
+    3 |
+    4 |
+      x (line)
 
-int main(void)
-{
-    for(n = 1; n <= 15; n++)
-    {
-        board = (int *)malloc(sizeof(int) * n);
-        memset(board, 0, sizeof(int) * n);
+    x starts with 1; 0 is not used
+    y starts with 1; 0 MEANS EMPTY
 
-        printf("N(%d) Result=%d\n", n, shift_left(n, n));
-        free(board);
-    }
+    board[0] is not used.
+    board[1] = 3; means queen is at line 1, cell 3.
+    board[1] = 0; means queen is not exist at line 1.
+*/
 
-    return 0;
-}
+int n; /* size of the board */
+int *board; /* 0 MEANS EMPTY */
 
-bool is_able_to_set(const int x, const int y, const int dir)
+bool is_able_to_set(const int x, const int y, const int dir = -1)
 {
     /* base case */
     if(x < 1 || x > n || y < 1 || y > n) return true;
@@ -50,25 +50,44 @@ bool is_able_to_set(const int x, const int y, const int dir)
     }
 }
 
-int shift_left(const int x, const int y)
+int b_set(const int x, const int y)
 {
-    if(y < 1) return 0;
-
-    int rc = 0;
-    if(is_able_to_set(x, y))
-    {
-        board[x - 1] = y;
-        rc += shift_up(x, ::n);
-        board[x - 1] = 0;
-    }
-    rc += shift_left(x, y - 1);
-    return rc;
+    /* set y to x */
+    board[x - 1] = y;
+    return 0;
 }
 
-int shift_up(const int x, const int y)
+int b_unset(const int x)
 {
-    if(x - 1 < 1 && is_able_to_set(x - 1, y)) return 1;
-    if(x - 1 < 1) return 0;
+    /* unset x */
+    board[x - 1] = 0; /* 0 MEANS EMPTY */
+    return 0;
+}
 
-    return shift_left(x - 1, y);
+int count_n_queens(const int x, const int y)
+{
+    /* base case */
+    if(y < 1) return 0; /* y reached left side */
+
+    /* recursive case */
+    if(is_able_to_set(x, y))
+    {
+        if(x - 1 >= 1)                  return count_n_queens(x, y - 1) + b_set(x, y) + count_n_queens(x - 1, ::n) + b_unset(x);
+        if(is_able_to_set(x - 1, ::n))  return count_n_queens(x, y - 1) + 1; /* x reached top side */
+    }
+    return count_n_queens(x, y - 1);
+}
+
+int main(void)
+{
+    for(n = 1; n <= 15; n++)
+    {
+        board = (int *)malloc(sizeof(int) * n);
+        memset(board, 0, sizeof(int) * n); /* 0 MEANS EMPTY */
+
+        printf("N(%d) Result=%d\n", n, count_n_queens(n, n));
+        free(board);
+    }
+
+    return 0;
 }
