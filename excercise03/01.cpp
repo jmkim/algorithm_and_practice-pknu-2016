@@ -9,7 +9,6 @@
 
 bool is_able_to_set(const int x, const int y, const int dir = -1);
 int count_n_queens(const int x, const int y);
-int shift_up(const int x);
 
 int n;
 int *board;
@@ -58,17 +57,16 @@ int count_n_queens(const int x, const int y)
     if(is_able_to_set(x, y))
     {
         board[x - 1] = y;
-        rc += shift_up(x - 1);
+
+        if(x - 1 < 1 && is_able_to_set(x - 1, ::n))
+            rc += 1;
+        if(x - 1 < 1)
+            rc += 0;
+        else
+            rc += count_n_queens(x - 1, ::n);
+
         board[x - 1] = 0;
     }
     rc += count_n_queens(x, y - 1);
     return rc;
-}
-
-int shift_up(const int x)
-{
-    if(x < 1 && is_able_to_set(x, ::n)) return 1;
-    if(x < 1) return 0;
-
-    return count_n_queens(x, ::n);
 }
