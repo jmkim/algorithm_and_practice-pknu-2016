@@ -3,9 +3,8 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define DIR_SE  3
-#define DIR_S   4
-#define DIR_SW  5
+int n; /* size of the board */
+int *board; /* 0 MEANS EMPTY */
 
 /*
     Coordinates of the board
@@ -25,29 +24,40 @@
     board[1] = 0; means queen is not exist at line 1.
 */
 
-int n; /* size of the board */
-int *board; /* 0 MEANS EMPTY */
-
-bool is_able_to_set(const int x, const int y, const int dir = -1)
+bool is_able_to_set_se(const int x, const int y)
 {
     /* base case */
     if(x < 1 || x > n || y < 1 || y > n) return true;
     if(board[x - 1] == y) return false; /* queen is exist */
 
     /* recursive case */
-    switch(dir)
-    {
-    case DIR_SE: return is_able_to_set(x + 1, y + 1, DIR_SE);
-    case DIR_S : return is_able_to_set(x + 1, y    , DIR_S );
-    case DIR_SW: return is_able_to_set(x + 1, y - 1, DIR_SW);
-    default: /* re-call with a direction */
-        if(
-            is_able_to_set(x, y, DIR_SE) &&
-            is_able_to_set(x, y, DIR_S ) &&
-            is_able_to_set(x, y, DIR_SW)
-        ) return true;
-        return false;
-    }
+    return is_able_to_set_se(x + 1, y + 1);
+}
+
+bool is_able_to_set_s(const int x, const int y)
+{
+    /* base case */
+    if(x < 1 || x > n || y < 1 || y > n) return true;
+    if(board[x - 1] == y) return false; /* queen is exist */
+
+    /* recursive case */
+    return is_able_to_set_s(x + 1, y);
+}
+
+bool is_able_to_set_sw(const int x, const int y)
+{
+    /* base case */
+    if(x < 1 || x > n || y < 1 || y > n) return true;
+    if(board[x - 1] == y) return false; /* queen is exist */
+
+    /* recursive case */
+    return is_able_to_set_sw(x + 1, y - 1);
+}
+
+bool is_able_to_set(const int x, const int y)
+{
+    if(is_able_to_set_se(x, y) && is_able_to_set_s(x, y) && is_able_to_set_sw(x, y)) return true;
+    return false;
 }
 
 int b_set(const int x, const int y)
@@ -73,7 +83,7 @@ int count_n_queens(const int x, const int y)
     if(is_able_to_set(x, y))
     {
         if(x - 1 >= 1)                  return count_n_queens(x, y - 1) + b_set(x, y) + count_n_queens(x - 1, ::n) + b_unset(x);
-        if(is_able_to_set(x - 1, ::n))  return count_n_queens(x, y - 1) + 1; /* x reached top side */
+        if(is_able_to_set(x - 1, ::n))  return count_n_queens(x, y - 1) + 1; /* x reached top side; Queen can be here! */
     }
     return count_n_queens(x, y - 1);
 }
