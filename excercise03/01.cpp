@@ -11,14 +11,14 @@ bool is_able_to_set(const int x, const int y, const int dir = -1);
 int count_n_queens(const int x, const int y);
 
 int n;
-int *board;
+int *board; /* 0 MEANS EMPTY */
 
 int main(void)
 {
     for(n = 1; n <= 15; n++)
     {
         board = (int *)malloc(sizeof(int) * n);
-        memset(board, 0, sizeof(int) * n);
+        memset(board, 0, sizeof(int) * n); /* 0 MEANS EMPTY */
 
         printf("N(%d) Result=%d\n", n, count_n_queens(n, n));
         free(board);
