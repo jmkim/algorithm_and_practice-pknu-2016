@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #include "make_random_data/make_random_data.hpp"
 #include "sort/merge.hpp"
