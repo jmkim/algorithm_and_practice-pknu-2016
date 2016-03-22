@@ -76,5 +76,7 @@ int main(void)
         putchar('\n');
     }
 
+    free_random_data(original);
+
     return 0;
 }
