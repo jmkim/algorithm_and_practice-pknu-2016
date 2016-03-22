@@ -1,7 +1,7 @@
 #include "bubble.hpp"
 #include "swap.hpp"
 
-void bubble(int *data, int size_of_data)
+void bubble(int *data, const int size_of_data)
 {
     if(size_of_data <= 0) return;
 
