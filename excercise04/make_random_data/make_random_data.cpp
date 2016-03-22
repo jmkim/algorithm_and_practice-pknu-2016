@@ -3,12 +3,12 @@
 
 #include "make_random_data.hpp"
 
-int *make_data(const int size)
+int *make_random_data(const int size)
 {
-    return make_data(size, RAND_MAX);
+    return make_random_data(size, RAND_MAX);
 }
 
-int *make_data(const int size, const int max)
+int *make_random_data(const int size, const int max)
 {
     srand(time(NULL)); /* Set a seed */
 
@@ -19,7 +19,7 @@ int *make_data(const int size, const int max)
     return data;
 }
 
-void free_data(int *data)
+void free_random_data(int *data)
 {
     free(data);
 }
