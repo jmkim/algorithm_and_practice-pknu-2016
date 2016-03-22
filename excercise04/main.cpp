@@ -16,7 +16,7 @@ int main(void)
 {
     int *original = make_random_data(MAX_SIZE);
 
-    for(int size_of_data = MIN_SIZE; size_of_data == MAX_SIZE; size_of_data *= SIZE_STEP)
+    for(int size_of_data = MIN_SIZE; size_of_data != MAX_SIZE; size_of_data *= SIZE_STEP)
     {
         printf("SIZE OF DATA: %d\n", size_of_data);
 
