@@ -16,7 +16,7 @@ int main(void)
 {
     int *original = make_random_data(MAX_SIZE);
 
-    for(int size_of_data = MIN_SIZE; size_of_data != MAX_SIZE; size_of_data *= SIZE_STEP)
+    for(int size_of_data = MIN_SIZE; size_of_data <= MAX_SIZE; size_of_data *= SIZE_STEP)
     {
         printf("SIZE OF DATA: %d\n", size_of_data);
 
@@ -30,7 +30,7 @@ int main(void)
 
             clock_t after = clock();
 
-            printf("Merge:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("%12s\t%lf\n", "Merge: ", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -43,7 +43,7 @@ int main(void)
 
             clock_t after = clock();
 
-            printf("Selection:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("%12s\t%lf\n", "Selection: ", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -56,7 +56,7 @@ int main(void)
 
             clock_t after = clock();
 
-            printf("Insertion:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("%12s%lf\n", "Insertion: ", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -69,7 +69,7 @@ int main(void)
 
             clock_t after = clock();
 
-            printf("Bubble:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("%12s%lf\n", "Bubble: ", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
 
