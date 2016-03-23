@@ -39,11 +39,11 @@ int main(void)
 
             clock_t before = clock();
 
-            selection(data, size_of_data);
+            insertion(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Selection:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Insertion:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -52,11 +52,11 @@ int main(void)
 
             clock_t before = clock();
 
-            insertion(data, size_of_data);
+            selection(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Insertion:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Selection:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
