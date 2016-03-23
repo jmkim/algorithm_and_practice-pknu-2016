@@ -30,7 +30,7 @@ int main(void)
 
             clock_t after = clock();
 
-            printf("%12s\t%lf\n", "Merge: ", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Merge:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -43,7 +43,7 @@ int main(void)
 
             clock_t after = clock();
 
-            printf("%12s\t%lf\n", "Selection: ", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Selection:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -56,7 +56,7 @@ int main(void)
 
             clock_t after = clock();
 
-            printf("%12s%lf\n", "Insertion: ", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Insertion:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -69,7 +69,7 @@ int main(void)
 
             clock_t after = clock();
 
-            printf("%12s%lf\n", "Bubble: ", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Bubble:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
 
