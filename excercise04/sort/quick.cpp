@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <string.h> /* memcpy() */
 #include <stdlib.h> /* rand() */
 
@@ -17,26 +18,18 @@ void quick(int *data, const int start, const int end)
     /* Conquer */
     int pivot = end; /* Set pivot */
 
-    int lss[size] = {0, }; /* Memory which stores less than data[pivot] */
-    int gtr[size] = {0, }; /*                     greater               */
-    int pos_lss = 0, pos_gtr = 0;
-
-    for(int pos = start; pos <= end; ++pos)
+    int ps = start, pe = end - 1;
+    while(ps < pe)
     {
-        if(pos == pivot) continue; /* Ignore pivot */
+        while(ps < pe && data[ps] < data[pivot]) ++ps;
+        while(ps < pe && data[pe] >= data[pivot]) --pe;
 
-        if(data[pos] < data[pivot])
-            lss[pos_lss++] = data[pos];
-        else
-            gtr[pos_gtr++] = data[pos];
+        if(ps < pe) swap(data[ps], data[pe]);
     }
 
-    /* Copy the sorted data */
-    data[start + pos_lss] = data[pivot];
-    memcpy(data + start, lss, sizeof(int) * pos_lss);
-    memcpy(data + start + pos_lss + 1, gtr, sizeof(int) * pos_gtr);
+    if(data[pe] > data[pivot]) swap(data[pe], data[pivot]);
 
     /* Divide */
-    quick(data, start, start + pos_lss - 1);
-    quick(data, start + pos_lss + 1, end);
+    quick(data, start, pe);
+    quick(data, pe + 1, end);
 }
