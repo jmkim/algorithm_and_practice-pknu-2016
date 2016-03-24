@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include <string.h> /* memcpy() */
-#include <stdlib.h> /* rand() */
 
 #include "quick.hpp"
 #include "swap.hpp"
