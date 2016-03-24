@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "quick.hpp"
 #include "swap.hpp"
 
@@ -8,6 +10,8 @@ void quick(int *data, const int size_of_data)
 
 void quick(int *data, const int start, const int end)
 {
+    int size = end - start + 1;
+
     if(start >= end) return; /* Base case */
 
     /* Conquer */
@@ -22,9 +26,12 @@ void quick(int *data, const int start, const int end)
         if(ps < pe) swap(data[ps], data[pe]);
     }
 
-    if(data[pe] > data[pivot]) swap(data[pe], data[pivot]);
+    if(data[pe] > data[pivot])
+        swap(data[pe], data[pivot]);
+    else if(pe == end - 1)
+        ++pe;
 
     /* Divide */
-    quick(data, start, pe);
+    quick(data, start, pe - 1);
     quick(data, pe + 1, end);
 }
