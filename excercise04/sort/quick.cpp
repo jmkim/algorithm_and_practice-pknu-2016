@@ -12,8 +12,7 @@ void quick(int *data, const int size_of_data)
 
 void quick(int *data, const int start, const int end)
 {
-    int size = end - start + 1;
-    if(size <= 1) return; /* Base case */
+    if(start >= end) return; /* Base case */
 
     /* Conquer */
     int pivot = end; /* Set pivot */
