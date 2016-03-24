@@ -12,7 +12,7 @@
 
 int main(void)
 {
-    int *data = make_random_data(SIZE);
+    int *data = make_random_data(SIZE, 9);
 
     for(int i = 0; i < SIZE; ++i) printf("%d\n", data[i]);
     putchar('\n');
