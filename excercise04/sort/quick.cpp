@@ -1,5 +1,3 @@
-#include <string.h> /* memcpy() */
-
 #include "quick.hpp"
 #include "swap.hpp"
 
