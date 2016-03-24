@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include "make_random_data/make_random_data.hpp"
+#include "sort/quick.hpp"
 #include "sort/merge.hpp"
 #include "sort/selection.hpp"
 #include "sort/insertion.hpp"
@@ -20,6 +21,19 @@ int main(void)
     {
         printf("SIZE OF DATA: %d\n", size_of_data);
 
+        {
+            int *data = (int *)malloc(sizeof(int) * size_of_data);
+            memcpy(data, original, size_of_data);
+
+            clock_t before = clock();
+
+            quick(data, size_of_data);
+
+            clock_t after = clock();
+
+            printf("Quick:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            free(data);
+        }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
             memcpy(data, original, size_of_data);
