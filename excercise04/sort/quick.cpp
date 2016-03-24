@@ -15,7 +15,7 @@ void quick(int *data, const int start, const int end)
     if(size <= 1) return; /* Base case */
 
     /* Conquer */
-    int pivot = start + rand() % size; /* Set pivot */
+    int pivot = end; /* Set pivot */
 
     int lss[size] = {0, }; /* Memory which stores less than data[pivot] */
     int gtr[size] = {0, }; /*                     greater               */
