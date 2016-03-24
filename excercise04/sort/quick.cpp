@@ -45,7 +45,10 @@ void quick(int *data, const int start, const int end)
         if(ps < pe) swap(data[ps], data[pe]);
     }
 
-    if(data[pe] > data[pivot]) swap(data[pe], data[pivot]);
+    if(data[pe] > data[pivot])
+        swap(data[pe], data[pivot]);
+    else if(pe == end - 1)
+        ++pe;
 
 #ifdef TESTLAYOUT
     for(int i = start; i <= end; ++i) printf(" %2d  ", data[i]);
@@ -53,6 +56,6 @@ void quick(int *data, const int start, const int end)
 #endif
 
     /* Divide */
-    quick(data, start, pe);
+    quick(data, start, pe - 1);
     quick(data, pe + 1, end);
 }
