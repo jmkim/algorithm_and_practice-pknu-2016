@@ -8,11 +8,11 @@
 #include "sort/bubble.hpp"
 
 #define SORT    quick
-#define SIZE    10
+#define SIZE    20
 
 int main(void)
 {
-    int *data = make_random_data(SIZE, 9);
+    int *data = make_random_data(SIZE, 99);
 
     for(int i = 0; i < SIZE; ++i) printf("%d\n", data[i]);
     putchar('\n');
