@@ -29,7 +29,7 @@ int partition(int *data, const int start, const int end)
 
     while(ps != pe)
     {
-        while(ps < pe && data[ps] < data[pivot]) ++ps;
+        while(ps < pe && data[ps] <= data[pivot]) ++ps;
         while(ps < pe && data[pe] >= data[pivot]) --pe;
 
         if(ps < pe) swap(data[ps], data[pe]);
