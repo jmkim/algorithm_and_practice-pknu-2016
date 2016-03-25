@@ -23,7 +23,7 @@ int main(void)
 
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
@@ -36,7 +36,7 @@ int main(void)
         }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
@@ -49,7 +49,7 @@ int main(void)
         }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
@@ -62,7 +62,7 @@ int main(void)
         }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
@@ -75,7 +75,7 @@ int main(void)
         }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
