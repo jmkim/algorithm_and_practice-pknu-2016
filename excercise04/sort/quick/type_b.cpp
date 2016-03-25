@@ -22,21 +22,21 @@ int partition(int *data, const int start, const int end)
 {
     int pivot = end; /* Set pivot */
 
-    int ps = start,
-        pe = end - 1;
+    int pleft = start,
+        pright = end - 1;
 
-    while(ps != pe)
+    while(pleft != pright)
     {
-        while(ps < pe && data[ps] <= data[pivot]) ++ps;
-        while(ps < pe && data[pe] >= data[pivot]) --pe;
+        while(pleft < pright && data[pleft] <= data[pivot]) ++pleft;
+        while(pleft < pright && data[pright] >= data[pivot]) --pright;
 
-        if(ps < pe) swap(data[ps], data[pe]);
+        if(pleft < pright) swap(data[pleft], data[pright]);
     }
 
-    if(data[pivot] < data[pe])
+    if(data[pivot] < data[pright])
     {
-        swap(data[pivot], data[pe]);
-        pivot = pe;
+        swap(data[pivot], data[pright]);
+        pivot = pright;
     }
 
     return pivot;
