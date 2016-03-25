@@ -24,8 +24,10 @@ int partition(int *data, const int start, const int end)
 {
     int pivot = end; /* Set pivot */
 
-    int ps = start, pe = end - 1;
-    while(ps < pe)
+    int ps = start,
+        pe = end - 1;
+
+    while(ps != pe)
     {
         while(ps < pe && data[ps] < data[pivot]) ++ps;
         while(ps < pe && data[pe] >= data[pivot]) --pe;
@@ -33,10 +35,11 @@ int partition(int *data, const int start, const int end)
         if(ps < pe) swap(data[ps], data[pe]);
     }
 
-    if(data[pe] > data[pivot])
-        swap(data[pe], data[pivot]);
-    else if(pe == end - 1)
-        ++pe;
+    if(data[pivot] < data[pe])
+    {
+        swap(data[pivot], data[pe]);
+        pivot = pe;
+    }
 
-    return pe;
+    return pivot;
 }
