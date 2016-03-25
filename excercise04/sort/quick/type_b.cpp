@@ -13,6 +13,15 @@ void quick(int *data, const int start, const int end)
     if(start >= end) return; /* Base case */
 
     /* Conquer */
+    int pivot = partition(data, start, end);
+
+    /* Divide */
+    quick(data, start, pe - 1);
+    quick(data, pe + 1, end);
+}
+
+int partition(int *data, const int start, const int end)
+{
     int pivot = end; /* Set pivot */
 
     int ps = start, pe = end - 1;
@@ -29,7 +38,5 @@ void quick(int *data, const int start, const int end)
     else if(pe == end - 1)
         ++pe;
 
-    /* Divide */
-    quick(data, start, pe - 1);
-    quick(data, pe + 1, end);
+    return pe;
 }

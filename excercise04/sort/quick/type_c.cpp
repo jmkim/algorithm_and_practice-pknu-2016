@@ -12,6 +12,14 @@ void quick(int *data, const int start, const int end)
 
     if(start >= end) return;
 
+    int pivot = partition(data, start, end);
+    
+    quick(data, start, pivot - 1);
+    quick(data, pivot + 1, end);
+}
+
+int partition(int *data, const int start, const int end)
+{
     int pleft = start,     /* Left to right */
         pivot = end;       /* Pivot */
 
@@ -29,6 +37,5 @@ void quick(int *data, const int start, const int end)
         }
     }
 
-    quick(data, start, pivot - 1);
-    quick(data, pivot + 1, end);
+    return pivot;
 }
