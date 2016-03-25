@@ -16,8 +16,8 @@ void quick(int *data, const int start, const int end)
     int pivot = partition(data, start, end);
 
     /* Divide */
-    quick(data, start, pe - 1);
-    quick(data, pe + 1, end);
+    quick(data, start, pivot - 1);
+    quick(data, pivot + 1, end);
 }
 
 int partition(int *data, const int start, const int end)
