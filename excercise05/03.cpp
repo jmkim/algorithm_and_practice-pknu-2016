@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "../excercise04/make_random_data/make_random_data.hpp"
-#include "../excercise04/sort/quick.hpp"
+#include "../excercise04/sort/quicksort.hpp"
 
 int get_index_smallest(const int k, int *data, const int start, const int end)
 {
