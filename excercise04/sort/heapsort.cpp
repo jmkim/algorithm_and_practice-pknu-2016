@@ -4,8 +4,7 @@
 
 void heapsort(int *data, const int size_of_data)
 {
-    binary_max_heap(data, size_of_data - 1);
-
+    convert_to_binary_max_heap(data, size_of_data);
     do_heapsort(data, size_of_data - 1);
 }
 
