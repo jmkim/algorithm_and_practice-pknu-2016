@@ -6,14 +6,14 @@
 #include "../excercise04/make_random_data/make_random_data.hpp"
 #include "../excercise04/sort/quicksort.hpp"
 
-int quickselection(const int k, int *data, const int start, const int end)
+int quickselect(const int k, int *data, const int start, const int end)
 {
     if(start >= end) return data[start];
     int pivot = partition(data, start, end);
 
     int p = pivot - start;
-    if(p > k - 1) return quickselection(k, data, start, pivot - 1);
-    if(p < k - 1) return quickselection(k - (p + 1), data, pivot + 1, end);
+    if(p > k - 1) return quickselect(k, data, start, pivot - 1);
+    if(p < k - 1) return quickselect(k - (p + 1), data, pivot + 1, end);
     return data[pivot];
 }
 
@@ -38,7 +38,7 @@ int main(void)
 
         clock_t before = clock();
 
-        printf("Result: %d\n", quickselection(k, data, 0, size_of_data - 1));
+        printf("Result: %d\n", quickselect(k, data, 0, size_of_data - 1));
 
         clock_t after = clock();
 
