@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "make_random_data/make_random_data.hpp"
+#include "sort/heapsort.hpp"
 #include "sort/quicksort.hpp"
 #include "sort/merge_sort.hpp"
 #include "sort/selection_sort.hpp"
 #include "sort/insertion_sort.hpp"
 #include "sort/bubble_sort.hpp"
 
-#define SORT    quicksort
+#define SORT    heapsort
 #define SIZE    20
 
 int main(void)
