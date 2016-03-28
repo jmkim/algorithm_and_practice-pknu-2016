@@ -1,8 +1,8 @@
 #include <string.h> /* memcpy() */
 
-#include "merge.hpp"
+#include "merge_sort.hpp"
 
-void merge(int *data, const int size_of_data)
+void merge_sort(int *data, const int size_of_data)
 {
     return merge(data, 0, size_of_data - 1);
 }

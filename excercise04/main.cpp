@@ -3,11 +3,12 @@
 #include <string.h>
 #include <time.h>
 #include "make_random_data/make_random_data.hpp"
-#include "sort/quick.hpp"
-#include "sort/merge.hpp"
-#include "sort/selection.hpp"
-#include "sort/insertion.hpp"
-#include "sort/bubble.hpp"
+#include "sort/heapsort.hpp"
+#include "sort/quicksort.hpp"
+#include "sort/merge_sort.hpp"
+#include "sort/selection_sort.hpp"
+#include "sort/insertion_sort.hpp"
+#include "sort/bubble_sort.hpp"
 
 #define MIN_SIZE    100
 #define MAX_SIZE    100000
@@ -23,67 +24,80 @@ int main(void)
 
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
-            quick(data, size_of_data);
+            heapsort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Quick:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Heapsort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
-            merge(data, size_of_data);
+            quicksort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Merge:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Quicksort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
-            insertion(data, size_of_data);
+            merge_sort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Insertion:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Merge sort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
-            selection(data, size_of_data);
+            insertion_sort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Selection:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Insertion sort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
             int *data = (int *)malloc(sizeof(int) * size_of_data);
-            memcpy(data, original, size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
 
             clock_t before = clock();
 
-            bubble(data, size_of_data);
+            selection_sort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Bubble:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Selection sort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            free(data);
+        }
+        {
+            int *data = (int *)malloc(sizeof(int) * size_of_data);
+            memcpy(data, original, sizeof(int) * size_of_data);
+
+            clock_t before = clock();
+
+            bubble_sort(data, size_of_data);
+
+            clock_t after = clock();
+
+            printf("Bubble sort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
 

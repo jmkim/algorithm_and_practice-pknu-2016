@@ -1,7 +1,7 @@
-#include "selection.hpp"
+#include "selection_sort.hpp"
 #include "swap.hpp"
 
-void selection(int *data, const int size_of_data)
+void selection_sort(int *data, const int size_of_data)
 {
     for(int i = 0; i < size_of_data; ++i)
     {
