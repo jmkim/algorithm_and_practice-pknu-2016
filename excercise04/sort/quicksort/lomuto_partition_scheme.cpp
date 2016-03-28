@@ -1,7 +1,7 @@
 #include "../quicksort.hpp"
 #include "../swap.hpp"
 
-void quick(int *data, const int size_of_data)
+void quicksort(int *data, const int size_of_data)
 {
     return quick(data, 0, size_of_data - 1);
 }
