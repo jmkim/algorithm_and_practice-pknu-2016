@@ -1,20 +1,12 @@
 #include "heapsort.hpp"
+#include "heap.hpp"
 #include "swap.hpp"
 
 void heapsort(int *data, const int size_of_data)
 {
-    make_binary_max_heap(data, size_of_data - 1);
+    binary_max_heap(data, size_of_data - 1);
 
     do_heapsort(data, size_of_data - 1);
-}
-
-void make_binary_max_heap(int *data, const int end)
-{
-    for(int i = end; i > 0; --i)
-    {
-        for(int k = i; k > 0; k = (k - 1) / 2)
-            if(data[i] > data[(k - 1) / 2]) swap(data[i], data[(k - 1) / 2]);
-    }
 }
 
 void do_heapsort(int *data, const int end)
