@@ -1,6 +1,6 @@
 #include <string.h> /* memcpy() */
 
-#include "merge.hpp"
+#include "merge_sort.hpp"
 
 void merge(int *data, const int size_of_data)
 {

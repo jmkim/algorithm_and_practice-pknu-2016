@@ -1,4 +1,4 @@
-#include "selection.hpp"
+#include "selection_sort.hpp"
 #include "swap.hpp"
 
 void selection(int *data, const int size_of_data)

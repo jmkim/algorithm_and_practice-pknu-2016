@@ -1,4 +1,4 @@
-#include "insertion.hpp"
+#include "insertion_sort.hpp"
 #include "swap.hpp"
 
 void insertion(int *data, const int size_of_data)

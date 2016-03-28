@@ -1,4 +1,4 @@
-#include "bubble.hpp"
+#include "bubble_sort.hpp"
 #include "swap.hpp"
 
 void bubble(int *data, const int size_of_data)
