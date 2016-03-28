@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "make_random_data/make_random_data.hpp"
-#include "sort/merge.hpp"
-#include "sort/quick.hpp"
-#include "sort/selection.hpp"
-#include "sort/insertion.hpp"
-#include "sort/bubble.hpp"
+#include "sort/quicksort.hpp"
+#include "sort/merge_sort.hpp"
+#include "sort/selection_sort.hpp"
+#include "sort/insertion_sort.hpp"
+#include "sort/bubble_sort.hpp"
 
 #define SORT    quick
 #define SIZE    20

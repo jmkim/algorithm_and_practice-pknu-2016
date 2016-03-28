@@ -3,11 +3,11 @@
 #include <string.h>
 #include <time.h>
 #include "make_random_data/make_random_data.hpp"
-#include "sort/quick.hpp"
-#include "sort/merge.hpp"
-#include "sort/selection.hpp"
-#include "sort/insertion.hpp"
-#include "sort/bubble.hpp"
+#include "sort/quicksort.hpp"
+#include "sort/merge_sort.hpp"
+#include "sort/selection_sort.hpp"
+#include "sort/insertion_sort.hpp"
+#include "sort/bubble_sort.hpp"
 
 #define MIN_SIZE    100
 #define MAX_SIZE    100000
