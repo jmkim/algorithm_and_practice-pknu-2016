@@ -50,7 +50,7 @@ int main(void)
 
         clock_t before = clock();
 
-        quick(data, size_of_data);
+        quicksort(data, size_of_data);
         printf("Result: %d\n", data[k - 1]);
 
         clock_t after = clock();

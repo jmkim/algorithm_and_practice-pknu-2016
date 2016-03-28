@@ -27,11 +27,11 @@ int main(void)
 
             clock_t before = clock();
 
-            quick(data, size_of_data);
+            quicksort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Quick:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Quicksort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -40,11 +40,11 @@ int main(void)
 
             clock_t before = clock();
 
-            merge(data, size_of_data);
+            merge_sort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Merge:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Merge sort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -53,11 +53,11 @@ int main(void)
 
             clock_t before = clock();
 
-            insertion(data, size_of_data);
+            insertion_sort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Insertion:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Insertion sort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -66,11 +66,11 @@ int main(void)
 
             clock_t before = clock();
 
-            selection(data, size_of_data);
+            selection_sort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Selection:\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Selection sort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
         {
@@ -79,11 +79,11 @@ int main(void)
 
             clock_t before = clock();
 
-            bubble(data, size_of_data);
+            bubble_sort(data, size_of_data);
 
             clock_t after = clock();
 
-            printf("Bubble:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
+            printf("Bubble sort:\t\t%lf\n", (double)(after - before)/CLOCKS_PER_SEC);
             free(data);
         }
 

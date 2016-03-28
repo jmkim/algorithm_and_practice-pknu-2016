@@ -7,7 +7,7 @@
 #include "sort/insertion_sort.hpp"
 #include "sort/bubble_sort.hpp"
 
-#define SORT    quick
+#define SORT    quicksort
 #define SIZE    20
 
 int main(void)
