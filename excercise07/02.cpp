@@ -1,9 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <istream>
 #include <sstream>
 #include <string>
-#include <cstring>
 #include <algorithm>
 #include <array>
 #include <vector>
@@ -168,9 +166,12 @@ namespace excercise07
                             continue;
                         }
                         std::cout << "Sorted with sort-key " << cmdtok[2] << std::endl;
+                    }
                 }
                 else if(cmdtok[0] == "exit" || cmdtok[0] == "quit")
                     break;
+                else
+                    std::cout << "" << std::endl;
             }
         }
     };
