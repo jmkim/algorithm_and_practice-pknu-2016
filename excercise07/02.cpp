@@ -58,7 +58,6 @@ namespace excercise07
     private:
         std::vector<class contact> data;
 
-    public:
         int load(const std::string path_of_file)
         {
             std::ifstream datafile;
@@ -107,6 +106,7 @@ namespace excercise07
             });
         }
 
+    public:
         void prompt(void)
         {
             while(true)
