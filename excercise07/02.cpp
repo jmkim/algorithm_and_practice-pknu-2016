@@ -176,8 +176,8 @@ namespace excercise07
 
 int main(void)
 {
-    excercise07::contact_manager cm;
-    cm.prompt();
+    excercise07::contact_manager contacts;
+    contacts.prompt();
 
     return 0;
 }
