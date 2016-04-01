@@ -62,6 +62,7 @@ namespace excercise07
         {
             std::ifstream datafile;
             datafile.open(path_of_file);
+            if(! datafile.is_open()) return 1;
 
             for(std::array<char, MAX_WORD_LENGTH> line; datafile.getline(&line[0], MAX_WORD_LENGTH); )
             {
