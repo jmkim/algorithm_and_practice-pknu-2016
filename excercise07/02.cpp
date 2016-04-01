@@ -123,8 +123,9 @@ namespace excercise07
                 };
 
                 if(cmdtok[0] == "read")
+                if(cmdtok.size() < 1) continue;
                 {
-                    if(cmdtok.size() < 1)
+                    if(cmdtok.size() < 2)
                         std::cout << "Usage: read [file name]" << std::endl;
                     else
                         switch(load(cmdtok[1]))
@@ -137,7 +138,7 @@ namespace excercise07
                     print();
                 else if(cmdtok[0] == "sort")
                 {
-                    if(cmdtok.size() < 2)
+                    if(cmdtok.size() < 3)
                     {
                         std::cout   << "Usage: sort as [sort-key]" << std::endl
                                     << "Available sort-key:" << std::endl
