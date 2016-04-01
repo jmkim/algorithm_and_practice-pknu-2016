@@ -1,9 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <istream>
 #include <sstream>
 #include <string>
-#include <cstring>
 #include <algorithm>
 #include <array>
 #include <vector>
@@ -60,11 +58,11 @@ namespace excercise07
     private:
         std::vector<class contact> data;
 
-    public:
         int load(const std::string path_of_file)
         {
             std::ifstream datafile;
             datafile.open(path_of_file);
+            if(! datafile.is_open()) return 1;
 
             for(std::array<char, MAX_WORD_LENGTH> line; datafile.getline(&line[0], MAX_WORD_LENGTH); )
             {
@@ -109,6 +107,7 @@ namespace excercise07
             });
         }
 
+    public:
         void prompt(void)
         {
             while(true)
@@ -123,54 +122,53 @@ namespace excercise07
                     std::istream_iterator<std::string>{}
                 };
 
-                if(cmdtok[0] == "read")
+                if(cmdtok.size() < 1) continue;
+                else if(cmdtok[0] == "exit" || cmdtok[0] == "quit") break;
+                else if(cmdtok[0] == "print") print();
+                else if(cmdtok[0] == "read")
                 {
-                    if(cmdtok.size() < 1)
+                    if(cmdtok.size() < 2)
                         std::cout << "Usage: read [file name]" << std::endl;
                     else
+                    {
                         switch(load(cmdtok[1]))
                         {
                             case 0: std::cout << "File " << cmdtok[1] << " loaded." << std::endl; break;
                             case 1: std::cout << "Error: File " << cmdtok[1] << " not found." << std::endl; break;
                         }
+                    }
                 }
-                else if(cmdtok[0] == "print")
-                    print();
                 else if(cmdtok[0] == "sort")
                 {
-                    if(cmdtok.size() < 2)
+                    if(cmdtok.size() < 3)
                     {
-                        std::cout   << "Usage: sort as [sort-key]" << std::endl
-                                    << "Available sort-key:" << std::endl
+                        std::cout   << "Usage: sort by [type name]" << std::endl
+                                    << "Available type name:" << std::endl
                                     << "   name, company, address, zipcode, phone1, phone2, email, web" << std::endl;
                     }
                     else
                     {
-                        if(cmdtok[2] == "name")
-                            sort(name);
-                        else if(cmdtok[2] == "company")
-                            sort(company);
-                        else if(cmdtok[2] == "address")
-                            sort(address);
-                        else if(cmdtok[2] == "zipcode")
-                            sort(zipcode);
-                        else if(cmdtok[2] == "phone1")
-                            sort(phone1);
-                        else if(cmdtok[2] == "phone2")
-                            sort(phone2);
-                        else if(cmdtok[2] == "email")
-                            sort(email);
-                        else if(cmdtok[2] == "web")
-                            sort(web);
+                        if(cmdtok[2] == "name") sort(name);
+                        else if(cmdtok[2] == "company") sort(company);
+                        else if(cmdtok[2] == "address") sort(address);
+                        else if(cmdtok[2] == "zipcode") sort(zipcode);
+                        else if(cmdtok[2] == "phone1") sort(phone1);
+                        else if(cmdtok[2] == "phone2") sort(phone2);
+                        else if(cmdtok[2] == "email") sort(email);
+                        else if(cmdtok[2] == "web") sort(web);
                         else
                         {
-                            std::cout << "sort-key not found" << std::endl;
+                            std::cout << "Error: Invalid type name '" << cmdtok[2] << "'." << std::endl;
                             continue;
                         }
-                        std::cout << "Sorted with sort-key " << cmdtok[2] << std::endl;
+                        std::cout << "Sorted by type name '" << cmdtok[2] << "'."<< std::endl;
+                    }
                 }
-                else if(cmdtok[0] == "exit" || cmdtok[0] == "quit")
-                    break;
+                else
+                {
+                    std::cout << "Error: '" << cmdtok[0] << "' command not found." << std::endl;
+                    continue;
+                }
             }
         }
     };
@@ -178,8 +176,8 @@ namespace excercise07
 
 int main(void)
 {
-    excercise07::contact_manager cm;
-    cm.prompt();
+    excercise07::contact_manager contacts;
+    contacts.prompt();
 
     return 0;
 }
