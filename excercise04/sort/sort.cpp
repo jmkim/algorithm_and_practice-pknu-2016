@@ -82,7 +82,12 @@ namespace sort
     template <typename T> class sorting_algorithm
     {
     protected:
-        virtual void sort(void) = 0;
+        virtual void sort(T first, T last) = 0;
+        virtual void sort(T first, T last, bool compare) = 0;
+                        /*
+                            bool compare(const T &first, const T &last)
+                            Returns true if the first argument is less than (i.e. is ordered before) the second. 
+                        */
     };
 
     template <typename T> class bubble_sort : public sorting_algorithm<T>
