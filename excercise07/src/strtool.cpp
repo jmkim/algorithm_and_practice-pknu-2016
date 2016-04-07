@@ -3,7 +3,7 @@
 
 #include "strtool.hpp"
 
-std::string phonebook::strtool::carrtostr(const char carr[])
+std::string strtool::carrtostr(const char carr[])
 {
     std::string str;
 
@@ -13,7 +13,7 @@ std::string phonebook::strtool::carrtostr(const char carr[])
     return str;
 }
 
-int phonebook::strtool::strtoi(const std::string &src)
+int strtool::strtoi(const std::string &src)
 {
     int number;
 

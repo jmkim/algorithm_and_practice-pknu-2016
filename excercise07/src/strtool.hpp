@@ -1,15 +1,12 @@
-#ifndef __PHONEBOOK_STRTOOL_HPP
-#define __PHONEBOOK_STRTOOL_HPP     1
+#ifndef __STRTOOL_HPP
+#define __STRTOOL_HPP     1
 
 #include <string>
 
-namespace phonebook
+struct strtool
 {
-    struct strtool
-    {
-        static std::string carrtostr(const char carr[]);
-        static int strtoi(const std::string &src);
-    };
-}
+    static std::string carrtostr(const char carr[]);
+    static int strtoi(const std::string &src);
+};
 
-#endif /* !__PHONEBOOK_STRTOOL_HPP */
+#endif /* !__STRTOOL_HPP */

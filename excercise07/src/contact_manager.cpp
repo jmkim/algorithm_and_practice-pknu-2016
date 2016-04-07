@@ -22,7 +22,7 @@
 #define EMAIL       6
 #define WEB         7
 
-int phonebook::contact_manager::load(const std::string path_of_file)
+int contact_manager::load(const std::string path_of_file)
 {
     std::ifstream datafile;
     datafile.open(path_of_file);
@@ -47,7 +47,7 @@ int phonebook::contact_manager::load(const std::string path_of_file)
     return 0;
 }
 
-void phonebook::contact_manager::print(void)
+void contact_manager::print(void)
 {
     for(class contact &d : data)
     {
@@ -62,7 +62,7 @@ void phonebook::contact_manager::print(void)
     }
 }
 
-void phonebook::contact_manager::sort(const int key)
+void contact_manager::sort(const int key)
 {
     std::sort(data.begin(), data.end(), [=](const class contact &first, const class contact &second)
     {
@@ -72,7 +72,7 @@ void phonebook::contact_manager::sort(const int key)
     });
 }
 
-void phonebook::contact_manager::prompt(void)
+void contact_manager::prompt(void)
 {
     while(true)
     {
