@@ -1,9 +1,6 @@
 #ifndef __CONTACT_HPP
 #define __CONTACT_HPP     1
 
-#include <string>
-#include <array>
-
 class contact
 {
 private:

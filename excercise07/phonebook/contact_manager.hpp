@@ -1,11 +1,6 @@
 #ifndef __CONTACTMANAGER_HPP
 #define __CONTACTMANAGER_HPP     1
 
-#include <string>
-#include <vector>
-
-#include "contact.hpp"
-
 class contact_manager
 {
 private:

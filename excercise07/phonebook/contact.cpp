@@ -1,4 +1,5 @@
 #include <string>
+#include <array>
 
 #include "contact.hpp"
 

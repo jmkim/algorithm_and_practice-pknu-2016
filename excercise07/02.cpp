@@ -1,4 +1,9 @@
-#include "src/contact_manager.hpp"
+#include <string>
+#include <array>
+#include <vector>
+
+#include "phonebook/contact.hpp"
+#include "phonebook/contact_manager.hpp"
 
 int main(void)
 {
