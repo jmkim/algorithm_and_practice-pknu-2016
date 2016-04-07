@@ -1,17 +1,14 @@
 #include <sstream>
 #include <string>
-#include <array>
 
 #include "strtool.hpp"
 
-std::string phonebook::strtool::carrtostr(const std::array<char, MAX_WORD_LENGTH> &src)
+std::string phonebook::strtool::carrtostr(const char carr[])
 {
     std::string str;
-    for(char c : src)
-    {
-        if(c == '\0') break;
-        str.push_back(c);
-    }
+
+    for(int i = 0; carr[i] != '\0'; ++i)
+        str.push_back(carr[i]);
 
     return str;
 }
