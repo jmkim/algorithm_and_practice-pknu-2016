@@ -2,7 +2,7 @@
 
 #include "node.hpp"
 
-binary_tree::node::node(std::string data)
+binary_tree::node::node(const std::string data)
 {
     set_data(data);
 
@@ -12,7 +12,7 @@ binary_tree::node::node(std::string data)
 
 binary_tree::node::~node(void) {}
 
-void binary_tree::node::set_data(std::string data) { this->data = data; }
+void binary_tree::node::set_data(const std::string data) { this->data = data; }
 void binary_tree::node::set_left(node *node) { left = node; }
 void binary_tree::node::set_right(node *node) { right = node; }
 

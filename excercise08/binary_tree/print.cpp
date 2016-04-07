@@ -4,7 +4,7 @@
 #include "node.hpp"
 #include "print.hpp"
 
-void binary_tree::print::inorder(node *n)
+void binary_tree::print::inorder(const node *n)
 {
     if(n == NULL) return;
 
@@ -13,7 +13,7 @@ void binary_tree::print::inorder(node *n)
     inorder(n->get_right());
 }
 
-void binary_tree::print::preorder(node *n)
+void binary_tree::print::preorder(const node *n)
 {
     if(n == NULL) return;
 
@@ -22,7 +22,7 @@ void binary_tree::print::preorder(node *n)
     preorder(n->get_right());
 }
 
-void binary_tree::print::postorder(node *n)
+void binary_tree::print::postorder(const node *n)
 {
     if(n == NULL) return;
 

@@ -5,9 +5,9 @@ namespace binary_tree
 {
     struct print
     {
-        static void inorder(node *n);
-        static void preorder(node *n);
-        static void postorder(node *n);
+        static void inorder(const node *n);
+        static void preorder(const node *n);
+        static void postorder(const node *n);
         static void levelorder(node *n);
     };
 }

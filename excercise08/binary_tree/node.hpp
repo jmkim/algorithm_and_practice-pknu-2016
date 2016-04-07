@@ -11,10 +11,10 @@ namespace binary_tree
         node *right;
 
     public:
-        node(std::string data);
+        node(const std::string data);
         ~node(void);
 
-        void set_data(std::string data);
+        void set_data(const std::string data);
         void set_left(node *node);
         void set_right(node *node);
 
