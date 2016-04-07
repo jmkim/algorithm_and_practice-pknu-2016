@@ -1,7 +1,7 @@
-#ifndef __CONTACTMANAGER_HPP
-#define __CONTACTMANAGER_HPP     1
+#ifndef __PHONEBOOK_HPP
+#define __PHONEBOOK_HPP     1
 
-class contact_manager
+class phonebook
 {
 private:
     std::vector<class contact> data;
@@ -14,4 +14,4 @@ public:
     void prompt(void);
 };
 
-#endif /* !__CONTACTMANAGER_HPP */
+#endif /* !__PHONEBOOK_HPP */

@@ -3,12 +3,12 @@
 #include <vector>
 
 #include "phonebook/contact.hpp"
-#include "phonebook/contact_manager.hpp"
+#include "phonebook/phonebook.hpp"
 
 int main(void)
 {
-    contact_manager contacts;
-    contacts.prompt();
+    phonebook p;
+    p.prompt();
 
     return 0;
 }

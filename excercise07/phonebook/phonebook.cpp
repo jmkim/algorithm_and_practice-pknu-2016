@@ -10,7 +10,7 @@
 
 #include "strtool.hpp"
 #include "contact.hpp"
-#include "contact_manager.hpp"
+#include "phonebook.hpp"
 
 #define DELIMITER   '|'
 #define MAX_WORD_LENGTH 500
@@ -24,7 +24,7 @@
 #define EMAIL       6
 #define WEB         7
 
-int contact_manager::load(const std::string path_of_file)
+int phonebook::load(const std::string path_of_file)
 {
     std::ifstream datafile;
     datafile.open(path_of_file);
@@ -49,7 +49,7 @@ int contact_manager::load(const std::string path_of_file)
     return 0;
 }
 
-void contact_manager::print(void)
+void phonebook::print(void)
 {
     for(class contact &d : data)
     {
@@ -64,7 +64,7 @@ void contact_manager::print(void)
     }
 }
 
-void contact_manager::sort(const int key)
+void phonebook::sort(const int key)
 {
     std::sort(data.begin(), data.end(), [=](const class contact &first, const class contact &second)
     {
@@ -74,7 +74,7 @@ void contact_manager::sort(const int key)
     });
 }
 
-void contact_manager::prompt(void)
+void phonebook::prompt(void)
 {
     while(true)
     {
