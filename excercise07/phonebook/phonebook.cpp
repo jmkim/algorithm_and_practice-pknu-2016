@@ -15,6 +15,9 @@
 #define DELIMITER   '|'
 #define MAX_WORD_LENGTH 500
 
+phonebook::phonebook(void) { data = new contact_manager; }
+phonebook::~phonebook(void) { delete data; }
+
 int phonebook::load(const std::string path_of_file)
 {
     std::ifstream datafile;
@@ -35,7 +38,7 @@ int phonebook::load(const std::string path_of_file)
             if(++key >= 8) break;
         }
 
-        add(datatemp);
+        data->add(datatemp);
     }
     return 0;
 }
@@ -56,7 +59,7 @@ void phonebook::prompt(void)
 
         if(cmdtok.size() < 1) continue;
         else if(cmdtok[0] == "exit" || cmdtok[0] == "quit") break;
-        else if(cmdtok[0] == "print") print();
+        else if(cmdtok[0] == "print") data->print();
         else if(cmdtok[0] == "read")
         {
             if(cmdtok.size() < 2)
@@ -80,14 +83,14 @@ void phonebook::prompt(void)
             }
             else
             {
-                if(cmdtok[2] == "name") sort(NAME);
-                else if(cmdtok[2] == "company") sort(COMPANY);
-                else if(cmdtok[2] == "address") sort(ADDRESS);
-                else if(cmdtok[2] == "zipcode") sort(ZIPCODE);
-                else if(cmdtok[2] == "phone1") sort(PHONE_PRIMARY);
-                else if(cmdtok[2] == "phone2") sort(PHONE_SECONDARY);
-                else if(cmdtok[2] == "email") sort(EMAIL);
-                else if(cmdtok[2] == "web") sort(WEB);
+                if(cmdtok[2] == "name") data->sort(NAME);
+                else if(cmdtok[2] == "company") data->sort(COMPANY);
+                else if(cmdtok[2] == "address") data->sort(ADDRESS);
+                else if(cmdtok[2] == "zipcode") data->sort(ZIPCODE);
+                else if(cmdtok[2] == "phone1") data->sort(PHONE_PRIMARY);
+                else if(cmdtok[2] == "phone2") data->sort(PHONE_SECONDARY);
+                else if(cmdtok[2] == "email") data->sort(EMAIL);
+                else if(cmdtok[2] == "web") data->sort(WEB);
                 else
                 {
                     std::cout << "Error: Invalid type name '" << cmdtok[2] << "'." << std::endl;
