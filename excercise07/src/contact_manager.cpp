@@ -3,7 +3,6 @@
 #include <sstream>
 #include <string>
 #include <algorithm>
-#include <array>
 #include <vector>
 #include <iterator>
 
@@ -12,6 +11,7 @@
 #include "contact_manager.hpp"
 
 #define DELIMITER   '|'
+#define MAX_WORD_LENGTH 500
 
 #define NAME        0
 #define COMPANY     1
@@ -28,7 +28,7 @@ int contact_manager::load(const std::string path_of_file)
     datafile.open(path_of_file);
     if(! datafile.is_open()) return 1;
 
-    for(std::array<char, MAX_WORD_LENGTH> line; datafile.getline(&line[0], MAX_WORD_LENGTH); )
+    for(char line[MAX_WORD_LENGTH]; datafile.getline(&line[0], MAX_WORD_LENGTH); )
     {
         class contact datatemp;
 
@@ -36,7 +36,7 @@ int contact_manager::load(const std::string path_of_file)
         dataline << strtool::carrtostr(line);
 
         int key = 0;
-        for(std::array<char, MAX_WORD_LENGTH> value; dataline.getline(&value[0], MAX_WORD_LENGTH, DELIMITER); )
+        for(char value[MAX_WORD_LENGTH]; dataline.getline(&value[0], MAX_WORD_LENGTH, DELIMITER); )
         {
             datatemp.set(key, strtool::carrtostr(value));
             if(++key >= 8) break;
