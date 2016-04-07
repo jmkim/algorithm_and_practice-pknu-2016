@@ -4,7 +4,7 @@
 class phonebook
 {
 private:
-    class contact_manager *data;
+    contact_manager *data;
     int load(const std::string path_of_file);
 
 public:

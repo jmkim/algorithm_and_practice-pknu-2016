@@ -4,10 +4,10 @@
 class contact_manager
 {
 private:
-    std::vector<class contact> data;
+    std::vector<contact> data;
 
 public:
-    void add(const class contact &contact);
+    void add(const contact &contact);
     void print(void);
     void sort(const int key);
 };

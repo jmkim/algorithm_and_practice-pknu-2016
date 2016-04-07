@@ -26,7 +26,7 @@ int phonebook::load(const std::string path_of_file)
 
     for(char line[MAX_WORD_LENGTH]; datafile.getline(&line[0], MAX_WORD_LENGTH); )
     {
-        class contact datatemp;
+        contact datatemp;
 
         std::stringstream dataline;
         dataline << strtool::carrtostr(line);

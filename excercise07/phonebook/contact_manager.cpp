@@ -9,14 +9,14 @@
 #include "contact.hpp"
 #include "contact_manager.hpp"
 
-void contact_manager::add(const class contact &contact)
+void contact_manager::add(const contact &contact)
 {
     data.push_back(contact);
 }
 
 void contact_manager::print(void)
 {
-    for(class contact &d : data)
+    for(contact &d : data)
     {
         std::cout   << d.get(NAME) << std::endl
                     << "\tCompany: " << d.get(COMPANY) << std::endl
@@ -31,7 +31,7 @@ void contact_manager::print(void)
 
 void contact_manager::sort(const int key)
 {
-    std::sort(data.begin(), data.end(), [=](const class contact &first, const class contact &second)
+    std::sort(data.begin(), data.end(), [=](const contact &first, const contact &second)
     {
         if(key == ZIPCODE && strtool::strtoi(first.get(key)) < strtool::strtoi(second.get(key))) return true; /* Sort Zipcode as an integer */
         if(first.get(key).compare(second.get(key)) < 0) return true;
