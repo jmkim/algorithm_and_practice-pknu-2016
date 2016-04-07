@@ -2,27 +2,18 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <algorithm>
 #include <array>
-#include <string>
 #include <vector>
 #include <iterator>
 
+#include "keyname.hpp"
 #include "strtool.hpp"
 #include "contact.hpp"
+#include "contact_manager.hpp"
 #include "phonebook.hpp"
 
 #define DELIMITER   '|'
 #define MAX_WORD_LENGTH 500
-
-#define NAME        0
-#define COMPANY     1
-#define ADDRESS     2
-#define ZIPCODE     3
-#define PHONE_PRIMARY   4
-#define PHONE_SECONDARY 5
-#define EMAIL       6
-#define WEB         7
 
 int phonebook::load(const std::string path_of_file)
 {
@@ -44,34 +35,9 @@ int phonebook::load(const std::string path_of_file)
             if(++key >= 8) break;
         }
 
-        data.push_back(datatemp);
+        add(datatemp);
     }
     return 0;
-}
-
-void phonebook::print(void)
-{
-    for(class contact &d : data)
-    {
-        std::cout   << d.get(NAME) << std::endl
-                    << "\tCompany: " << d.get(COMPANY) << std::endl
-                    << "\tAddress: " << d.get(ADDRESS) << std::endl
-                    << "\tZipcode: " << d.get(ZIPCODE) << std::endl
-                    << "\tPhones:  " << d.get(PHONE_PRIMARY) << ", " << d.get(PHONE_SECONDARY) << std::endl
-                    << "\tEmail:   " << d.get(EMAIL) << std::endl
-                    << "\tWeb:     " << d.get(WEB) << std::endl
-                    << std::endl;
-    }
-}
-
-void phonebook::sort(const int key)
-{
-    std::sort(data.begin(), data.end(), [=](const class contact &first, const class contact &second)
-    {
-        if(key == ZIPCODE && strtool::strtoi(first.get(key)) < strtool::strtoi(second.get(key))) return true; /* Sort Zipcode as an integer */
-        if(first.get(key).compare(second.get(key)) < 0) return true;
-        return false;
-    });
 }
 
 void phonebook::prompt(void)
