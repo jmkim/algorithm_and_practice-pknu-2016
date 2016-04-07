@@ -9,14 +9,11 @@ namespace binary_tree
         std::string data;
         node *left;
         node *right;
-        static std::string carrtostr(const char carr[]);
 
     public:
-        node(const char data[]);
-        node(std::string &data);
+        node(std::string data);
         ~node(void);
 
-        void set_data(const char data[]);
         void set_data(std::string data);
         void set_left(node *node);
         void set_right(node *node);

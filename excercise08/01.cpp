@@ -8,30 +8,30 @@ using namespace binary_tree;
 
 int main(void)
 {
-    node root("fox");
+    node root(std::string("fox"));
 
-    node bear("bear");
+    node bear(std::string("bear"));
     root.set_left(&bear);
 
-    node ant("ant");
+    node ant(std::string("ant"));
     bear.set_left(&ant);
 
-    node dog("dog");
+    node dog(std::string("dog"));
     bear.set_right(&dog);
 
-    node cat("cat");
+    node cat(std::string("cat"));
     dog.set_left(&cat);
 
-    node eagle("eagle");
+    node eagle(std::string("eagle"));
     dog.set_right(&eagle);
 
-    node goose("goose");
+    node goose(std::string("goose"));
     root.set_right(&goose);
 
-    node hippo("hippo");
+    node hippo(std::string("hippo"));
     goose.set_right(&hippo);
 
-    node iguana("iguana");
+    node iguana(std::string("iguana"));
     hippo.set_right(&iguana);
 
     std::cout << "Inorder" << std::endl;
