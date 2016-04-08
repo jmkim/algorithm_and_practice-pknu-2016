@@ -18,7 +18,7 @@ namespace binary_tree
         void set_left(node *node);
         void set_right(node *node);
 
-        std::string get_data(void) const;
+        contact *get_data(void) const;
         node *get_left(void) const;
         node *get_right(void) const;
     };
