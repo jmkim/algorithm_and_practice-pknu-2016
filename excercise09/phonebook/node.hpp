@@ -15,7 +15,7 @@ namespace binary_tree
         node(contact *data, node *parent);
         ~node(void);
 
-        void set_data(const contact &data);
+        void set_data(contact *data);
         void set_left(node *node);
         void set_right(node *node);
         void set_parent(node *node);

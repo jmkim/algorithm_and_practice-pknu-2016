@@ -13,7 +13,7 @@
 
 contact_manager::~contact_manager(void)
 {
-    clear_all_child();
+    clear_all_child(data);
 }
 
 binary_tree::node *contact_manager::new_node(contact *contact) { return new binary_tree::node(contact, NULL); }
@@ -32,11 +32,12 @@ void contact_manager::clear_all_child(binary_tree::node *node)
 binary_tree::node *contact_manager::get_node_by_name(const std::string &name, binary_tree::node *node)
 {
     /* Inorder */
-    if(node == NULL) return NULL;
+    if(node == NULL || name == node->get_data()->get(NAME)) return node;
 
-    get_node_by_name(name, node->get_left());
-    if(node->get_data()->get(NAME) == name) return node;
-    get_node_by_name(name, node->get_right());
+    if(name < node->get_data()->get(NAME))
+        get_node_by_name(name, node->get_left());
+    else
+        get_node_by_name(name, node->get_right());
 }
 
 binary_tree::node *contact_manager::get_tree_minimum(binary_tree::node *x)
@@ -49,7 +50,7 @@ binary_tree::node *contact_manager::get_tree_minimum(binary_tree::node *x)
 
 binary_tree::node *contact_manager::get_tree_successor(binary_tree::node *x)
 {
-    if(x->get_right() != NULL) return get_tree_minimum(x);
+    if(x->get_right() != NULL) return get_tree_minimum(x->get_right());
 
     binary_tree::node *y = x->get_parent();
 
@@ -64,7 +65,7 @@ binary_tree::node *contact_manager::get_tree_successor(binary_tree::node *x)
 
 void contact_manager::add(contact *c)
 {
-    if(get_node_by_name(c->get(NAME)) != NULL) return; /* Already exists */
+    if(get_node_by_name(c->get(NAME), data) != NULL) return; /* Already exists */
 
     binary_tree::node *newnode = new_node(c);
 
@@ -76,7 +77,7 @@ void contact_manager::add(contact *c)
         y = x;
 
         {
-            if(y->get_data()->get(NAME) < x->get_data()->get(NAME))
+            if(newnode->get_data()->get(NAME) < x->get_data()->get(NAME))
                 x = x->get_left();
             else
                 x = x->get_right();
@@ -97,7 +98,7 @@ void contact_manager::add(contact *c)
 
 void contact_manager::remove(const std::string &name)
 {
-    binary_tree::node *t = get_node_by_name(name);
+    binary_tree::node *t = get_node_by_name(name, data);
     if(t == NULL) return; /* Not exists */
 
     binary_tree::node *y;
@@ -130,28 +131,41 @@ void contact_manager::remove(const std::string &name)
     }
 
     {
-        if(y != t) t->set_data(y->get_data);
+        if(y != t) t->set_data(y->get_data());
     }
 
     delete_node(y);
 }
 
-contact contact_manager::find(const std::string &name)
+void contact_manager::find(const std::string &name)
 {
-    /* TODO: Add a function search */
+    print(get_node_by_name(name, data));
 }
 
-void contact_manager::print(void)
+void contact_manager::printall(void)
 {
-    for(contact &d : data)
-    {
-        std::cout   << d.get(NAME) << std::endl
-                    << "\tCompany: " << d.get(COMPANY) << std::endl
-                    << "\tAddress: " << d.get(ADDRESS) << std::endl
-                    << "\tZipcode: " << d.get(ZIPCODE) << std::endl
-                    << "\tPhones:  " << d.get(PHONE_PRIMARY) << ", " << d.get(PHONE_SECONDARY) << std::endl
-                    << "\tEmail:   " << d.get(EMAIL) << std::endl
-                    << "\tWeb:     " << d.get(WEB) << std::endl
-                    << std::endl;
-    }
+    printall(data);
+}
+
+void contact_manager::printall(binary_tree::node *node)
+{
+    /* Inorder */
+    if(node == NULL) return;
+
+    printall(node->get_left());
+    print(node);;
+    printall(node->get_right());
+}
+
+void contact_manager::print(binary_tree::node *d)
+{
+    if(d == NULL) return;
+    std::cout   << d->get_data()->get(NAME) << std::endl
+                << "\tCompany: " << d->get_data()->get(COMPANY) << std::endl
+                << "\tAddress: " << d->get_data()->get(ADDRESS) << std::endl
+                << "\tZipcode: " << d->get_data()->get(ZIPCODE) << std::endl
+                << "\tPhones:  " << d->get_data()->get(PHONE_PRIMARY) << ", " << d->get_data()->get(PHONE_SECONDARY) << std::endl
+                << "\tEmail:   " << d->get_data()->get(EMAIL) << std::endl
+                << "\tWeb:     " << d->get_data()->get(WEB) << std::endl
+                << std::endl;
 }

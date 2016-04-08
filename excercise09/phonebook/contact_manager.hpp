@@ -4,13 +4,13 @@
 class contact_manager
 {
 private:
-    static binary_tree::node *data;
+    binary_tree::node *data;
 
     binary_tree::node *new_node(contact *contact);
     void delete_node(binary_tree::node *node);
 
-    void clear_all_child(binary_tree::node *node = data);
-    binary_tree::node *get_node_by_name(const std::string &name, binary_tree::node *node = data);
+    void clear_all_child(binary_tree::node *node);
+    binary_tree::node *get_node_by_name(const std::string &name, binary_tree::node *node);
     binary_tree::node *get_tree_minimum(binary_tree::node *x);
     binary_tree::node *get_tree_successor(binary_tree::node *x);
 
@@ -19,8 +19,10 @@ public:
 
     void add(contact *c);
     void remove(const std::string &name);
-    contact find(const std::string &name);
-    void print(void);
+    void find(const std::string &name);
+    void print(binary_tree::node *d);
+    void printall(void);
+    void printall(binary_tree::node *node);
     //void sort(const int key); /* Not implemented */
 };
 
