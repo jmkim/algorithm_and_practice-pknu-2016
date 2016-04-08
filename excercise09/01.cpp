@@ -2,6 +2,7 @@
 #include <array>
 
 #include "../excercise07/phonebook/contact.hpp"
+#include "phonebook/node.hpp"
 #include "phonebook/contact_manager.hpp"
 #include "phonebook/phonebook.hpp"
 

@@ -9,18 +9,21 @@ namespace binary_tree
         contact *data;
         node *left;
         node *right;
+        node *parent;
 
     public:
-        node(const contact &data);
+        node(contact *data, node *parent);
         ~node(void);
 
-        void set_data(const contact &data);
+        void set_data(contact *data);
         void set_left(node *node);
         void set_right(node *node);
+        void set_parent(node *node);
 
         contact *get_data(void) const;
         node *get_left(void) const;
         node *get_right(void) const;
+        node *get_parent(void) const;
     };
 }
 
