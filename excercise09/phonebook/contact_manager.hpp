@@ -9,6 +9,7 @@ private:
 public:
     void add(const contact &contact);
     void remove(const std::string &name);
+    void find(const std::string &name);
     void print(void);
     //void sort(const int key); /* Not implemented */
 };

@@ -11,13 +11,18 @@
 
 void contact_manager::add(const contact &contact)
 {
-    /* TODO: Binary list add */
+    /* TODO: Add a binary tree add */
     //data.push_back(contact);
 }
 
 void contact_manager::remove(const std::string &name)
 {
-    /* TODO: Binary list add */
+    /* TODO: Add a binary tree remove */
+}
+
+void find(const std::string &name)
+{
+    /* TODO: Add a function search */
 }
 
 void contact_manager::print(void)
