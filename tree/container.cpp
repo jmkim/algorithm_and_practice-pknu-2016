@@ -64,9 +64,6 @@ namespace container
     template<class NODE, typename DATA> class binary_tree
     {
     protected:
-        virtual bool is_empty(void) const = 0;
-        virtual int get_size(void) const = 0;
-
         static NODE *create_node(const DATA &key) { return new NODE(key); }
         static void destroy_node(const NODE *node) { delete node; }
 
@@ -113,13 +110,20 @@ namespace container
                 if(n->get_right() != NULL) queue.push(n->get_right());
             }
         }
+
+    public:
+        virtual bool is_empty(void) const = 0;
+        virtual int get_size(void) const = 0;
     };
 
     template<class NODE, typename DATA> class binary_search_tree : public binary_tree<NODE, DATA>
     {
-    private:
+    protected:
         NODE *root;
         int size;
+
+        binary_search_tree(void) : size(0) { root = NULL; }
+        ~binary_search_tree(void) { while(! is_empty()) delete(root); }
 
         NODE *get_minimum(const NODE *node)
         {
@@ -145,10 +149,7 @@ namespace container
             return p;
         }
 
-    protected:
-        binary_search_tree(void) : size(0) { root = NULL; }
-        ~binary_search_tree(void) { while(! is_empty()) delete(root); }
-
+    public:
         bool is_empty(void) const { return root == NULL; }
         int get_size(void) const { return size; }
 
