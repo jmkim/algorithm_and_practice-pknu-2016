@@ -149,20 +149,6 @@ namespace container
             return p;
         }
 
-    public:
-        bool is_empty(void) const { return root == NULL; }
-        int get_size(void) const { return size; }
-
-        NODE *search(const DATA &key)
-        {
-            NODE *n = NULL;
-            traverse_inorder(root,
-                [&] (NODE *node) => { if(key == node->get()->get()) n = node; return; }
-            );
-
-            return n;
-        }
-
         void insert(const DATA &key)
         {
             NODE *node = create_node(key);
@@ -188,8 +174,6 @@ namespace container
 
             node->set_parent(p);
         }
-
-        void delete(const DATA &key) { delete(search(key)); }
 
         void delete(const NODE *node)
         {
@@ -228,5 +212,21 @@ namespace container
 
             destroy_node(node);
         }
+
+    public:
+        bool is_empty(void) const { return root == NULL; }
+        int get_size(void) const { return size; }
+
+        NODE *search(const DATA &key)
+        {
+            NODE *n = NULL;
+            traverse_inorder(root,
+                [&] (NODE *node) => { if(key == node->get()->get()) n = node; return; }
+            );
+
+            return n;
+        }
+
+        void delete(const DATA &key) { delete(search(key)); }
     };
 }
