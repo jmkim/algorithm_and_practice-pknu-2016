@@ -121,6 +121,30 @@ namespace container
         NODE *root;
         int size;
 
+        NODE *get_minimum(const NODE *node)
+        {
+            while(node->get_left() != NULL) node = node->get_left();
+            return node;
+        }
+
+        NODE *get_inorder_successor(const NODE *node)
+        {
+            /* Downward */
+            if(node->get_right() != NULL) return get_minimum(node->get_right());
+
+            /* Upward */
+            NODE *n = node;
+            NODE *p = node->get_parent();
+
+            while(p != NULL && n == p->get_right())
+            {
+                n = p;
+                p = p->get_parent();
+            }
+
+            return p;
+        }
+
     protected:
         binary_search_tree(void) : size(0) { root = NULL; }
         ~binary_search_tree(void) { while(! is_empty()) delete(root); }
@@ -202,30 +226,6 @@ namespace container
             }
 
             destroy_node(node);
-        }
-
-        NODE *get_minimum(const NODE *node)
-        {
-            while(node->get_left() != NULL) node = node->get_left();
-            return node;
-        }
-
-        NODE *get_inorder_successor(const NODE *node)
-        {
-            /* Downward */
-            if(node->get_right() != NULL) return get_minimum(node->get_right());
-
-            /* Upward */
-            NODE *n = node;
-            NODE *p = node->get_parent();
-
-            while(p != NULL && n == p->get_right())
-            {
-                n = p;
-                p = p->get_parent();
-            }
-
-            return p;
         }
     };
 }
