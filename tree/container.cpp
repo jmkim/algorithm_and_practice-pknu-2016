@@ -149,9 +149,8 @@ namespace container
             return p;
         }
 
-        void insert(const DATA &key)
+        void insert(const NODE *node)
         {
-            NODE *node = create_node(key);
             if(is_empty()) root = node;
 
             NODE *n = root;
@@ -227,6 +226,7 @@ namespace container
             return n;
         }
 
+        void insert(const DATA &key) { insert(create_node(key)); }
         void delete(const DATA &key) { delete(search(key)); }
     };
 }
