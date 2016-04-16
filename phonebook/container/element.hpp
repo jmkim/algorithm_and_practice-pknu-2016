@@ -5,9 +5,14 @@ namespace container
 {
     template<typename D_KEY> class element
     {
+    private:
+        const D_KEY key;
+
     public:
-        virtual bool is_equal(const element &element) = 0;
-        virtual bool is_less_than(const element &element) = 0;  /* Return true if `me' is less than `element' */
+        element(const D_KEY &key) : key(key) {}
+
+        bool is_equal(const element *element) const;
+        bool is_less_than(const element *element) const; /* Return true if `me' is less than `element' */
     };
 }
 
