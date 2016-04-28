@@ -1,0 +1,1274 @@
+StateAbb	PlaceName	longitude	latitude	DistancetoCapitalCity_km
+AL	High Pine Creek Watershed Dam Number 3	-85.35328	33.17512	124
+AL	High Pine Creek Watershed Dam Number 4	-85.37995	33.21179	125
+AL	High Pine Creek Watershed Dam Number 5	-85.38828	33.21345	125
+AL	High Pine Creek Watershed Dam Number 6	-85.40662	33.18512	122
+AL	High Pine Lake Number 11	-85.43950	33.09819	112
+AL	High Pine Water Shed Dam Number 11	-85.44162	33.10012	112
+AL	High Point	-86.87777	33.33372	123
+AL	High Point	-86.39581	33.62621	141
+AL	High Point	-87.48500	33.20706	149
+AL	High Point	-85.47774	33.97177	193
+AL	High Point	-86.27859	34.24232	209
+AL	High Point	-87.59501	34.02000	223
+AL	High Point	-85.72830	34.57147	250
+AL	High Point	-86.44777	34.69648	260
+AL	High Point	-86.26748	34.71120	261
+AL	High Point	-85.98498	34.92842	286
+AL	High Point Baptist Church	-86.27748	34.24259	209
+AL	High Point Cemetery	-86.27776	34.24259	209
+AL	High Point Church	-86.14109	34.41287	228
+AL	High Point Church of God	-85.67969	34.58370	253
+AL	High Point School (historical)	-85.72664	34.56870	250
+AL	High Pointe Golf Course	-88.16730	30.75919	253
+AL	High Ridge	-85.89495	32.06265	47
+AL	High Ridge Cemetery	-85.77245	32.02321	59
+AL	High Ridge Church	-85.74939	32.01821	61
+AL	High Rock	-86.69055	33.95954	182
+AL	High Rock Church	-86.68694	33.96177	182
+AL	High Rock Point	-86.04026	34.97758	291
+AL	High Rocky Hill	-88.13362	31.36795	209
+AL	High Run	-88.01446	32.59930	167
+AL	High Shoals	-85.34134	33.23401	130
+AL	High Shoals Falls	-85.33283	33.23715	131
+AL	High Street Baptist Church	-86.03720	34.03176	187
+AL	High Street Church of Christ	-87.69809	34.72787	295
+AL	High Top	-86.33527	34.94175	287
+AL	High View	-85.75942	34.74480	269
+AL	Higher Ground Baptist Church	-88.25844	30.44500	285
+AL	Highfalls	-85.79993	31.09851	146
+AL	Highfield Branch	-85.63080	34.73925	271
+AL	Highfield Creek	-85.66414	34.76286	272
+AL	Highland	-86.67332	32.79318	62
+AL	Highland	-85.82552	33.35567	118
+AL	Highland Avenue Baptist Church	-86.28219	32.37264	3
+AL	Highland Avenue Elementary School	-86.28108	32.37153	3
+AL	Highland Avenue Historic District	-86.78916	33.50288	136
+AL	Highland Baptist Church	-86.67054	32.80290	63
+AL	Highland Baptist Church	-86.60972	34.48648	238
+AL	Highland Baptist Church	-87.67864	34.81842	303
+AL	Highland Baptist Hospital	-86.78999	33.50288	136
+AL	Highland Cemetery	-86.66970	32.80318	63
+AL	Highland Cemetery	-85.81524	33.65760	150
+AL	Highland Cemetery	-85.61524	33.93316	185
+AL	Highland Church	-86.77388	33.34094	119
+AL	Highland Church	-86.69638	33.39039	122
+AL	Highland Church	-88.18306	30.77185	254
+AL	Highland Church of Christ	-86.22497	32.33847	4
+AL	Highland Church of God	-86.67332	32.79263	62
+AL	Highland Country Club	-88.18389	30.67797	261
+AL	Highland Crest	-86.84638	33.37789	126
+AL	Highland Elementary Grade School	-85.40438	31.23156	149
+AL	Highland Evangelic Church	-86.27108	32.37208	2
+AL	Highland Forest	-86.99472	33.48983	143
+AL	Highland Gardens	-86.27997	32.40708	6
+AL	Highland Gardens Baptist Church	-86.27747	32.40097	5
+AL	Highland Gardens Church of Christ	-86.27830	32.39847	5
+AL	Highland Gardens Elementary School	-86.27914	32.39903	5
+AL	Highland Home	-86.31385	31.95348	45
+AL	Highland Home Church	-86.30830	31.95376	45
+AL	Highland Home Church of Christ	-86.31441	31.95182	45
+AL	Highland Home High School	-86.31330	31.95293	45
+AL	Highland Home Post Office	-86.31441	31.95293	45
+AL	Highland Home Volunteer Fire and Rescue	-86.31339	31.92203	49
+AL	Highland Lake	-86.41971	33.88510	170
+AL	Highland Lake	-86.42368	33.88725	170
+AL	Highland Lake Dam	-86.43332	33.88010	170
+AL	Highland Lakes Census Designated Place	-86.65130	33.39838	121
+AL	Highland Memorial Gardens	-86.95999	33.42650	136
+AL	Highland Methodist Church	-87.67836	34.76370	298
+AL	Highland Oaks Golf Course	-85.49822	31.22926	144
+AL	Highland Park	-85.95801	31.78988	69
+AL	Highland Park	-86.81610	33.48955	136
+AL	Highland Park	-87.67086	34.73342	294
+AL	Highland Park	-87.66975	34.74287	295
+AL	Highland Park Church	-87.66947	34.73064	294
+AL	Highland Park Church of Christ	-87.66697	34.75814	297
+AL	Highland Park Methodist Church	-85.40827	31.21073	150
+AL	Highland Park Presbyterian Church (historical)	-86.28275	32.37097	3
+AL	Highland Park Public Use Area	-85.09965	31.63128	136
+AL	Highland Park School	-87.66281	34.73926	295
+AL	Highland Park United Methodist Church	-85.40866	31.20810	151
+AL	Highland Pond	-88.26460	31.53221	211
+AL	Highland Post Office (historical)	-86.79360	32.82874	73
+AL	Highland Residence Park	-86.78582	33.50622	137
+AL	Highland School	-85.98942	34.08149	193
+AL	Highland Spring	-86.77193	33.34456	120
+AL	Highland Village	-86.34080	32.36125	8
+AL	Highland Volunteer Fire Department	-85.96374	34.09905	195
+AL	Highlands	-86.91944	33.29845	121
+AL	Highlands Baptist Church	-86.63444	34.76342	269
+AL	Highlands Elementary School	-86.63249	34.75787	269
+AL	Highlands Medical Center	-86.04738	34.66228	256
+AL	Highlands Methodist Church	-86.79527	33.50149	137
+AL	Highlands Methodist Church	-86.62972	34.75370	268
+AL	Highlands Park	-86.88027	33.50205	140
+AL	Highlandview Church	-86.57887	33.60733	142
+AL	Highlog (historical)	-85.90468	32.16070	40
+AL	Highmound	-86.37887	34.14398	199
+AL	Highmound Church	-86.38054	34.14287	198
+AL	Highnote	-85.69243	30.99601	160
+AL	Highpine Creek Lake Number 1	-85.33661	33.21845	129
+AL	Highpine Creek Watershed Dam Number 1	-85.33661	33.21845	129
+AL	Highpoint	-85.88664	34.34315	223
+AL	Highpoint Baptist Church	-88.14182	30.76148	252
+AL	Highpoint Estates	-86.25413	32.40097	5
+AL	Highpoint Overlook	-88.08198	34.81064	321
+AL	Highrock Lake	-85.62231	33.71567	162
+AL	Highsmith Branch	-85.81689	31.84210	71
+AL	Hight School (historical)	-86.63333	34.84870	279
+AL	Hightogy	-88.09475	33.69511	227
+AL	Hightogy Church	-88.09503	33.69483	227
+AL	Hightower	-85.39551	33.53178	153
+AL	Hightower Cemetery	-87.05029	34.97342	299
+AL	Hightower Hollow	-87.37280	34.60009	270
+AL	Hightown	-87.58890	33.24317	159
+AL	Highview	-87.65084	33.29734	167
+AL	Highview School	-86.27581	34.24426	209
+AL	Highway 247 Volunteer Fire Department	-87.90571	34.62685	295
+AL	Highway 36 Church	-87.21474	34.41954	245
+AL	Highway 45 Baptist Church	-88.11472	30.74963	251
+AL	Highway 51 Volunteer Fire Department	-85.54663	32.14214	71
+AL	Highway Cemetery	-85.35412	33.27706	133
+AL	Highway Church	-85.96970	34.39176	227
+AL	Highway First Congregational Methodist Church	-85.35384	33.27706	133
+AL	Highway Five Church	-87.38668	33.91622	202
+AL	Highway Ridge Memorial Gardens	-85.34856	33.27790	133
+AL	Highway School (historical)	-87.86529	32.90568	163
+AL	Hill Branch	-88.03363	32.17820	168
+AL	Hill Cemetery	-86.02190	32.31542	23
+AL	Hill Cemetery	-85.46467	32.60375	79
+AL	Hill Cemetery	-86.31275	33.16012	89
+AL	Hill Cemetery	-87.72139	31.65460	159
+AL	Hill Cemetery	-88.11530	32.85069	183
+AL	Hill Cemetery	-88.13836	32.97457	189
+AL	Hill Cemetery	-88.07114	33.84705	237
+AL	Hill Cemetery	-86.60055	34.50093	240
+AL	Hill Cemetery	-88.10559	33.87066	241
+AL	Hill Cemetery	-87.13862	34.41593	243
+AL	Hill Cemetery	-87.10807	34.50371	251
+AL	Hill Cemetery	-85.85664	34.62842	255
+AL	Hill Cemetery	-87.44252	34.64954	277
+AL	Hill Cemetery	-87.50808	34.91620	307
+AL	Hill Chapel	-86.34332	34.53759	242
+AL	Hill Creek	-87.18222	33.02957	114
+AL	Hill Creek	-87.10638	33.11484	116
+AL	Hill Creek Mine	-87.12583	33.12373	118
+AL	Hill Crest Baptist Church	-85.83413	33.67288	151
+AL	Hill Crest Behavioral Health Services	-86.73012	33.54882	139
+AL	Hill Dam	-86.27663	32.09181	29
+AL	Hill Elementary School	-86.83082	33.51233	139
+AL	Hill Hospital of Sumter County	-88.29565	32.49204	192
+AL	Hill Lake	-85.23829	32.91894	114
+AL	Hill Lake Number Two	-86.15809	32.18850	21
+AL	Hill Mountain	-88.26808	32.04043	193
+AL	Hill Mountain	-86.38638	34.56926	246
+AL	Hill Number 1	-86.46887	33.68566	149
+AL	Hill Number 2	-86.48332	33.68760	149
+AL	Hill Place Cemetery	-87.55112	32.67819	127
+AL	Hill Pond	-86.10116	34.81978	274
+AL	Hill Pond Dam	-86.10332	34.81842	273
+AL	Hill Poultry Farm	-85.62028	34.92917	291
+AL	Hill Push Mine	-87.46168	33.97650	212
+AL	Hill Ranch Dam	-88.17003	32.78680	186
+AL	Hill Ranch Pond	-88.17003	32.78680	186
+AL	Hill School (historical)	-86.58777	34.96203	291
+AL	Hill Spring Baptist Church	-88.09917	31.24600	213
+AL	Hill Spring Branch	-87.79448	34.29482	258
+AL	Hill Springs (historical)	-86.34220	33.14373	88
+AL	Hill Springs Cemetery	-88.09917	31.24545	214
+AL	Hill Top	-87.90029	32.25959	155
+AL	Hill Top (historical)	-85.89441	33.83343	167
+AL	Hill Zion Church	-87.62640	32.80124	138
+AL	Hill Zion Church	-87.67029	32.83124	143
+AL	Hill and Hill Dam	-86.30163	32.13681	25
+AL	Hill and Hill Lake	-86.30219	32.13681	25
+AL	Hill of Knowledge School (historical)	-86.27192	33.57788	135
+AL	Hill-Thompson Cemetery	-85.45689	32.98873	103
+AL	Hillabee Baptist Church	-85.91163	32.96596	75
+AL	Hillabee Campground Cemetery	-85.90441	33.04873	84
+AL	Hillabee Campground Methodist Church	-85.90441	33.04901	84
+AL	Hillabee Creek	-85.85330	32.96457	77
+AL	Hillabee Creek	-85.76274	33.58872	144
+AL	Hillabee Post Office (historical)	-85.84218	33.19234	100
+AL	Hillabee Ridge	-85.90469	33.16845	96
+AL	Hillabeehago Branch	-85.56579	33.14790	109
+AL	Hillabi (historical)	-85.92219	33.09595	88
+AL	Hillake	-86.30860	32.31921	6
+AL	Hillandale	-86.61555	34.73176	265
+AL	Hillard Drift Mine	-87.36528	33.82233	193
+AL	Hillard Mine	-87.35695	33.81816	192
+AL	Hillard and Howard Cemetery	-86.04856	31.76599	68
+AL	Hillards Cross Roads	-85.87800	31.69433	82
+AL	Hillardsville (historical)	-85.20354	31.68350	124
+AL	Hillcrest	-86.28608	32.38597	4
+AL	Hillcrest	-85.81161	31.72516	82
+AL	Hillcrest	-87.47472	32.45152	115
+AL	Hillcrest	-85.85549	31.33100	120
+AL	Hillcrest	-87.54473	33.19123	152
+AL	Hillcrest	-85.82635	33.72232	157
+AL	Hillcrest - Grelot Shopping Center	-88.19128	30.66197	263
+AL	Hillcrest Baptist Church	-86.84054	32.73291	69
+AL	Hillcrest Baptist Church	-85.62577	31.45406	117
+AL	Hillcrest Baptist Church	-85.85383	31.32795	120
+AL	Hillcrest Baptist Church	-87.47473	33.18706	147
+AL	Hillcrest Baptist Church	-88.19168	30.66454	263
+AL	Hillcrest Cemetery	-86.84138	32.73263	69
+AL	Hillcrest Cemetery	-86.12107	31.71849	72
+AL	Hillcrest Cemetery	-86.01383	31.40294	108
+AL	Hillcrest Cemetery	-87.12833	33.12984	118
+AL	Hillcrest Cemetery	-87.31820	31.53000	136
+AL	Hillcrest Cemetery	-85.77246	33.82177	169
+AL	Hillcrest Cemetery	-87.17886	31.03185	171
+AL	Hillcrest Cemetery	-86.17720	34.19454	204
+AL	Hillcrest Cemetery	-87.15223	34.18750	219
+AL	Hillcrest Cemetery	-87.79780	33.88011	222
+AL	Hillcrest Cemetery	-87.61751	34.22555	243
+AL	Hillcrest Church	-85.62549	31.45378	117
+AL	Hillcrest Church	-85.77438	31.12712	144
+AL	Hillcrest Church	-87.79669	33.88011	222
+AL	Hillcrest Country Club	-86.81693	33.47316	134
+AL	Hillcrest Estates	-86.92777	33.59455	151
+AL	Hillcrest Garden	-85.22939	32.87652	112
+AL	Hillcrest High School	-87.53750	33.13000	147
+AL	Hillcrest Memorial Gardens	-88.15282	34.46065	292
+AL	Hillcrest Middle School	-87.53972	33.13250	148
+AL	Hillcrest Plaza Shopping Center	-88.18968	30.67540	262
+AL	Hillcrest Pond	-86.37829	31.19517	129
+AL	Hillcrest Pond	-86.40958	31.19883	129
+AL	Hillcrest Pond Number 1 Dam	-86.37829	31.19517	129
+AL	Hillcrest Pond Number 2 Dam	-86.40829	31.19851	129
+AL	Hillcrest Ponds	-86.41024	31.19577	130
+AL	Hillcrest Road Commercial Park	-88.19130	30.67100	262
+AL	Hillcrest School	-85.85383	31.32295	121
+AL	Hillcrest Square Building	-88.19140	30.66927	262
+AL	Hilldale Baptist Church	-86.69916	33.65205	149
+AL	Hilldale Farm Lake	-86.62345	33.72480	155
+AL	Hilldale Farm Lake Dam	-86.62499	33.72510	156
+AL	Hilley Branch	-85.98942	34.49481	238
+AL	Hilley Point	-86.07164	34.47759	236
+AL	Hillhouse Lake	-86.48933	33.53009	132
+AL	Hillian Store (historical)	-86.12026	34.49259	237
+AL	Hilliard	-87.37640	33.81455	192
+AL	Hilliard African Methodist Episcopal Zion Church	-86.29136	32.37236	4
+AL	Hillman	-86.90805	33.44511	135
+AL	Hillman Ferry (historical)	-88.05419	32.65319	172
+AL	Hillman Gardens	-86.90305	33.44789	135
+AL	Hillman Mine	-86.90416	33.42650	133
+AL	Hillman Park	-86.90055	33.44483	135
+AL	Hillman Pond	-87.96643	31.30386	199
+AL	Hillmans Island (historical)	-88.09724	32.68597	177
+AL	Hillmont	-86.62416	34.72315	265
+AL	Hills Chapel	-86.12524	32.03404	38
+AL	Hills Chapel	-86.82528	34.31982	224
+AL	Hills Chapel	-86.43971	34.43092	231
+AL	Hills Chapel	-86.58749	34.96203	291
+AL	Hills Chapel Cemetery	-86.12690	32.03515	38
+AL	Hills Chapel Church	-85.59884	32.81624	80
+AL	Hills Chapel School (historical)	-86.12024	32.01876	40
+AL	Hills Christian Methodist Episcopal Chapel	-86.55137	33.54094	134
+AL	Hills Creek	-86.94443	32.04765	73
+AL	Hills Creek	-86.96721	31.93765	81
+AL	Hills Lake	-86.30056	32.13832	25
+AL	Hills Lake	-85.25169	32.87714	111
+AL	Hills Lake (historical)	-85.13327	31.98766	114
+AL	Hills Landing (historical)	-88.15001	31.75682	191
+AL	Hills Mill (historical)	-85.86246	33.34789	116
+AL	Hills Mills (historical)	-87.86472	31.05629	210
+AL	Hills Store (historical)	-87.42557	33.95927	208
+AL	Hills Upper Landing (historical)	-88.16808	32.98235	192
+AL	Hillsboro	-87.19168	34.63926	268
+AL	Hillsboro	-86.42332	34.93898	287
+AL	Hillsboro Area Volunteer Fire Department	-87.15783	34.64788	267
+AL	Hillsboro Elementary School	-87.19418	34.63398	267
+AL	Hillsboro Heights Baptist Church	-86.61888	34.70092	262
+AL	Hillsboro Post Office	-87.19252	34.63704	267
+AL	Hillsboro School (historical)	-86.42499	34.93981	287
+AL	Hillsdale	-86.60498	33.14540	93
+AL	Hillsdale	-87.48250	33.20123	148
+AL	Hillsdale	-87.26640	33.86844	192
+AL	Hillsdale Community Center	-88.20197	30.70290	260
+AL	Hillsdale Heights	-88.20084	30.70019	260
+AL	Hillsdale Heights Church of God	-88.20723	30.70519	260
+AL	Hillsdale Heights Park	-88.20139	30.70269	260
+AL	Hillsdale Methodist Church	-87.71642	34.96564	319
+AL	Hillsdale Middle School	-88.20140	30.70399	260
+AL	Hillsdale Presbyterian Church	-88.20778	30.70408	261
+AL	Hillside (historical)	-86.66665	32.59902	47
+AL	Hillside Cemetery	-85.81746	33.65760	150
+AL	Hillside Chapel	-85.06493	32.46903	113
+AL	Hillside Memorial Gardens	-86.41718	31.31378	117
+AL	Hillside School	-85.98247	33.51677	131
+AL	Hillside Spring	-87.08279	34.88703	291
+AL	Hillsman Gap	-86.18386	33.42872	119
+AL	Hillsville (historical)	-86.22775	33.42789	119
+AL	Hillswood	-87.47917	33.18456	147
+AL	Hilltop	-86.92999	33.34261	126
+AL	Hilltop Church	-86.58666	34.32204	220
+AL	Hilltop Church	-88.21892	33.84483	246
+AL	Hilltop Park	-88.18334	30.69047	260
+AL	Hillview	-86.88416	33.57566	147
+AL	Hillview	-87.44500	33.22234	147
+AL	Hillview Acres	-86.62277	34.74231	267
+AL	Hillview Baptist Church	-86.88333	33.57306	147
+AL	Hillview Cemetery	-85.92941	32.95068	73
+AL	Hillview Church	-86.90944	33.34817	126
+AL	Hillview Elementary School	-86.87027	33.56816	146
+AL	Hillview Trailer Park	-88.21327	30.57149	272
+AL	Hillwood	-86.25413	32.35486	0
+AL	Hillwood	-86.36136	32.92540	64
+AL	Hillwood	-86.56305	34.63759	255
+AL	Hillwood Baptist Church	-86.56305	34.62898	254
+AL	Hillwood Plaza Shopping Center	-88.19229	30.64150	264
+AL	Hillwood Plaza Shopping Center (duplicate point)	-88.19232	30.64179	264
+AL	Hillwood West	-86.27691	32.35736	2
+AL	Hilton Birmingham Perimeter Park	-86.72400	33.43550	127
+AL	Hilton Mckee Lake	-87.48761	32.52827	117
+AL	Hilton Mckee Lake Dam	-87.48834	32.52847	117
+AL	Hilview Church	-86.92112	34.41315	236
+AL	Hincle Lake	-85.39759	32.73802	91
+AL	Hines	-87.64364	34.95981	316
+AL	Hines Cemetery	-86.39887	34.47926	236
+AL	Hines Cemetery	-86.44721	34.63787	254
+AL	Hines Creek	-87.79501	32.69319	149
+AL	Hines Gap	-86.42527	34.62148	252
+AL	Hines Lake	-87.09255	31.09674	161
+AL	Hines Landing	-87.84474	32.54736	151
+AL	Hines Memorial Baptist Church	-87.72253	34.27093	252
+AL	Hines Mill (historical)	-87.04362	34.65981	266
+AL	Hines Mountain	-86.11720	33.84788	166
+AL	Hinkle Dam	-85.39661	32.73846	91
+AL	Hinote Cemetery	-87.64276	30.65714	230
+AL	Hinson Cemetery	-86.01356	31.80904	65
+AL	Hinson Mill (historical)	-85.65604	31.12934	148
+AL	Hinsons Store (historical)	-85.51521	31.03129	163
+AL	Hinton	-88.44225	32.09209	208
+AL	Hinton Cemetery	-86.69054	32.63180	51
+AL	Hinton Church	-88.44031	32.09098	208
+AL	Hinton School	-87.43139	32.48513	111
+AL	Hintons Mill (historical)	-87.57501	33.09734	148
+AL	Hiphill Landing	-87.65556	33.03207	151
+AL	Hipps Creek	-87.64086	34.64981	285
+AL	Hipps Hollow	-87.65586	34.64037	285
+AL	Hirsch	-85.12188	32.17182	109
+AL	Hissop	-86.15330	32.89235	60
+AL	Hissop Post Office	-86.15302	32.89235	60
+AL	Hitchcock Branch	-88.19254	34.98759	343
+AL	Hitchcock Hollow	-88.18226	34.99703	343
+AL	Hitchcock Landing (historical)	-88.19476	34.99231	343
+AL	Hitching Beech	-85.59802	33.79538	171
+AL	Hix (historical)	-85.97192	34.46203	235
+AL	Hixon	-87.42610	31.57294	141
+AL	Hixon	-88.22475	32.54569	186
+AL	Hixon Church	-88.24197	32.54069	188
+AL	Hixon Lookout Tower	-87.43999	31.57322	142
+AL	Hixson Hall	-86.80166	33.50205	137
+AL	Hoagtown	-87.02777	33.50983	147
+AL	Hobbie Farm	-86.24469	32.19403	18
+AL	Hobbie Lee Dam	-85.67328	32.04015	65
+AL	Hobbie Lee Lake	-85.67352	32.04314	65
+AL	Hobbs Bar (historical)	-87.39666	32.14098	110
+AL	Hobbs Cemetery	-86.53193	34.61898	252
+AL	Hobbs Island	-87.39610	31.95209	116
+AL	Hobbs Island	-86.53471	34.53704	243
+AL	Hobbs Island	-86.54610	34.55398	245
+AL	Hobbs Island Sewage Treatment Plant	-86.55805	34.58926	249
+AL	Hobbs Landing (historical)	-87.39805	31.94793	117
+AL	Hobbs Prospect	-85.90691	33.32039	112
+AL	Hobbs Spring Number One	-86.96917	34.94703	295
+AL	Hobbs Spring Number Two	-86.96973	34.94758	295
+AL	Hobdy	-85.53161	31.81516	91
+AL	Hobdys Bridge	-85.66244	31.78516	85
+AL	Hobgood	-87.63475	34.71426	291
+AL	Hoboken	-85.14882	31.91183	116
+AL	Hoboken	-87.87695	32.02598	157
+AL	Hoboken Baptist Church	-87.87668	32.02959	157
+AL	Hoboken Cemetery	-87.87640	32.03043	157
+AL	Hobson	-85.40745	33.28067	130
+AL	Hobson	-86.92999	33.50983	142
+AL	Hobson	-88.15334	31.47239	204
+AL	Hobson Assembly of God Church	-88.15279	31.47267	204
+AL	Hobson City	-85.84413	33.62149	145
+AL	Hobson City Park	-85.84219	33.61927	145
+AL	Hobson Creek	-87.73530	34.13232	240
+AL	Hobson Gap	-86.43526	34.21260	206
+AL	Hobson School (historical)	-87.68890	32.76680	142
+AL	Hobson Volunteer Fire Department	-88.15202	31.46725	205
+AL	Hocutts Mill (historical)	-87.62640	33.53567	183
+AL	Hodge	-85.94942	34.61953	253
+AL	Hodge Chapel Cemetery	-87.82252	33.87288	223
+AL	Hodge Church	-85.94887	34.62092	253
+AL	Hodge Creek	-86.83746	31.16129	144
+AL	Hodge Island	-85.58440	33.17484	110
+AL	Hodge Lake	-87.75407	33.31574	176
+AL	Hodge Mine	-85.87274	33.32622	113
+AL	Hodge Mountain	-86.24276	34.93703	286
+AL	Hodgens Creek	-87.89446	32.07737	157
+AL	Hodges	-87.92642	34.32704	268
+AL	Hodges Cemetery	-86.87444	33.62260	152
+AL	Hodges Cemetery	-87.84002	33.87122	224
+AL	Hodges Cemetery	-87.21863	34.46593	250
+AL	Hodges Cemetery	-87.92698	34.32788	268
+AL	Hodges Cemetery	-86.94751	34.97620	297
+AL	Hodges Chapel	-87.82280	33.87316	223
+AL	Hodges Creek	-85.70301	33.10068	98
+AL	Hodges Dam	-87.91837	34.30676	266
+AL	Hodges Junior High School	-87.93170	34.33593	269
+AL	Hodges Mathis Mill Creek	-85.27882	31.43378	138
+AL	Hodges Pond	-88.03901	31.72017	182
+AL	Hodges Post Office	-87.92587	34.32704	268
+AL	Hodges Poultry Farms	-85.83889	31.11056	144
+AL	Hodges Volunteer Fire Department	-87.92632	34.32828	268
+AL	Hodgesville	-85.37299	31.08268	164
+AL	Hodgesville Church	-85.37104	31.08351	164
+AL	Hodgesville Volunteer Fire Department	-85.37472	31.11481	161
+AL	Hodgewood	-88.30224	31.93737	198
+AL	Hodnett Creek	-85.59078	32.49903	65
+AL	Hodnett Mill Creek	-85.60884	33.02790	96
+AL	Hoehn Mine	-87.72862	33.40512	180
+AL	Hoff Pond	-85.63613	32.12890	64
+AL	Hoff Pond Dam	-85.63495	32.12848	64
+AL	Hoffman Rhyne Lake	-86.73831	32.25514	47
+AL	Hog Bayou	-88.05500	30.75102	247
+AL	Hog Bayou	-87.95166	30.24715	284
+AL	Hog Branch	-87.49054	31.08435	183
+AL	Hog Branch	-87.92558	33.33651	190
+AL	Hog Branch	-86.57249	34.34176	222
+AL	Hog Creek	-86.68859	31.97931	58
+AL	Hog Creek	-86.53581	32.88651	64
+AL	Hog Creek	-85.93384	31.60766	89
+AL	Hog Creek	-86.65635	31.40739	112
+AL	Hog Creek	-85.45829	33.92260	189
+AL	Hog Creek	-86.37415	34.25787	211
+AL	Hog Creek Hollow	-86.37415	34.25565	211
+AL	Hog Foot Creek	-86.51190	31.11907	139
+AL	Hog Heaven	-87.17640	34.38815	241
+AL	Hog Hollow	-87.05140	34.27927	226
+AL	Hog Hollow	-88.02031	34.89370	325
+AL	Hog Island	-85.65691	34.21259	213
+AL	Hog Island (historical)	-85.04993	32.26876	114
+AL	Hog Island (historical)	-87.43863	34.79314	292
+AL	Hog Jaw	-86.56027	34.33232	221
+AL	Hog Jaw Creek	-86.57416	34.34065	222
+AL	Hog Mountain	-85.84968	33.07595	88
+AL	Hog Mountain	-86.68777	33.98788	185
+AL	Hog Mountain	-86.95417	34.21149	216
+AL	Hog Mountain Goldmine	-85.85135	33.07262	88
+AL	Hog Pen Branch	-86.76385	31.09462	148
+AL	Hog Pen Branch	-85.92414	34.12954	199
+AL	Hog Shoals	-87.47445	33.25290	151
+AL	Hog Wallow Ridge	-88.41809	32.12792	205
+AL	Hogan Creek	-87.32444	32.19931	102
+AL	Hogbed Creek	-86.34858	32.65346	34
+AL	Hogeland Creek	-86.78638	33.81260	169
+AL	Hoggle Cemetery	-87.62641	34.17204	238
+AL	Hoggle Church	-87.62780	34.17288	238
+AL	Hoggle Ridge	-87.64002	34.15288	237
+AL	Hogglesville	-87.49167	32.85429	128
+AL	Hoghouse Creek	-87.32196	34.09316	217
+AL	Hoghouse Point	-87.73142	34.64648	288
+AL	Hogjaw Creek	-85.62497	34.99202	298
+AL	Hogjaw Ridge	-85.66608	34.96925	295
+AL	Hogjaw Valley	-85.68250	34.93806	291
+AL	Hogley Wood Cemetery	-87.97918	32.89235	172
+AL	Hogpen Branch	-86.64582	33.51122	133
+AL	Hogpen Creek	-86.80304	33.27845	114
+AL	Hogpen Hollow	-88.07559	34.98175	336
+AL	Hogsick Creek	-87.22889	33.33234	141
+AL	Hogskin Creek	-85.75469	34.69342	263
+AL	Hogue Creek	-85.70886	34.77064	273
+AL	Hogwood Branch	-87.49836	34.58370	273
+AL	Hogyard Ridge	-86.20887	34.97286	290
+AL	Hohenberg Field	-86.21191	32.54597	21
+AL	Hohenlinden Plantation (historical)	-87.96029	32.74208	166
+AL	Hoithlewalli (historical)	-86.08052	32.41958	18
+AL	Hokes Bluff	-85.86636	33.99815	186
+AL	Hokes Bluff Elementary School	-85.87025	33.99649	185
+AL	Hokes Bluff Ferry (historical)	-85.88247	33.99649	185
+AL	Hokes Bluff First Baptist Church	-85.87664	33.99482	185
+AL	Hokes Bluff High School	-85.86997	34.01399	187
+AL	Hokes Bluff Middle School	-85.86886	33.99621	185
+AL	Hokes Bluff Volunteer Fire Department	-85.86558	33.99213	185
+AL	Holbert Springs Primitive Baptist Church	-87.16113	34.87009	291
+AL	Holcim Axis Quarry	-87.97731	30.94652	226
+AL	Holcomb Branch	-87.90531	34.35760	270
+AL	Holcomb Cemetery	-87.67696	33.98538	224
+AL	Holcomb Lake	-86.54511	33.65215	146
+AL	Holden Cemetery	-87.49306	34.08667	224
+AL	Holden Cemetery	-87.47197	34.89564	303
+AL	Holder Branch	-85.61247	34.90758	289
+AL	Holder Cemetery	-86.71333	34.75565	269
+AL	Holders Ferry (historical)	-87.89250	31.35933	190
+AL	Holding Cemetery	-86.76000	34.64176	258
+AL	Holdridge Branch	-85.77246	33.19567	104
+AL	Holdridge Pond	-86.02124	32.95250	70
+AL	Holdridges Mill (historical)	-86.90388	32.63291	68
+AL	Holetah Creek	-88.20919	32.61541	186
+AL	Holiday Beach	-87.17222	33.22234	129
+AL	Holiday Gardens	-86.71054	33.52205	136
+AL	Holiday Park	-87.78527	30.88185	219
+AL	Holiday Park Estates	-86.66971	33.65316	149
+AL	Holiday Plaza Shopping Center	-86.62638	34.71259	264
+AL	Holiday Raceway	-87.16666	33.22234	128
+AL	Holiday Shopping Center	-86.03053	34.64786	255
+AL	Holiday Shores	-87.55917	33.39512	168
+AL	Holiday Shores	-86.31721	34.44592	232
+AL	Holiday Village	-85.76521	31.34100	122
+AL	Holiness Chapel (historical)	-85.54882	31.10184	155
+AL	Holiness Church	-86.25245	31.27850	120
+AL	Holiness Church	-87.75334	32.07932	144
+AL	Holiness Church	-87.78779	32.77652	151
+AL	Holiness Church	-87.90057	32.18626	156
+AL	Holiness Church	-87.94057	32.08515	161
+AL	Holiness Church	-88.26614	32.35958	189
+AL	Holiness Church	-88.27697	32.27847	190
+AL	Holiness Church	-88.29306	30.76186	262
+AL	Holiness Church	-88.39501	30.71908	272
+AL	Holiness Church (historical)	-86.89108	31.52822	110
+AL	Holiness Church (historical)	-86.27637	34.41231	228
+AL	Holiness Tabernacle	-88.36670	32.43986	199
+AL	Holiness Tabernacle (historical)	-85.40493	31.22518	149
+AL	Holiness Temple of Alexandria	-85.84747	33.76343	161
+AL	Holland Branch	-87.17194	33.11901	120
+AL	Holland Branch	-86.38554	34.16704	201
+AL	Holland Cemetery	-86.49637	32.58180	34
+AL	Holland Cemetery	-86.11023	31.38822	108
+AL	Holland Cemetery	-87.02164	31.28739	139
+AL	Holland Cemetery	-86.37832	34.16121	200
+AL	Holland Cemetery	-87.77003	34.65565	291
+AL	Holland Chapel	-86.07776	34.75786	267
+AL	Holland Cove	-86.17221	34.90675	283
+AL	Holland Creek	-85.03271	32.48903	116
+AL	Holland Creek	-85.34579	33.65344	167
+AL	Holland Creek	-86.87500	34.99897	299
+AL	Holland Creek Baptist Church	-85.01160	32.47014	118
+AL	Holland Gin	-86.88723	34.96342	295
+AL	Holland Place	-86.94390	34.79814	278
+AL	Holland School (historical)	-86.38830	31.66905	77
+AL	Hollands Chapel	-85.84775	34.62536	254
+AL	Hollaway Point	-85.67608	34.86564	283
+AL	Holley Branch	-86.01883	31.16406	134
+AL	Holley Cemetery	-85.69718	32.77791	70
+AL	Holley Cemetery	-86.43387	33.28539	104
+AL	Holley Cemetery	-87.51362	32.84263	130
+AL	Holley Creek	-87.16222	32.54736	88
+AL	Holley Creek	-87.85500	31.18212	200
+AL	Holley Creek Landing	-87.85444	31.18129	200
+AL	Holley Crossroads	-85.68357	33.80149	169
+AL	Holley Crossroads Missionary Baptist Church	-85.68524	33.80232	169
+AL	Holley Hill	-85.33049	31.71072	113
+AL	Holley Mill Creek	-86.09967	31.17351	132
+AL	Holley Mitchell Church (historical)	-85.79079	32.40625	44
+AL	Holley Pond	-86.24823	31.01046	149
+AL	Holley Store	-86.09911	31.22239	127
+AL	Holleys Ferry Access Point Park	-87.41166	31.97098	117
+AL	Holliday Cemetery	-88.12142	33.85094	240
+AL	Holliday Pond	-87.18946	34.68259	272
+AL	Hollidays Pond	-86.73449	32.19276	48
+AL	Hollifield Memorial Library	-85.47995	32.60763	78
+AL	Holligan and Moore Cemetery	-88.12893	34.10233	261
+AL	Holliman Branch	-85.20021	31.33740	151
+AL	Holliman Cemetery	-87.91752	33.80455	223
+AL	Holliman Lake	-87.05499	32.50847	77
+AL	Holliman Lake Dam	-87.05499	32.50847	77
+AL	Hollimans and O'Neals Mill (historical)	-85.08521	31.43545	151
+AL	Hollinger Creek	-87.56832	31.44739	160
+AL	Hollinger Creek	-87.61610	30.64880	229
+AL	Hollingers Island	-88.11028	30.54825	267
+AL	Hollingers Island Channel	-88.05944	30.52464	266
+AL	Hollingers Island Church	-88.09611	30.55158	266
+AL	Hollingers Island Elementary School	-88.09111	30.55130	265
+AL	Hollingers Landing (historical)	-87.56888	31.44461	160
+AL	Hollingsworth	-85.69774	33.82510	171
+AL	Hollingsworth Cemetery	-87.84417	31.62877	170
+AL	Hollingsworth Cemetery	-87.74335	33.78344	210
+AL	Hollingsworth Mill Creek	-87.74724	33.79066	211
+AL	Hollingsworth School (historical)	-85.69635	33.82732	171
+AL	Hollingsworth School (historical)	-87.99530	33.00485	178
+AL	Hollingworths School (historical)	-86.07080	33.58288	137
+AL	Hollins	-86.14442	33.11762	85
+AL	Hollins Baptist Church	-86.14803	33.11512	85
+AL	Hollins Church of Christ	-86.14497	33.11845	85
+AL	Hollins Fire Tower	-86.08858	33.17345	92
+AL	Hollins Fire and Rescue	-86.14729	33.11541	85
+AL	Hollins Hunter Camp	-86.12414	33.15789	90
+AL	Hollins Spring Church	-86.15747	33.11373	84
+AL	Hollins Springs Baptist Church	-86.24525	33.12373	85
+AL	Hollins Springs Cemetery	-86.15719	33.11428	85
+AL	Hollins Wildlife Camping Area	-86.12025	33.15651	90
+AL	Hollins Wildlife Management Area	-86.12469	33.24984	100
+AL	Hollis (historical)	-86.34996	31.58183	86
+AL	Hollis Cemetery	-86.52776	33.46400	125
+AL	Hollis Cemetery	-86.46054	33.53844	132
+AL	Hollis Cemetery	-88.04503	33.90705	240
+AL	Hollis Cemetery	-88.16615	33.88539	246
+AL	Hollis Creek	-86.34912	31.27600	120
+AL	Hollis Crossroads	-85.63718	33.52372	142
+AL	Hollis Crossroads Volunteer Fire Department	-85.63396	33.51754	141
+AL	Hollis Dam	-85.70663	33.89343	178
+AL	Hollis Ferry (historical)	-87.41556	33.33900	154
+AL	Hollis Memorial Church	-86.06887	34.61203	251
+AL	Hollis Orange Blossom Square	-87.68389	30.40523	255
+AL	Hollis Pond	-85.88692	31.40907	111
+AL	Hollis Pond	-86.94351	34.00673	194
+AL	Hollis Pond Dam	-85.88661	31.40850	111
+AL	Hollis Pond Dam	-86.94500	34.00677	194
+AL	Hollis School (historical)	-85.82523	31.81627	73
+AL	Hollow Field Branch	-87.54892	34.59926	276
+AL	Hollow Hills Park	-86.99444	33.82649	177
+AL	Hollow Rock Branch	-85.84191	34.07621	195
+AL	Holloway	-87.53864	34.89036	305
+AL	Holloway Branch	-86.29801	31.34906	112
+AL	Holloway Branch	-87.96115	34.28538	266
+AL	Holloway Church	-85.96383	31.24350	127
+AL	Holly Branch	-87.49555	31.75293	135
+AL	Holly Creek	-87.93308	33.31901	190
+AL	Holly Creek Church	-87.41918	33.84122	197
+AL	Holly Ferry (historical)	-87.41305	31.96932	117
+AL	Holly Grove	-87.42251	33.83872	197
+AL	Holly Grove Baptist Church	-86.75276	32.94679	80
+AL	Holly Grove Cemetery	-86.74971	32.94512	80
+AL	Holly Grove Cemetery	-86.98164	31.30017	136
+AL	Holly Grove Cemetery	-88.05614	33.56484	215
+AL	Holly Grove Cemetery	-87.60110	30.78880	216
+AL	Holly Grove Church	-87.00970	31.50266	118
+AL	Holly Grove Church	-86.35443	34.17982	202
+AL	Holly Grove Church	-86.23915	34.84398	276
+AL	Holly Grove Methodist Church	-86.23245	31.29933	117
+AL	Holly Grove Mine	-87.42501	33.84178	197
+AL	Holly Grove Number 15 Mine	-87.40834	33.84872	197
+AL	Holly Grove Post Office (historical)	-87.52501	33.84594	203
+AL	Holly Grove School	-88.08475	33.55511	216
+AL	Holly Grove School (historical)	-87.34668	34.17871	226
+AL	Holly Hill Elementary School	-85.84577	31.33850	119
+AL	Holly Hills	-87.77971	30.78297	227
+AL	Holly Hills Country Club and Golf Course	-87.77555	30.78685	226
+AL	Holly Holiness Church	-86.29941	32.39764	6
+AL	Holly Hollow	-87.75975	34.31315	258
+AL	Holly Mill Creek	-87.42054	31.61071	138
+AL	Holly Pond	-86.61638	34.17426	204
+AL	Holly Pond Cemetery	-86.62610	34.18121	205
+AL	Holly Pond High School	-86.61833	34.17649	205
+AL	Holly Pond Post Office	-86.61610	34.17454	204
+AL	Holly Pond United Methodist Church	-86.60972	34.17426	204
+AL	Holly Pond Volunteer Fire Department	-86.61501	34.17476	204
+AL	Holly Spring	-86.81971	33.48538	136
+AL	Holly Spring Branch	-88.00781	34.33510	273
+AL	Holly Spring Cemetery	-85.57163	34.53925	250
+AL	Holly Spring Church	-85.97578	31.64516	83
+AL	Holly Spring Church	-87.98448	34.34315	273
+AL	Holly Spring School (historical)	-86.25248	34.69120	259
+AL	Holly Springs	-85.75135	33.65233	151
+AL	Holly Springs	-86.47832	33.82454	164
+AL	Holly Springs Baptist Church	-86.36581	33.07401	80
+AL	Holly Springs Baptist Church	-85.75219	33.65205	151
+AL	Holly Springs Baptist Church	-87.73612	33.12151	162
+AL	Holly Springs Baptist Church	-87.61417	33.39067	171
+AL	Holly Springs Cemetery	-87.73696	33.12095	162
+AL	Holly Springs Cemetery	-87.61473	33.39067	171
+AL	Holly Springs Cemetery	-87.99724	33.30706	194
+AL	Holly Springs Cemetery	-87.98337	34.34343	273
+AL	Holly Springs Church	-86.46026	33.82593	164
+AL	Holly Springs Church	-87.99808	33.30734	194
+AL	Holly Springs School (historical)	-85.75219	33.65233	151
+AL	Holly Springs School (historical)	-86.25887	34.68898	259
+AL	Holly Springs School (historical)	-87.79475	34.33232	262
+AL	Holly Springs Volunteer Fire Department	-86.45782	33.82623	164
+AL	Hollybranch Cemetery	-86.26858	32.83151	53
+AL	Hollybrook Lake	-86.58915	33.45857	126
+AL	Hollys Ferry (historical)	-86.12828	31.22100	127
+AL	Hollytree	-86.25332	34.79898	271
+AL	Hollytree Cemetery	-86.25665	34.80259	271
+AL	Hollywood	-86.78304	33.47288	133
+AL	Hollywood	-85.97248	34.72425	264
+AL	Hollywood Cemetery	-87.21164	31.00629	175
+AL	Hollywood Junior High School	-85.96470	34.73036	265
+AL	Hollywood Park	-87.58917	33.18512	155
+AL	Hollywood Volunteer Fire Department	-85.96124	34.71777	263
+AL	Holman	-87.82335	33.27984	179
+AL	Holman Bottom	-87.58612	33.22790	158
+AL	Holman Cemetery	-86.25025	32.69235	37
+AL	Holman Church	-87.82363	33.27734	179
+AL	Holman Crossroads	-86.19247	33.10428	83
+AL	Holman Elementary School	-86.75166	33.52955	138
+AL	Holman Hill	-87.58334	33.22734	157
+AL	Holmes Branch	-86.58693	33.41039	121
+AL	Holmes Cemetery	-86.93556	34.33454	228
+AL	Holmes Chapel Cemetery	-87.25891	34.28516	233
+AL	Holmes Freewill Baptist Church	-85.67855	31.63739	97
+AL	Holmes Gap	-86.85778	34.24565	217
+AL	Holmes Medical Museum	-87.68480	30.40616	255
+AL	Holmes Memorial Hospital (historical)	-87.68443	30.40603	255
+AL	Holmes Pond	-85.87003	31.75678	76
+AL	Holmes Prospect	-85.53523	33.40234	134
+AL	Holmes Prospect	-85.55134	33.43150	136
+AL	Holmes Street Baptist Church	-88.08556	30.73630	250
+AL	Holmes Street Methodist Church	-86.58249	34.73648	266
+AL	Holsombech Creek	-87.03527	32.79429	88
+AL	Holston Chapel	-86.72360	33.82454	168
+AL	Holstum Cemetery	-85.31800	32.92263	108
+AL	Holstun Cemetery	-85.28272	32.90596	110
+AL	Holt	-87.48445	33.23401	151
+AL	Holt Baptist Church	-87.49528	33.23901	152
+AL	Holt Cemetery	-86.22580	32.35236	3
+AL	Holt Cemetery	-85.44939	32.46375	77
+AL	Holt Cemetery	-85.20272	32.70263	106
+AL	Holt Cemetery	-87.67112	32.28181	133
+AL	Holt Cemetery	-87.48389	33.24178	151
+AL	Holt Dam	-87.84003	33.98677	233
+AL	Holt Damsite-Left Bank Public Use Area	-87.45389	33.25067	150
+AL	Holt Damsite-Right Bank Public Use Area	-87.45611	33.25512	150
+AL	Holt Elementary School	-87.49695	33.23984	152
+AL	Holt High School	-87.48750	33.23678	151
+AL	Holt Lake	-87.44917	33.25428	150
+AL	Holt Lock and Dam	-87.45018	33.25277	149
+AL	Holt Post Office	-87.50028	33.24067	152
+AL	Holt Road Church	-86.89528	34.84703	282
+AL	Holt Store (historical)	-86.89750	34.86398	284
+AL	Holt Street Baptist Church	-86.32025	32.36486	6
+AL	Holt Street Church of Christ	-86.32025	32.36403	6
+AL	Holt Trestle	-86.99112	34.96314	297
+AL	Holt United Methodist Church	-87.49750	33.23873	152
+AL	Holts Bar	-88.16364	32.83985	187
+AL	Holts Mill (historical)	-86.95084	34.79842	278
+AL	Holtville	-86.32664	32.63624	32
+AL	Holtville - Slapout Fire and Rescue	-86.31988	32.63462	31
+AL	Holtville Church	-86.27636	32.61569	29
+AL	Holtville High School	-86.32636	32.63569	32
+AL	Holtville Park	-86.32886	32.64985	33
+AL	Holtzclaw Lake	-86.78392	33.28968	115
+AL	Holy Apostolic Faith Church	-85.82219	33.63816	148
+AL	Holy Assembly Church	-88.32695	30.45214	289
+AL	Holy Assembly Church of Jesus Christ	-86.25414	32.54569	21
+AL	Holy Bible Church	-87.47667	33.37178	160
+AL	Holy Church	-85.59327	31.43878	120
+AL	Holy Church	-87.69806	32.10265	139
+AL	Holy Church	-88.24250	30.66408	266
+AL	Holy Church of God	-88.04555	30.67602	252
+AL	Holy Church of God	-88.15556	30.64741	262
+AL	Holy Church of God	-88.38473	30.54853	285
+AL	Holy Church of God Pentecostal Number 1	-88.10167	30.71769	252
+AL	Holy Church of God in Christ	-88.11076	30.72898	252
+AL	Holy Cross Cemetery	-87.51695	32.45152	119
+AL	Holy Cross Church	-87.33527	32.00681	109
+AL	Holy Cross Episcopal Church	-87.51667	32.45152	119
+AL	Holy Cross Lutheran Child Development Center	-87.51751	33.20540	151
+AL	Holy Cross Lutheran Church	-87.51806	33.20567	151
+AL	Holy Cross Lutheran Church	-88.14389	30.67658	258
+AL	Holy Cross School	-87.39333	32.00626	114
+AL	Holy Cross School	-87.90194	30.58491	251
+AL	Holy Faith Mission Full Gospel Church	-85.67466	31.54294	106
+AL	Holy Family Catholic Church	-86.88305	33.51066	141
+AL	Holy Family Catholic church	-85.18855	32.87374	116
+AL	Holy Family Church	-88.15834	30.71713	256
+AL	Holy Family Elementary School	-86.88249	33.51066	141
+AL	Holy Family High School	-86.88138	33.50983	141
+AL	Holy Ghost Revival Center	-85.91802	33.94593	179
+AL	Holy Ground Bar	-86.68526	32.35319	40
+AL	Holy Hill Church	-86.48024	31.28906	120
+AL	Holy Hill Church of Our Lord Jesus Christ	-86.18636	33.57177	135
+AL	Holy Infant of Prague Catholic Church	-86.61138	33.62316	144
+AL	Holy Name of Jesus Church	-88.27723	30.73713	263
+AL	Holy Redeemer Catholic Church	-85.15132	31.89266	116
+AL	Holy Rosary Catholic Church	-86.72721	33.54149	139
+AL	Holy Spirit Catholic Church	-87.52667	33.17373	149
+AL	Holy Spirit Catholic Church	-87.82780	33.71289	210
+AL	Holy Spirit Catholic Church	-86.57360	34.68954	260
+AL	Holy Spirit Episcopal Church	-87.70161	30.26106	270
+AL	Holy Spirit High School	-87.52861	33.17361	150
+AL	Holy Spirit School	-87.52778	33.17373	150
+AL	Holy Spirit School	-86.57305	34.69065	260
+AL	Holy Tabernacle	-86.48110	31.29971	119
+AL	Holy Tabernacle Church	-86.45886	31.84682	60
+AL	Holy Temple Church	-86.85330	31.28573	131
+AL	Holy Temple Church of God	-87.06330	31.11657	157
+AL	Holy Temple Church of God in Christ	-86.99306	34.61870	260
+AL	Holy Temple Ministries	-85.39446	31.22168	150
+AL	Holy Trinity	-85.00521	32.22237	119
+AL	Holy Trinity Episcopal Church	-85.48356	32.59236	77
+AL	Holy Trinity Ministry Church of God in Christ	-88.05631	30.66368	254
+AL	Holy Trinity Post Office	-85.00632	32.22071	119
+AL	Holyoke (historical)	-87.82777	30.72936	234
+AL	Home Aid Cemetery	-86.90249	32.49069	62
+AL	Home Benevolent School (historical)	-85.36245	32.62236	89
+AL	Home Creek	-87.37779	33.93316	204
+AL	Home Mission Cemetery	-88.31170	32.49986	194
+AL	Home Place Church	-86.43054	33.95871	178
+AL	Home of Grace for Women	-88.10636	30.76930	249
+AL	Home of Mercy (historical)	-86.81110	33.52705	140
+AL	Homeport Marina	-87.68518	30.28063	267
+AL	Homer (historical)	-85.90719	34.26343	214
+AL	Homer A Crow Dam	-87.71000	31.88682	147
+AL	Homer Carpenter Dam	-88.04502	33.00346	182
+AL	Homer Fieldhouse	-88.18919	32.58819	183
+AL	Homestead	-86.46831	33.20595	96
+AL	Homestead	-86.74721	33.37928	122
+AL	Homewood	-86.80082	33.47177	134
+AL	Homewood	-87.59944	31.36961	168
+AL	Homewood Church of Christ	-86.79582	33.47511	134
+AL	Homewood City Hall	-86.78916	33.47927	134
+AL	Homewood Fire and Rescue Station 1	-86.78929	33.47929	134
+AL	Homewood Fire and Rescue Station 2	-86.81790	33.46252	133
+AL	Homewood Fire and Rescue Station 3	-86.83886	33.44726	133
+AL	Homewood Fire and Rescue Station 4	-86.79397	33.46021	132
+AL	Homewood Junior High School	-86.80805	33.47761	135
+AL	Homewood Public Library	-86.78999	33.47761	134
+AL	Homewood Senior High School	-86.79027	33.46066	132
+AL	Homewood Suites Birmingham So	-86.71900	33.43500	127
+AL	Honea (historical)	-86.36721	34.89175	281
+AL	Honea Hollow	-86.39193	34.61009	250
+AL	Honey Bluff	-86.37110	34.42565	230
+AL	Honey Branch	-86.46999	34.08315	192
+AL	Honey Cemetery	-86.37499	34.42898	230
+AL	Honey Creek	-86.90054	32.02876	71
+AL	Honey Creek	-86.44802	31.66099	79
+AL	Honey Cutts Mill (historical)	-86.78999	32.89262	78
+AL	Honey Ferry (historical)	-86.37554	34.42287	229
+AL	Honey Hollow	-86.32721	34.76731	267
+AL	Honey Jones Mill Creek	-86.18773	31.60460	84
+AL	Honey Landing (historical)	-86.37637	34.42454	230
+AL	Honeycomb Cemetery	-86.32304	34.45287	233
+AL	Honeycomb Church	-86.32721	34.45342	233
+AL	Honeycomb Church (historical)	-86.32193	34.45259	233
+AL	Honeycomb Creek	-86.34637	34.43120	230
+AL	Honeycomb Natural Bridge	-86.32889	34.45917	233
+AL	Honeycomb Park	-86.30915	34.47620	235
+AL	Honeycomb School (historical)	-86.29637	34.46314	234
+AL	Honeycomb Snug Harbor	-86.29582	34.45564	233
+AL	Honeycomb Spring	-86.26229	34.46427	234
+AL	Honeycut Creek	-87.88166	30.87880	225
+AL	Honeycutt (historical)	-85.61274	33.64399	155
+AL	Honeycutt Creek	-86.78971	32.86929	76
+AL	Honeycutt Institute (historical)	-86.57386	31.98432	51
+AL	Honeysuckle Creek	-87.00388	32.80013	86
+AL	Honeysuckle Hills	-85.82744	31.35684	118
+AL	Honeysuckle Hills Park	-86.83110	33.48233	136
+AL	Honeysuckle Middle School	-85.43410	31.20490	150
+AL	Honig School (historical)	-86.94139	34.14704	208
+AL	Honor Branch	-86.93110	32.18070	66
+AL	Honor Camp Number Four	-86.23747	32.46514	12
+AL	Honoraville	-86.40608	31.85071	58
+AL	Honoraville Church	-86.40775	31.84932	58
+AL	Honoraville Junior High School	-86.40636	31.85182	58
+AL	Honoraville Volunteer Fire Department	-86.40993	31.84782	58
+AL	Hood	-86.15498	33.88843	170
+AL	Hood Cemetery	-86.48971	34.05649	190
+AL	Hood Creek	-86.49054	34.04982	189
+AL	Hood Spring	-87.10543	34.51715	252
+AL	Hood-Graves Mine	-85.97413	33.23511	101
+AL	Hoods Creek	-86.39887	33.99788	182
+AL	Hoods Crossroads	-86.42026	33.98843	182
+AL	Hoods School	-86.41026	33.99704	182
+AL	Hooie Cemetery	-87.24863	34.83425	290
+AL	Hook Street Baptist Church	-87.71114	34.74537	297
+AL	Hooker Point	-86.66499	33.46011	128
+AL	Hooker Spring Branch	-87.56975	34.45398	263
+AL	Hooks	-85.23244	32.19182	98
+AL	Hooks Crossroads	-85.85273	32.05154	51
+AL	Hooks Lake	-85.97385	34.04964	190
+AL	Hooks Lake	-87.96638	31.16588	209
+AL	Hooks Lake Spring	-85.96164	34.04815	190
+AL	Hooks Lake Subdivision	-85.97303	34.05065	190
+AL	Hoomesville Church Cemetery	-86.81746	31.20017	139
+AL	Hoomesville Church of Christ	-86.81691	31.20045	139
+AL	Hooper Academy	-86.35969	32.25736	15
+AL	Hooper Cemetery	-86.46971	33.80816	162
+AL	Hooper City	-86.84110	33.55538	144
+AL	Hooper Field	-85.68966	31.40684	118
+AL	Hooper Gap	-86.47360	33.81732	163
+AL	Hoover	-86.81138	33.40539	127
+AL	Hoover	-86.73555	34.85537	281
+AL	Hoover Business Park	-86.79443	33.39316	125
+AL	Hoover City Hall	-86.80610	33.38761	125
+AL	Hoover Dam	-86.43498	33.61010	140
+AL	Hoover Fire Department Station 1	-86.80899	33.40224	127
+AL	Hoover Fire Department Station 2	-86.83104	33.38600	126
+AL	Hoover Fire Department Station 3	-86.80429	33.35364	122
+AL	Hoover Fire Department Station 4	-86.79956	33.38873	125
+AL	Hoover Fire Department Station 5	-86.85561	33.41151	130
+AL	Hoover Fire Department Station 6	-86.87519	33.35155	125
+AL	Hoover Fire Department Station 7	-86.71393	33.40172	123
+AL	Hoover Fire Department Station 8	-86.66422	33.41581	123
+AL	Hoover Lake	-86.43492	33.61011	140
+AL	Hoover Mall Shopping Center	-86.80471	33.39844	126
+AL	Hoover Metropolitan Stadium	-86.84944	33.33861	122
+AL	Hoover Sports Park Central	-86.82389	33.38333	126
+AL	Hoover Sports Park East	-86.76194	33.40000	125
+AL	Hoover Sports Park West	-86.84222	33.37361	125
+AL	Hoover Square Shopping Center	-86.80693	33.39205	126
+AL	Hoover Village Shopping Center	-86.80693	33.40455	127
+AL	Hope African Methodist Episcopal Zion Chapel	-88.06583	30.69602	252
+AL	Hope Chapel African Methodist Episcopal Zion Church	-88.11622	30.74919	251
+AL	Hope Church	-87.06416	32.25431	77
+AL	Hope Church	-87.44556	33.22123	147
+AL	Hope Church	-87.96001	32.18292	162
+AL	Hope Haven School	-87.71920	34.72315	295
+AL	Hope Hill Church	-87.64528	32.34625	131
+AL	Hope Hull	-86.35719	32.26986	13
+AL	Hope Hull Church	-86.42803	32.19598	24
+AL	Hope Hull Church	-86.35691	32.14376	25
+AL	Hope Hull Post Office	-86.36525	32.26986	14
+AL	Hope Hull Recreation Center	-86.37664	32.26847	15
+AL	Hope Hull United Methodist Church	-86.36608	32.26931	14
+AL	Hope Independent Church	-86.19998	34.16565	201
+AL	Hope Lutheran Church	-86.71943	33.52538	137
+AL	Hope Memorial Church	-85.52801	33.17040	113
+AL	Hope Mine	-87.05000	33.88899	185
+AL	Hope Mine	-87.54585	33.91816	211
+AL	Hope Post Office	-87.72558	34.99036	322
+AL	Hope School	-87.06527	32.25542	77
+AL	Hope School (historical)	-87.49250	33.31817	157
+AL	Hope Well Cemetery	-86.65942	32.23459	40
+AL	Hope-Galloway Mine	-87.54168	33.91400	210
+AL	Hopeful	-85.91247	33.49400	130
+AL	Hopeful Primitive Baptist Church	-85.71105	31.48711	109
+AL	Hopewell	-85.30244	32.52514	92
+AL	Hopewell	-86.93860	33.36067	128
+AL	Hopewell	-85.38273	33.63205	163
+AL	Hopewell	-85.72941	34.20121	210
+AL	Hopewell	-86.46804	34.25621	212
+AL	Hopewell	-86.04748	34.37453	225
+AL	Hopewell African Methodist Episcopal Church	-87.21444	32.93346	110
+AL	Hopewell African Methodist Episcopal Church	-86.77194	33.54056	140
+AL	Hopewell African Methodist Episcopal Church	-87.62058	34.84648	304
+AL	Hopewell Baptist Church	-86.62970	32.81402	62
+AL	Hopewell Baptist Church	-87.02971	32.42069	73
+AL	Hopewell Baptist Church	-86.61052	31.25767	126
+AL	Hopewell Baptist Church	-87.78168	32.34986	143
+AL	Hopewell Baptist Church	-87.48695	33.20373	149
+AL	Hopewell Baptist Church	-87.85417	31.77738	164
+AL	Hopewell Baptist Church	-87.88918	33.01235	169
+AL	Hopewell Baptist Church	-86.14859	33.88788	170
+AL	Hopewell Baptist Church	-88.10585	32.14598	176
+AL	Hopewell Baptist Church	-86.78055	34.08343	198
+AL	Hopewell Baptist Church	-86.04803	34.37453	225
+AL	Hopewell Baptist Church	-87.03695	34.40510	238
+AL	Hopewell Baptist Church of Magazine Point	-88.05567	30.73483	248
+AL	Hopewell Branch	-86.76942	31.92348	68
+AL	Hopewell Branch	-88.10363	32.13904	176
+AL	Hopewell Cemetery	-86.43358	31.87793	56
+AL	Hopewell Cemetery	-86.75026	31.99765	61
+AL	Hopewell Cemetery	-86.63054	32.81374	62
+AL	Hopewell Cemetery	-86.05273	31.66377	79
+AL	Hopewell Cemetery	-86.63886	31.68655	83
+AL	Hopewell Cemetery	-85.76855	31.69516	87
+AL	Hopewell Cemetery	-85.30189	32.52514	92
+AL	Hopewell Cemetery	-85.51301	33.06346	105
+AL	Hopewell Cemetery	-87.21472	32.93401	110
+AL	Hopewell Cemetery	-87.40556	32.64263	112
+AL	Hopewell Cemetery	-87.21666	33.19678	129
+AL	Hopewell Cemetery	-87.82835	32.42653	148
+AL	Hopewell Cemetery	-87.48695	33.20401	149
+AL	Hopewell Cemetery	-87.88835	33.01290	169
+AL	Hopewell Cemetery	-87.79389	31.56349	170
+AL	Hopewell Cemetery	-88.10557	32.14570	176
+AL	Hopewell Cemetery	-87.70168	33.59372	192
+AL	Hopewell Cemetery	-86.78083	34.08232	197
+AL	Hopewell Cemetery	-88.01891	33.39151	201
+AL	Hopewell Cemetery	-85.46246	34.10593	208
+AL	Hopewell Cemetery	-87.79669	33.75511	211
+AL	Hopewell Cemetery	-87.71196	33.91205	219
+AL	Hopewell Christian Methodist Episcopal Church	-87.34054	31.52655	138
+AL	Hopewell Church	-86.49914	32.17209	31
+AL	Hopewell Church	-86.63831	32.26347	37
+AL	Hopewell Church	-85.94079	32.11848	40
+AL	Hopewell Church	-86.61359	31.93459	58
+AL	Hopewell Church	-86.92554	31.99487	75
+AL	Hopewell Church	-87.01082	32.11348	76
+AL	Hopewell Church	-86.63803	31.68655	83
+AL	Hopewell Church	-87.14444	32.34930	83
+AL	Hopewell Church	-85.76855	31.69516	87
+AL	Hopewell Church	-87.08665	31.90404	93
+AL	Hopewell Church	-87.08721	31.86571	95
+AL	Hopewell Church	-85.51329	33.06373	105
+AL	Hopewell Church	-87.40445	32.64346	112
+AL	Hopewell Church	-87.40472	32.64124	112
+AL	Hopewell Church	-85.42827	31.59822	115
+AL	Hopewell Church	-86.94694	33.36206	129
+AL	Hopewell Church	-87.22694	33.19206	130
+AL	Hopewell Church	-87.82862	32.42625	148
+AL	Hopewell Church	-86.50773	31.00240	152
+AL	Hopewell Church	-85.40551	33.60233	159
+AL	Hopewell Church	-87.15833	33.59511	161
+AL	Hopewell Church	-86.68166	33.76760	161
+AL	Hopewell Church	-85.89247	33.81927	166
+AL	Hopewell Church	-86.13997	33.87232	168
+AL	Hopewell Church	-87.90418	32.98790	170
+AL	Hopewell Church	-86.37387	33.96565	179
+AL	Hopewell Church	-87.70224	33.59428	193
+AL	Hopewell Church	-85.45996	34.11621	209
+AL	Hopewell Church	-87.49140	34.01372	217
+AL	Hopewell Church	-86.42332	34.90120	283
+AL	Hopewell Church	-85.75219	34.95814	292
+AL	Hopewell Church (historical)	-86.11803	33.22011	97
+AL	Hopewell Church (historical)	-86.94888	33.35317	128
+AL	Hopewell Church (historical)	-87.71113	33.91260	219
+AL	Hopewell Church (historical)	-87.58835	33.99538	220
+AL	Hopewell Church of Christ	-87.57753	34.59870	277
+AL	Hopewell Cumberland Presbyterian Church (historical)	-87.60142	34.85286	304
+AL	Hopewell Elementary School	-86.94749	33.35428	128
+AL	Hopewell High School	-88.02586	33.37623	200
+AL	Hopewell Hill Cemetery	-88.00030	33.18818	187
+AL	Hopewell Lake	-86.67666	33.76510	161
+AL	Hopewell Methodist Church	-87.79305	31.54238	171
+AL	Hopewell Methodist Church (historical)	-86.48637	33.58621	138
+AL	Hopewell Missionary Baptist Church	-86.46165	34.25232	211
+AL	Hopewell Mountain	-86.11747	33.89676	171
+AL	Hopewell Presbyterian Church (historical)	-87.51222	32.44875	118
+AL	Hopewell Primitive Baptist Church	-86.05412	31.66488	79
+AL	Hopewell Primitive Baptist Church	-87.16000	33.11318	119
+AL	Hopewell Primitive Baptist Church	-87.79669	33.75511	211
+AL	Hopewell School	-87.00943	32.11348	76
+AL	Hopewell School (historical)	-87.01082	32.11348	76
+AL	Hopewell School (historical)	-87.38722	32.63402	110
+AL	Hopewell School (historical)	-86.60913	31.25878	126
+AL	Hopewell School (historical)	-87.48834	33.20429	149
+AL	Hopewell School (historical)	-87.79696	33.75455	211
+AL	Hopewell School (historical)	-87.57697	34.59898	277
+AL	Hopewell School (historical)	-87.59169	34.86398	304
+AL	Hopewell Springs	-85.71774	33.94066	183
+AL	Hopewell United Methodist Church	-85.30244	32.52514	92
+AL	Hopewell United Methodist Church	-85.18966	32.76208	110
+AL	Hopewell Volunteer Fire Department	-86.61182	31.25798	126
+AL	Hopkins	-87.07861	33.48455	147
+AL	Hopkins Memorial Mission Center Chapel	-86.02497	34.01454	185
+AL	Hopn Branch	-85.47272	31.59156	113
+AL	Hopper	-86.25137	34.05537	188
+AL	Hopson Lake	-87.95946	33.71949	219
+AL	Hopwood Cemetery	-86.81722	34.99175	297
+AL	Horak Airport	-87.54374	30.46748	243
+AL	Horeb Baptist Church	-87.71111	31.65071	158
+AL	Horn Branch	-85.97219	33.37039	116
+AL	Horn Branch	-88.08613	32.18292	173
+AL	Horn Branch	-88.30253	32.16487	194
+AL	Horn Branch	-85.74581	34.90341	286
+AL	Horn Creek	-87.38667	33.36039	153
+AL	Horn Hill	-86.31662	31.24573	123
+AL	Horn Memorial Church	-86.04164	33.28900	105
+AL	Horn Mountain	-86.07469	33.29789	106
+AL	Horn Mountain Lookout Tower	-86.07441	33.29789	106
+AL	Horn School (historical)	-85.41049	31.77489	103
+AL	Horn Valley	-86.05969	33.26484	102
+AL	Hornady	-85.86524	32.46514	39
+AL	Hornbuckle Hollow	-86.57499	34.50537	240
+AL	Horne Dam	-85.98663	33.32011	110
+AL	Horne Ridge	-88.17585	31.96321	186
+AL	Hornes Lakes	-85.98504	33.32159	110
+AL	Hornet Creek	-86.36412	31.48433	97
+AL	Hornet Stadium	-86.29858	32.36486	4
+AL	Horns Branch	-88.10502	32.51764	175
+AL	Horns Memorial Cemetery	-86.04191	33.28872	105
+AL	Horns Peak Mine	-85.91552	33.31484	111
+AL	Horns Valley	-86.03052	33.26678	103
+AL	Hornsboro (historical)	-88.02140	32.06487	169
+AL	Hornsby Cemetery	-85.91385	32.62319	44
+AL	Hornsbytown	-85.91690	32.55069	39
+AL	Hornyhead Branch	-85.32134	33.12234	122
+AL	Horrace Williams Landing (historical)	-88.09251	31.73905	186
+AL	Horse Branch	-86.92470	31.65571	100
+AL	Horse Branch	-87.24055	32.99873	116
+AL	Horse Branch	-86.75274	31.07434	150
+AL	Horse Branch	-88.08559	34.88064	327
+AL	Horse Cove	-86.42110	34.63537	253
+AL	Horse Creek	-86.36108	31.82543	60
+AL	Horse Creek	-86.36913	31.64627	80
+AL	Horse Creek	-85.77968	33.43178	127
+AL	Horse Creek	-85.95052	33.46927	127
+AL	Horse Creek	-87.40278	33.08040	134
+AL	Horse Creek	-87.39222	33.52789	168
+AL	Horse Creek	-88.05418	32.07709	172
+AL	Horse Creek	-87.13944	33.71344	172
+AL	Horse Creek	-87.77418	33.26706	174
+AL	Horse Creek	-87.38473	33.80233	192
+AL	Horse Creek	-87.36363	34.34982	244
+AL	Horse Creek Cemetery	-85.91774	33.42233	122
+AL	Horse Creek Valley	-85.94997	33.46622	126
+AL	Horse Pens Forty	-86.30970	33.92093	174
+AL	Horse Stomp Campground	-86.41164	32.91846	64
+AL	Horseapple Cove	-87.98143	34.73676	309
+AL	Horseblock Mountain	-85.70663	33.56538	144
+AL	Horsecollar Branch	-87.50415	30.56547	231
+AL	Horsehead Creek	-85.77747	34.67092	260
+AL	Horselot Branch	-85.14327	32.36820	105
+AL	Horselot Pond	-87.48864	34.67259	281
+AL	Horsemill Mountain	-87.64392	34.45982	266
+AL	Horseneck Church	-87.69249	30.89657	212
+AL	Horseneck Creek	-87.64916	31.24878	180
+AL	Horseneck Creek	-87.64499	30.87769	210
+AL	Horsepen Branch	-86.13831	34.07676	191
+AL	Horsepen Branch	-85.57829	34.09982	203
+AL	Horsepen Creek	-87.90555	31.23156	200
+AL	Horsepond Branch	-87.13168	34.22871	223
+AL	Horseshoe Bend	-85.74163	32.96762	83
+AL	Horseshoe Bend	-86.62305	33.92065	177
+AL	Horseshoe Bend	-87.91611	31.33434	194
+AL	Horseshoe Bend	-87.22446	34.16399	220
+AL	Horseshoe Bend	-85.92831	34.39648	228
+AL	Horseshoe Bend	-87.74975	34.27288	254
+AL	Horseshoe Bend	-87.34835	34.55009	264
+AL	Horseshoe Bend	-87.96504	34.38038	275
+AL	Horseshoe Bend	-86.13221	34.84120	276
+AL	Horseshoe Bend	-87.86587	34.74565	304
+AL	Horseshoe Bend Bridge	-87.96976	34.37954	275
+AL	Horseshoe Bend National Military Park	-85.73635	32.97596	84
+AL	Horseshoe Creek	-86.11998	34.22371	207
+AL	Horseshoe Gap	-86.18942	33.76427	156
+AL	Horseshoe Lake	-88.06709	31.65347	188
+AL	Horseshoe Lake (historical)	-88.10308	32.78846	180
+AL	Horseshoe Mountain	-87.36473	33.86316	196
+AL	Horseshoe Pond	-85.94741	34.86379	280
+AL	Horsetrough Creek	-85.75913	33.27956	112
+AL	Horsley Lake	-86.16831	34.23537	208
+AL	Horst Pond	-86.65776	33.52260	135
+AL	Horton	-86.29692	34.20093	205
+AL	Horton	-85.84636	34.38453	228
+AL	Horton Branch	-86.84080	31.34350	125
+AL	Horton Branch	-85.81191	34.36676	227
+AL	Horton Branch	-88.13754	34.41427	287
+AL	Horton Cemetery	-86.79497	31.34239	123
+AL	Horton Cemetery	-88.05474	32.99624	183
+AL	Horton Cemetery	-88.06113	32.99679	183
+AL	Horton Creek	-86.02608	33.97788	181
+AL	Horton Gap	-86.02470	34.17732	203
+AL	Horton Hollow	-87.07723	34.90314	292
+AL	Horton Mill Bridge	-86.44887	34.00760	184
+AL	Horton Mountain	-87.31724	34.57704	265
+AL	Horton School (historical)	-86.30470	34.20260	205
+AL	Horton School (historical)	-86.64138	34.58759	250
+AL	Horton Shoal	-85.43412	33.23595	124
+AL	Horton Shoal Branch	-85.44217	33.23706	124
+AL	Horton Spring	-87.31919	34.58238	266
+AL	Horton Spring	-86.25475	34.86981	279
+AL	Horton Spring Branch	-86.40443	34.30370	216
+AL	Horton-Joiner Cemetery	-86.63999	34.58120	249
+AL	Hortons Mill	-86.44721	34.00926	184
+AL	Hortons Mill (historical)	-86.50887	33.17789	94
+AL	Hortons Plaza Shopping Center	-87.06580	31.09879	159
+AL	Hosanna Church	-85.78410	31.33045	122
+AL	Hosea Cemetery	-87.73584	32.09098	142
+AL	Hosea Mathis Dam	-85.57993	31.19851	144
+AL	Hosea Mathis Lake	-85.57993	31.19851	144
+AL	Hospilika Creek	-85.13271	32.46681	107
+AL	Host	-86.26718	31.49100	96
+AL	Hostler Creek	-86.25331	33.08401	81
+AL	Hot Spur (historical)	-86.40109	33.42511	119
+AL	Hotamville	-87.94001	31.99237	164
+AL	Hotel Cemetery	-87.26305	32.08626	99
+AL	Hotel Cemetery	-87.78889	31.52600	172
+AL	Hough Cemetery	-86.59944	34.54565	245
+AL	Houpt Cemetery	-87.92363	32.52569	158
+AL	House (historical)	-85.85274	33.59038	142
+AL	House Bluff	-86.72054	32.40569	44
+AL	House Creek	-86.70276	32.35764	42
+AL	House of Delivery of Apostles Church	-88.11040	30.73116	252
+AL	House of God Church	-86.32080	32.36347	6
+AL	House of God Saints in Christ Church	-85.84608	33.66899	151
+AL	House of Happiness Church	-86.10720	34.64009	254
+AL	House of Happiness School (historical)	-86.10804	34.64009	254
+AL	House of Prayer	-86.70164	31.86265	69
+AL	House of Prayer	-85.37708	31.21799	151
+AL	House of Prayer	-87.58254	31.59361	151
+AL	House of Prayer Church	-87.28776	31.59627	129
+AL	House of Prayer Church	-86.29859	33.59427	137
+AL	House of Prayer Church	-85.65466	31.15157	145
+AL	House of Prayer Church	-87.78084	32.08904	147
+AL	House of Prayer Church	-85.87302	33.99677	185
+AL	House of Prayer Church	-88.23057	31.79738	196
+AL	House of Prayer Church	-87.27390	33.93288	199
+AL	House of Prayer Church	-85.64997	34.55564	250
+AL	House of Prayer Freewill	-86.75194	34.26037	216
+AL	House of Prayer Holiness Church	-87.12534	31.25781	147
+AL	Household of Faith Church	-85.30467	32.68680	97
+AL	Houser Hall	-87.54472	33.21444	154
+AL	Houses Ferry (historical)	-86.44998	32.85846	58
+AL	Houses Island	-86.45831	32.86762	60
+AL	Houses Lake	-87.56657	33.27140	159
+AL	Housh Chapel Cemetery	-87.80141	33.79427	215
+AL	Houshs Chapel Church of Christ	-87.80141	33.79483	215
+AL	Houston	-87.25807	34.14149	219
+AL	Houston Academy	-85.44854	31.24406	145
+AL	Houston Baptist Church Cemetery	-87.25778	34.14444	219
+AL	Houston Branch	-85.95942	34.79231	272
+AL	Houston Bridge	-86.28943	34.37092	223
+AL	Houston Cemetery	-88.16891	32.62014	182
+AL	Houston Cemetery	-86.77083	34.48593	241
+AL	Houston Cemetery	-86.89639	34.67148	263
+AL	Houston Cemetery	-87.36752	34.74370	284
+AL	Houston Cemetery	-87.43030	34.82036	294
+AL	Houston Church	-87.26029	34.16705	221
+AL	Houston Church of God Cemetery	-87.26139	34.16861	222
+AL	Houston Cole Library	-85.76274	33.82399	169
+AL	Houston Corner	-87.63420	34.72981	293
+AL	Houston County	-85.30252	31.15318	161
+AL	Houston County Courthouse	-85.39243	31.22545	150
+AL	Houston County Farm Center	-85.37368	31.19333	154
+AL	Houston County Health Center	-85.39688	31.22101	150
+AL	Houston County Health Department	-85.39320	31.22469	150
+AL	Houston County High School	-85.11326	31.29379	160
+AL	Houston County Jail	-85.40320	31.22635	149
+AL	Houston County Port Authority Industrial Park	-85.09576	31.29202	161
+AL	Houston County Public Library Ashford Branch	-85.23393	31.18154	162
+AL	Houston Hill Junior High School	-86.29136	32.37708	4
+AL	Houston Hollow	-86.05693	34.82008	274
+AL	Houston Hollow	-86.15360	34.93397	286
+AL	Houston Jail	-87.25751	34.14111	219
+AL	Houston Library	-85.39493	31.22851	149
+AL	Houston Lookout Tower	-85.15104	31.10490	174
+AL	Houston Memorial Library	-86.97501	34.80370	279
+AL	Houston Memorial United Methodist Church Cemetery	-87.25862	34.14306	219
+AL	Houston Mine	-87.12805	33.24956	128
+AL	Houston Post Office	-87.25751	34.14121	219
+AL	Houston Recreation Site	-87.29807	34.12455	219
+AL	Houston Spring	-85.95796	34.81123	274
+AL	Houston Union Church	-87.25724	34.14483	219
+AL	Houston Union Church Cemetery	-87.25667	34.14416	219
+AL	Houston Volunteer Fire Department	-87.25833	34.14182	219
+AL	Houstons Island (historical)	-88.08002	32.63513	174
+AL	Houstons Landing (historical)	-88.08113	32.63291	174
+AL	Houstons Store (historical)	-85.33160	31.81683	106
+AL	Houstontown	-87.43502	34.82731	295
+AL	Houstonville	-87.90027	30.50186	258
+AL	Houten Branch	-87.96308	33.22873	187
+AL	Hovaters Mill (historical)	-87.81753	34.54843	283
+AL	Howard	-87.56751	33.85427	206
+AL	Howard Branch	-86.43804	33.49233	127
+AL	Howard Branch	-87.77114	34.28954	256
+AL	Howard Brown Dam	-87.85668	32.78013	157
+AL	Howard Brown Lake	-87.85668	32.78013	157
+AL	Howard Building	-86.88306	33.45222	135
+AL	Howard Cemetery	-86.14052	32.89957	61
+AL	Howard Cemetery	-86.46052	31.74571	70
+AL	Howard Chapel	-85.32966	32.35514	87
+AL	Howard Chapel	-86.17942	33.46622	123
+AL	Howard Church of Christ	-87.57057	33.85400	206
+AL	Howard Cooper Bridge	-87.13972	32.94457	105
+AL	Howard Creek	-86.71859	32.39375	44
+AL	Howard Creek	-86.10773	31.71516	73
+AL	Howard Dam	-85.67662	32.33514	55
+AL	Howard Dam	-86.19497	33.20678	94
+AL	Howard E Smith Dam	-88.23001	31.02018	239
+AL	Howard E Smith Lake	-88.22896	31.01949	239
+AL	Howard Island (historical)	-87.26196	34.75731	282
+AL	Howard Johnson Express	-85.59460	33.62700	154
+AL	Howard Johnson Express Inn - Birmingham	-86.83420	33.45850	134
+AL	Howard Johnson Express Inn - Dothan	-85.40670	31.19350	152
+AL	Howard Johnson Express Oxford	-85.82950	33.60580	144
+AL	Howard Johnson Inn	-85.87970	34.27520	216
+AL	Howard Johnson Inn Mobile AL	-88.11800	30.65500	259
+AL	Howard Johnson Inn Tuscaloosa AL	-87.53460	33.16280	149
+AL	Howard Johnson Montgomery	-86.16650	32.37020	9
+AL	Howard Lake	-85.60996	34.50620	246
+AL	Howard Lamar Dam	-85.62662	32.33348	59
+AL	Howard Landing	-87.56582	31.45600	159
+AL	Howard Mine	-85.67246	32.91151	82
+AL	Howard School (historical)	-87.28752	34.88897	297
+AL	Howard Town Baptist Church	-88.21168	31.37156	215
+AL	Howard Town Cemetery	-88.21112	31.37156	215
+AL	Howards Bar	-88.11252	32.80874	181
+AL	Howards Chapel Cemetery	-85.61611	34.50528	246
+AL	Howards Grove Church	-85.25688	31.10490	168
+AL	Howards Landing (historical)	-85.03771	32.15376	117
+AL	Howards Lower Bar	-88.11086	32.80680	181
+AL	Howards Mill Creek	-85.06271	31.13963	176
+AL	Howards Pond	-86.17714	32.89689	60
+AL	Howe	-85.16410	32.01849	110
