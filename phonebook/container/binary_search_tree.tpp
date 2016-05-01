@@ -1,8 +1,3 @@
-#include <functional>
-
-#include "binary_tree.hpp"
-#include "binary_search_tree.hpp"
-
 using namespace container;
 
 template<class NODE, class ELEMENT> bool binary_search_tree<NODE, ELEMENT>::is_empty(void) const { return root == NULL; }

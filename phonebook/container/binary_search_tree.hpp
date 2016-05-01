@@ -1,6 +1,11 @@
 #ifndef __CONTAINER_BINARYSEARCHTREE_HPP
 #define __CONTAINER_BINARYSEARCHTREE_HPP    1
 
+#include <functional>
+
+#include "binary_tree.hpp"
+#include "binary_search_tree.hpp"
+
 namespace container
 {
     template<class ELEMENT> struct node_p : public node<ELEMENT>
@@ -33,5 +38,7 @@ namespace container
         void remove(const NODE *node);
     };
 }
+
+#include "binary_search_tree.tpp"
 
 #endif /* !__CONTAINER_BINARYSEARCHTREE_HPP */

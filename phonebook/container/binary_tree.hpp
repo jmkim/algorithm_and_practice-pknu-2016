@@ -1,6 +1,11 @@
 #ifndef __CONTAINER_BINARYTREE_HPP
 #define __CONTAINER_BINARYTREE_HPP    1
 
+#include <queue>
+#include <functional>
+
+#include "binary_tree.hpp"
+
 namespace container
 {
     template<class ELEMENT> struct node
@@ -28,5 +33,7 @@ namespace container
         static void traverse_level_order(const NODE *const node, const std::function<void(const NODE *const)> callback);
     };
 }
+
+#include "binary_tree.tpp"
 
 #endif /* !__CONTAINER_BINARYTREE_HPP */

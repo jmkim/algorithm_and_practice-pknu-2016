@@ -1,8 +1,3 @@
-#include <queue>
-#include <functional>
-
-#include "binary_tree.hpp"
-
 using namespace container;
 
 template<class NODE, class ELEMENT> NODE *binary_tree<NODE, ELEMENT>::create_node(const ELEMENT *element) { return new NODE(element); }

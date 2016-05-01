@@ -16,4 +16,6 @@ namespace container
     };
 }
 
+#include "element.tpp"
+
 #endif /* !__CONTAINER_ELEMENT_HPP */

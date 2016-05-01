@@ -1,9 +1,3 @@
-#include <functional>
-
-#include "binary_tree.hpp"
-#include "binary_search_tree.hpp"
-#include "red_black_tree.hpp"
-
 using namespace container;
 
 template<class ELEMENT> bool node_rb<ELEMENT>::is_red(void) const { return color == true; }

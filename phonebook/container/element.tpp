@@ -1,5 +1,3 @@
-#include "element.hpp"
-
 using namespace container;
 
 template<typename D_KEY> bool element<D_KEY>::is_equal(const element *element) const

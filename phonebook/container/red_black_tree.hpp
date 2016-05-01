@@ -1,6 +1,12 @@
 #ifndef __CONTAINER_REDBLACKTREE_HPP
 #define __CONTAINER_REDBLACKTREE_HPP    1
 
+#include <functional>
+
+#include "binary_tree.hpp"
+#include "binary_search_tree.hpp"
+#include "red_black_tree.hpp"
+
 namespace container
 {
     template<class ELEMENT> struct node_rb : public node_p<ELEMENT>
@@ -52,5 +58,7 @@ namespace container
         void remove_rb(NODE *node);
     };
 }
+
+#include "red_black_tree.tpp"
 
 #endif /* !__CONTAINER_REDBLACKTREE_HPP */
