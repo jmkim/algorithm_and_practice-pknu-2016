@@ -1,7 +1,7 @@
 #include <iostream>
 
 #define GRAPH_NODETYPE   1
-#include "src/graph.hpp"
+#include "includes/graph.hpp"
 
 int main(void)
 {
