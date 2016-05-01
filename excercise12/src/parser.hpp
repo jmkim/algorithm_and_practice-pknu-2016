@@ -18,8 +18,8 @@ private:
         std::string output;
         for(char d : data)
         {
-            output.push_back(d);
             if(d == '\0') break;
+            output.push_back(d);
         }
 
         return output;
