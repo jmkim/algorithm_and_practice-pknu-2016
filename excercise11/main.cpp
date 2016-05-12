@@ -3,14 +3,7 @@
 #include "hash_table.cpp"
 #include <time.h>
 
-void randstr(const int length, std::string &out)
-{
-    char range[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.-#'?!";
-    for (int n = 0; n < length; ++n)
-        out.push_back(range[rand() % sizeof(range - 1)]);
-
-    out.push_back('\0');
-}
+void randstr(const int length, std::string &out);
 
 int main(void)
 {
@@ -42,4 +35,13 @@ int main(void)
                     << "count: " << hs_str.size() << std::endl
                     << "capacity: " << hs_str.get_capacity() << std::endl;
     }
+}
+
+void randstr(const int length, std::string &out)
+{
+    char range[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.-#'?!";
+    for (int n = 0; n < length; ++n)
+        out.push_back(range[rand() % sizeof(range - 1)]);
+
+    out.push_back('\0');
 }
