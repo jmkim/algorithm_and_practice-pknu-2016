@@ -28,13 +28,15 @@ private:
         count = 0;
         capacity = new_capacity;
 
-        for(int i = 0; i < o_capacity; ++i)
+        for(int tk = 0; tk < o_capacity; ++tk)
         {
-            node *n = o_table[i];
+            node *n = o_table[tk];
+            node *p = NULL;
             while(n != NULL)
             {
+                p = n->next;
                 add(n);
-                n = n->next;
+                n = p;
             }
         }
 
@@ -79,7 +81,7 @@ public:
 
                 while(n != NULL)
                 {
-                    std::cout << n->element << " ";
+                    std::cout << n->element << " -- ";
                     n = n->next;
                 }
                 std::cout << std::endl;
@@ -103,7 +105,7 @@ public:
     {
         unsigned int hash = hash_code(n->element) % capacity;
 
-        if(table[hash] != NULL) n->next = table[hash]->next;
+        n->next = table[hash];
         table[hash] = n;
 
         ++count;
