@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <functional>
+#include <ctime>
 
 #define _USE_MATH_DEFINES   1
 #include <complex>
@@ -9,6 +10,8 @@
 #include "graph.hpp"
 #include "parser.hpp"
 #include "bstree.hpp"
+
+#define elapsed_secs(begin, end) ((double)(end - begin) / CLOCKS_PER_SEC)
 
 class city_searcher
 {
@@ -66,16 +69,18 @@ public:
             return 2;
         }
 
+        clock_t begin, end;
+        double elapsed_secs = 0;
+
         /***************************
          * READ FILE               *
          ***************************/
         std::cout << "Step 1 of 2: Read a file, add to the vertex of the graph, add to the BST (together) . . . ";
+        begin = clock();
+
         fp.parse(
             [&] (const std::string &line)
             {
-                static int line_number = 0;
-                if(++line_number == 1) return;
-
                 std::string arr[5];
                 fp.divide_by_delimiter(arr, line, 5, '\t');
                 /*
@@ -95,7 +100,7 @@ public:
                 }
                 catch(const std::invalid_argument &e)
                 {
-                    return; /* Invalid line, so we cannot add this line */
+                    return; /* Invalid line, so we should not add this line */
                 }
 
                 /* Add to graph */
@@ -103,10 +108,10 @@ public:
                 if(key == -1) /* Duplicate city name */
                 {
                     char *temp = new char[5]();
-                    for(int i = 1; ; ++i)
+                    for(int i = 2; ; ++i) /* suffix start with #2 */
                     {
                         std::snprintf(temp, 5, "%d", i);
-                        if(g.add_vertex(graphelement(std::string(city_name + " #" + temp))) != -1)
+                        if((key = g.add_vertex(graphelement(std::string(city_name + " #" + temp)))) != -1)
                         {
                             city_name = city_name + " #" + temp;
                             break;
@@ -120,27 +125,37 @@ public:
                 bst->add(element);
             }
         );
-        std::cout << "Finished." << std::endl;
 
-        std::cout << "Step 2: Add the edges to each vertex . . . ";
+        end = clock();
+        std::cout << "Finished (" << elapsed_secs(begin, end) << "sec)" << std::endl;
+        bst->printall();
+
+        std::cout << "Step 2 of 2: Add the edges to each vertex . . . ";
+        begin = clock();
+
         double lat1, lon1, lat2, lon2;
         bst->traverse_level_order(
             [&] (bstnode *node)
             {
-                lat1 = node->element->latitude;
-                lon1 = node->element->longitude;
-
-                binary_search_tree::traverse_level_order(node,
+                bst->binary_search_tree::traverse_level_order(
                     [&] (bstnode *n)
                     {
-                        lat2 = n->element->latitude;
-                        lon2 = n->element->longitude;
-                        if(10000 >= calc_distance(lat1, lon1, lat2, lon2)) g.add_edge(node->element->value, n->element->value);
+                        if(10000 >= calc_distance(node->element->latitude,
+                                                  node->element->longitude,
+                                                  n->element->latitude,
+                                                  n->element->longitude))
+                        {
+                            g.add_edge(node->element->value, n->element->value);
+                            g.add_edge(n->element->value, node->element->value);
+                        }
                     }
                 );
             }
         );
-        std::cout << "Finished." << std::endl;
+
+        end = clock();
+        std::cout << "Finished (" << elapsed_secs(begin, end) << "sec)" << std::endl;
+        g.print();
     }
 
     void prompt(void)

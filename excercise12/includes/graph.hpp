@@ -1,6 +1,8 @@
 #include <cstddef>
 #include <functional>
 #include <iostream>
+#include <set>
+#include <queue>
 
 #ifndef GRAPH_NODETYPE
 #define GRAPH_NODETYPE 0
@@ -90,9 +92,9 @@ public:
                 while(n != NULL)
                 {
 #if GRAPH_NODETYPE == 1
-                    std::cout << n->element << " ";
+                    std::cout << n->element << " -- ";
 #elif GRAPH_NODETYPE == 2
-                    std::cout << n->element.data << " ";
+                    std::cout << n->element.data << " -- ";
 #endif
                     n = n->next;
                 }
@@ -103,20 +105,41 @@ public:
 
     void traverse(const int &key, const int &hop)
     {
-        traverse(table[key], hop);
+        std::set<int> visited_keys;
+        traverse(table[key], 0, hop, visited_keys);
     }
 
-    void traverse(node *n, const int &hop)
+    void traverse(node *n, const int &hop, const int &max_hop, std::set<int> &visited_keys)
     {
-        if(hop <= 0) return;
+        if(hop > max_hop) return;
 
-        while(n != NULL)
+        std::queue<int> queue;
+
+        if(hop == 0)
         {
-            std::cout << n->element.data << " ";
-            traverse(table[n->key], hop - 1);
-            n = n->next;
+            std::cout << "[" << hop << "] " << n->key << " " << n->element.data << std::endl;
+            visited_keys.insert(n->key);
+            queue.push(n->key);
         }
-        std::cout << std::endl;
+        else
+            while(n != NULL)
+            {
+                if(visited_keys.count(n->key) == 0)
+                {
+                    std::cout << "[" << hop << "] " << n->key << " " << n->element.data << std::endl;
+                    visited_keys.insert(n->key);
+                    queue.push(n->key);
+                }
+                n = n->next;
+            }
+
+        while(! queue.empty())
+        {
+            int key = queue.front();
+
+            traverse(table[key]->next, hop + 1, max_hop, visited_keys);
+            queue.pop();
+        }
     }
 
     int add_vertex(const T &entry)

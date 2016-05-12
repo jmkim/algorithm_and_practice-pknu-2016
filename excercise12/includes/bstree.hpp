@@ -28,7 +28,9 @@ public:
     void remove(const std::string &key);
     void find(const std::string &key);
     void traverse_level_order(std::function<void(bstnode *)> what_to_do);
-    static void traverse_level_order(bstnode *const node, std::function<void(bstnode *)> what_to_do);
+    static void traverse_level_order(bstnode * node, std::function<void(bstnode *)> what_to_do);
+    void traverse_in_order(std::function<void(bstnode *)> what_to_do);
+    static void traverse_in_order(bstnode * node, std::function<void(bstnode *)> what_to_do);
     void print(bstnode *d);
     void printall(void);
     void printall(bstnode *node);
@@ -172,7 +174,7 @@ void binary_search_tree::traverse_level_order(std::function<void(bstnode *)> wha
     traverse_level_order(root, what_to_do);
 }
 
-void binary_search_tree::traverse_level_order(bstnode *const node, std::function<void(bstnode *)> what_to_do)
+void binary_search_tree::traverse_level_order(bstnode * node, std::function<void(bstnode *)> what_to_do)
 {
     bstnode *n = node;
     std::queue<bstnode *> queue;
@@ -187,6 +189,18 @@ void binary_search_tree::traverse_level_order(bstnode *const node, std::function
         if(n->left != NULL) queue.push(n->left);
         if(n->right != NULL) queue.push(n->right);
     }
+}
+
+void binary_search_tree::traverse_in_order(std::function<void(bstnode *)> what_to_do)
+{
+    traverse_in_order(root, what_to_do);
+}
+
+void binary_search_tree::traverse_in_order(bstnode * node, std::function<void(bstnode *)> what_to_do)
+{
+    traverse_in_order(node->left, what_to_do);
+    what_to_do(node);
+    traverse_in_order(node->right, what_to_do);
 }
 
 void binary_search_tree::find(const std::string &key)

@@ -4,7 +4,7 @@ int main(const int argc, const char *argv[])
 {
     city_searcher cs;
     cs.load(argc, argv);
-    cs.prompt();
+    //cs.prompt();
 
     return 0;
 }
