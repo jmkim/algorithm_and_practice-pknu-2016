@@ -30,10 +30,10 @@ int main(void)
     {
         hs_str.add(s);
 
+        std::cout << std::endl;
         hs_str.print();
-        std::cout << std::endl
-                    << "count: " << hs_str.size() << std::endl
-                    << "capacity: " << hs_str.get_capacity() << std::endl;
+        std::cout << "count: " << hs_str.size() << std::endl
+                  << "capacity: " << hs_str.get_capacity() << std::endl;
     }
 }
 
