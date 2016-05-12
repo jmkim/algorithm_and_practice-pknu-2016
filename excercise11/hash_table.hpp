@@ -1,4 +1,7 @@
-#include <cstddef>
+#ifndef HASH_TABLE_H_
+#define HASH_TABLE_H_ 1
+
+#include <iostream>
 #include <functional>
 
 template<typename T> class hash_set
@@ -15,7 +18,7 @@ private:
     int count;
     int capacity;
     const float load_factor;
-    const std::function<int(T)> hash_code;
+    const std::function<unsigned int(T)> hash_code;
 
     void realloc(const int new_capacity)
     {
@@ -27,13 +30,15 @@ private:
         count = 0;
         capacity = new_capacity;
 
-        for(int i = 0; i < o_capacity; ++i)
+        for(int tk = 0; tk < o_capacity; ++tk)
         {
-            node *n = o_table[i];
+            node *n = o_table[tk];
+            node *p = NULL;
             while(n != NULL)
             {
+                p = n->next;
                 add(n);
-                n = n->next;
+                n = p;
             }
         }
 
@@ -41,27 +46,42 @@ private:
     }
 
 public:
-    hash_set(const int initial_capacity, const float load_factor, const std::function<int(T)> hash_code) : count(0), capacity(initial_capacity), load_factor(load_factor), hash_code(hash_code)
-    {
-        table = new node*[initial_capacity];
-#if 0
-        for(int i = 0; i < initial_capacity; ++i)
-            table[i] = NULL;
-#endif
-    }
+    hash_set(const int initial_capacity, const float load_factor, const std::function<unsigned int(T)> hash_code) : count(0), capacity(initial_capacity), load_factor(load_factor), hash_code(hash_code)
+    { table = new node*[initial_capacity]; }
+
     ~hash_set(void) { delete table; }
 
-#include <iostream>
     void print(std::function<void(int, T)> output)
     {
         for(int tk = 0; tk < capacity; ++tk)
         {
-            std::cout << "[" << capacity << "]" <<
+            std::cout << "[" << capacity << "] ";
             node *n = table[tk];
             while(n != NULL)
             {
                 output(tk, n->element);
                 n = n->next;
+            }
+        }
+    }
+
+    void print(void)
+    {
+        std::cout << "[k: v] value_of_edges" << std::endl;
+        for(int tk = 0; tk < capacity; ++tk)
+        {
+            node *n = table[tk];
+            if(n != NULL)
+            {
+                std::cout << "[" << tk << ": " << n->element << "] ";
+                n = n->next;
+
+                while(n != NULL)
+                {
+                    std::cout << n->element << " -- ";
+                    n = n->next;
+                }
+                std::cout << std::endl;
             }
         }
     }
@@ -80,9 +100,9 @@ public:
 
     void add(node *n)
     {
-        int hash = hash_code(n->element) % capacity;
+        unsigned int hash = hash_code(n->element) % capacity;
 
-        if(table[hash] != NULL) n->next = table[hash]->next;
+        n->next = table[hash];
         table[hash] = n;
 
         ++count;
@@ -144,3 +164,5 @@ public:
     int length(void) { return count; }
     int get_capacity(void) { return capacity; }
 };
+
+#endif /* ! HASH_TABLE_H_ */
