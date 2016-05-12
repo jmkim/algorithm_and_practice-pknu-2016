@@ -147,7 +147,15 @@ public:
                         {
                             if(node->element->latitude < n->element->latitude
                                 && node->element->longitude < n->element->longitude)
-                                g.add_edge(node->element->value, n->element->value);
+                            {
+                                bool is_connected = false;
+                                g.traverse(n->element->value,
+                                    [&] (graph<graphelement>::node* edgn)
+                                    { if(edgn->key == node->element->value) is_connected = true; }
+                                );
+                                if(! is_connected)
+                                    g.add_edge(node->element->value, n->element->value);
+                            }
                         }
                     }
                 );
@@ -157,24 +165,5 @@ public:
         end = clock();
         std::cout << "Finished (" << elapsed_secs(begin, end) << "sec)" << std::endl;
         g.print();
-    }
-
-    void prompt(void)
-    {
-        while(true)
-        {
-            std::string city_name, hop;
-            std::cout << "City name: "; std::getline(std::cin, city_name);
-            std::cout << "Hop: "; std::getline(std::cin, hop);
-
-            bstnode *n = bst->get_node_by_key(city_name);
-            if(n == NULL)
-                std::cout << "Error: City name '" << city_name << "' not found." << std::endl;
-            else
-            {
-                int city_code = n->element->value;
-                g.traverse(city_code, atoi(hop.c_str()));
-            }
-        }
     }
 };

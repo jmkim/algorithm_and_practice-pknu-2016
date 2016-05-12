@@ -10,7 +10,7 @@
 
 template<typename T> class graph
 {
-private:
+public:
     struct node
     {
         const int key;
@@ -19,6 +19,7 @@ private:
         node(const int &key, const T &element) : key(key), element(element), next(NULL) {}
     };
 
+private:
     node **table;
     int count;
     int capacity;
@@ -103,42 +104,23 @@ public:
         }
     }
 
-    void traverse(const int &key, const int &hop)
+    void traverse(std::function<void(node *)> callback)
     {
-        std::set<int> visited_keys;
-        traverse(table[key], 0, hop, visited_keys);
+        for(int tk = 0; tk < capacity; ++tk)
+            traverse(table[tk], callback);
     }
 
-    void traverse(node *n, const int &hop, const int &max_hop, std::set<int> &visited_keys)
+    void traverse(const int &key, std::function<void(node *)> callback)
     {
-        if(hop > max_hop) return;
+        traverse(table[key], callback);
+    }
 
-        std::queue<int> queue;
-
-        if(hop == 0)
+    void traverse(node *n, std::function<void(node *)> callback)
+    {
+        while(n != NULL)
         {
-            std::cout << "[" << hop << "] " << n->key << " " << n->element.data << std::endl;
-            visited_keys.insert(n->key);
-            queue.push(n->key);
-        }
-        else
-            while(n != NULL)
-            {
-                if(visited_keys.count(n->key) == 0)
-                {
-                    std::cout << "[" << hop << "] " << n->key << " " << n->element.data << std::endl;
-                    visited_keys.insert(n->key);
-                    queue.push(n->key);
-                }
-                n = n->next;
-            }
-
-        while(! queue.empty())
-        {
-            int key = queue.front();
-
-            traverse(table[key]->next, hop + 1, max_hop, visited_keys);
-            queue.pop();
+            callback(n);
+            n = n->next;
         }
     }
 
