@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "hash_table.cpp"
+#include "hash_table.hpp"
 #include <time.h>
 
 void randstr(const int length, std::string &out);
