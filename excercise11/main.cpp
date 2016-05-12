@@ -25,22 +25,6 @@ int main(void)
         }
     );
 
-    std::function<void(int, std::string)> pr_str =
-        [](const int table_key, const std::string entry)
-        {
-#if 0
-            static int last_key = -1;
-            if(last_key != table_key)
-            {
-#endif
-                std::cout << std::endl << "[" << table_key << "] ";
-#if 0
-                last_key = table_key;
-            }
-#endif
-            std::cout << entry;
-        };
-
     const int s_count = 30;
     std::string arr[s_count];
     for(int i = 0; i < s_count; ++i) randstr(10, arr[i]);
@@ -49,7 +33,7 @@ int main(void)
     {
         hs_str.add(s);
 
-        hs_str.print(pr_str);
+        hs_str.print();
         std::cout << std::endl
                     << "count: " << hs_str.size() << std::endl
                     << "capacity: " << hs_str.get_capacity() << std::endl;

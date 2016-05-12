@@ -1,3 +1,4 @@
+#include <iostream>
 #include <cstddef>
 #include <functional>
 
@@ -51,17 +52,37 @@ public:
     }
     ~hash_set(void) { delete table; }
 
-#include <iostream>
     void print(std::function<void(int, T)> output)
     {
         for(int tk = 0; tk < capacity; ++tk)
         {
-            std::cout << "[" << capacity << "]" <<
+            std::cout << "[" << capacity << "] ";
             node *n = table[tk];
             while(n != NULL)
             {
                 output(tk, n->element);
                 n = n->next;
+            }
+        }
+    }
+
+    void print(void)
+    {
+        std::cout << "[k: v] value_of_edges" << std::endl;
+        for(int tk = 0; tk < capacity; ++tk)
+        {
+            node *n = table[tk];
+            if(n != NULL)
+            {
+                std::cout << "[" << tk << ": " << n->element << "] ";
+                n = n->next;
+
+                while(n != NULL)
+                {
+                    std::cout << n->element << " ";
+                    n = n->next;
+                }
+                std::cout << std::endl;
             }
         }
     }
