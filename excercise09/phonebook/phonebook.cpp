@@ -81,8 +81,14 @@ void phonebook::prompt(void)
             else
             {
                 std::string name;
-                for(int i = 1; i < cmdtok.size(); ++i)
+                int i;
+
+                for(i = 1; i < cmdtok.size() - 1; ++i)
                     name += cmdtok[i] + " ";
+                name += cmdtok[i];
+
+                std::cout << "'" << name << "'" << std::endl;
+
                 data->find(name);
             }
         }
@@ -93,8 +99,14 @@ void phonebook::prompt(void)
             else
             {
                 std::string name;
-                for(int i = 1; i < cmdtok.size(); ++i)
+                int i;
+
+                for(i = 1; i < cmdtok.size() - 1; ++i)
                     name += cmdtok[i] + " ";
+                name += cmdtok[i];
+
+                std::cout << "'" << name << "'" << std::endl;
+
                 data->remove(name);
             }
         }
