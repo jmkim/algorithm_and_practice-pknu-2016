@@ -17,9 +17,9 @@ int main(void)
     srand(time(NULL));
 
     hash_set<std::string> hs_str(10, 0.8,
-        [] (const std::string entry) -> int
+        [] (const std::string entry) -> unsigned int
         {
-            int hash = 0;
+            unsigned int hash = 0;
             for(char c : entry) hash = c + (13 * hash);
             return hash;
         }
@@ -27,7 +27,11 @@ int main(void)
 
     const int s_count = 30;
     std::string arr[s_count];
-    for(int i = 0; i < s_count; ++i) randstr(10, arr[i]);
+    for(int i = 0; i < s_count; ++i)
+    {
+        randstr(10, arr[i]);
+        std::cout << arr[i] << std::endl;
+    }
 
     for(std::string s : arr)
     {
@@ -38,9 +42,4 @@ int main(void)
                     << "count: " << hs_str.size() << std::endl
                     << "capacity: " << hs_str.get_capacity() << std::endl;
     }
-}
-
-void run(const int num)
-{
-    std::cout << num << std::endl;
 }

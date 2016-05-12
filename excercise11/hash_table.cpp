@@ -16,7 +16,7 @@ private:
     int count;
     int capacity;
     const float load_factor;
-    const std::function<int(T)> hash_code;
+    const std::function<unsigned int(T)> hash_code;
 
     void realloc(const int new_capacity)
     {
@@ -42,7 +42,7 @@ private:
     }
 
 public:
-    hash_set(const int initial_capacity, const float load_factor, const std::function<int(T)> hash_code) : count(0), capacity(initial_capacity), load_factor(load_factor), hash_code(hash_code)
+    hash_set(const int initial_capacity, const float load_factor, const std::function<unsigned int(T)> hash_code) : count(0), capacity(initial_capacity), load_factor(load_factor), hash_code(hash_code)
     {
         table = new node*[initial_capacity];
 #if 0
@@ -101,7 +101,7 @@ public:
 
     void add(node *n)
     {
-        int hash = hash_code(n->element) % capacity;
+        unsigned int hash = hash_code(n->element) % capacity;
 
         if(table[hash] != NULL) n->next = table[hash]->next;
         table[hash] = n;
