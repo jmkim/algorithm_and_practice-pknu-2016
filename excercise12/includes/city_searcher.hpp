@@ -128,7 +128,7 @@ public:
 
         end = clock();
         std::cout << "Finished (" << elapsed_secs(begin, end) << "sec)" << std::endl;
-        bst->printall();
+        //bst->printall();
 
         std::cout << "Step 2 of 2: Add the edges to each vertex . . . ";
         begin = clock();
@@ -155,7 +155,7 @@ public:
 
         end = clock();
         std::cout << "Finished (" << elapsed_secs(begin, end) << "sec)" << std::endl;
-        g.print();
+        //g.print();
     }
 
     void prompt(void)
