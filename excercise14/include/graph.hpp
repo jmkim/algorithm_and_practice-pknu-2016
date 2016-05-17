@@ -14,7 +14,8 @@ template<
 class Graph
 {
 public:
-    typedef size_t  SizeType;
+    typedef size_t          SizeType;
+    typedef unsigned int    KeyType;
 
     struct VertexNode
     {
@@ -30,14 +31,14 @@ public:
 
     struct EdgeNode
     {
-        const   unsigned int    key;        /**< key (index of vertex in table) */
+        const   KeyType         key;        /**< key (index of vertex in table) */
                 EdgeType        value;      /**< value of edge */
                 WeightType      weight;     /**< weight of edge */
                 GraphNode *     next;       /**< point to next edge */
 
         /** Constructor */
-        GraphNode(const unsigned int &  key,
-                  const Edge &          edge,
+        GraphNode(const KeyType &       key,
+                  const EdgeType &      value,
                   const WeightType &    weight = WeightDefaultValue)
         : key(key)
         , value(value)
@@ -50,7 +51,7 @@ private:
     std::vector<VertexNode> graph_;
 
 public:
-#if 0 /** graph_ is not a pointer type */
+#if 0 /** unblock while graph_ is not a pointer type */
     /** Constructor */
     Graph(void)
     : graph_(new VertexNode[Capacity]())
@@ -66,12 +67,14 @@ public:
 
         Test whether there is an edge from the verticies depart to dest.
         \return return true if the edge exists; otherwise return false
-        \param  src     source
-        \param  dest    destination
+        \param  key_src     key of source (src)
+        \param  key_dest    key of destination (dest)
     */
     bool
-    Adjacent(const VertexType & src, const VertexType & dest)
+    Adjacent(const KeyType & key_src, const KeyType & key_dest)
     {
+
+        while(
         /** (TODO:) Not implemented */
     }
 
