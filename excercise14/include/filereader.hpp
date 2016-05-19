@@ -70,7 +70,7 @@ public:
 
     /** Destructor */
     ~FileReader(void)
-    { Close(filename); }
+    { Close(); }
 
     /** Open a file and associates it with the stream
         
