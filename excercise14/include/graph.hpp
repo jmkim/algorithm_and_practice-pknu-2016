@@ -17,50 +17,47 @@
 namespace algorithm
 {
 
-/** \brief Graph class
+/** Undirected, weighted graph class
 
-    Undirected, weighted graph class.
-    TODO: Vertex deletion is not implemented
-    TODO: Edge deletion is not implemented
+    \note   Vertex deletion is not implemented
+    \note   Edge deletion is not implemented
 */
 template<
-    class       ValueType,                            /**< vertex value type; operator== should be defined */
-    class       WeightType            = unsigned int, /**< weight type */
-    WeightType  WeightDefaultValue    = 0             /**< default value of weight */
+    class       ValueType,                            /**< Vertex value type; operator== should be defined */
+    class       WeightType            = unsigned int, /**< Weight type */
+    WeightType  WeightDefaultValue    = 0             /**< Default value of weight */
 >
 class Graph
 {
 public:
     typedef size_t              SizeType;
-    typedef unsigned int        KeyType;        /**< key type, used to access an array */
+    typedef unsigned int        KeyType;        /**< Key type, used to access an array */
 
-    /** \brief  Test if two keys are equal
+    /** Test if two keys are equal
 
-        Test if two keys are equal.
-        \return return true if two keys are equal; otherwise return false
-        \param  key_first   first key to compare
-        \param  key_second  second key to compare
+        \return     Return true if two keys are equal; otherwise return false
+        \param[in]  key_first       First key to compare
+        \param[in]  key_second      Second key to compare
     */
     bool
     IsKeyEqual(const KeyType & key_first, const KeyType & key_second)
     { return key_first == key_second; }
 
-    /** \brief  Vertex class
+    /** Vertex class
 
-        Vertex class.
         Each vertex has an array for its edges as a member.
     */
     struct VertexNode
     {
-        const   KeyType             key;        /**< key of vertex; same with index in graph_ */
-                ValueType           value;      /**< value of vertex */
+        const   KeyType             key;        /**< Key of vertex; same with index in graph_ */
+                ValueType           value;      /**< Value of vertex */
                 std::forward_list<
                     std::pair<const KeyType, WeightType>
-                > edges;                        /**< edges of vertex
-                                                    \param  const KeyType   key_dest
-                                                    \param  WeightType      weight
+                > edges;                        /**< Edges of vertex
+                                                    \param  KeyType     key_dest
+                                                    \param  WeightType  weight
                                                 */
-                SizeType            edges_size; /**< count of edges; forward_list not support size() function */
+                SizeType            edges_size; /**< Count of edges; forward_list not support size() function */
 
         /** Constructor */
         VertexNode(const KeyType & key, const ValueType & value)
@@ -69,11 +66,10 @@ public:
         , edges_size(0)
         { }
 
-        /** \brief  Test if two values are equal
+        /** Test if two values are equal
 
-            Test if two values are equal.
-            \return return true if two values are equal; otherwise return false
-            \param  value   value to compare
+            \return     Return true if two values are equal; otherwise return false
+            \param[in]  value       Value to compare
         */
         bool
         IsValueEqual(const ValueType & value)
@@ -81,15 +77,14 @@ public:
     };
 
 private:
-    std::vector<VertexNode> graph_; /**< graph */
+    std::vector<VertexNode> graph_; /**< Graph */
 
 public:
-    /** \brief  Test whether there is an edge from the vertices src to dest
+    /** Test whether there is an edge from the vertices src to dest
 
-        Test whether there is an edge from the vertices depart to dest.
-        \return return true if the edge exists; otherwise return false
-        \param  key_src     key of source (src)
-        \param  key_dest    key of destination (dest)
+        \return     Return true if the edge exists; otherwise return false
+        \param[in]  key_src         Key of source (src)
+        \param[in]  key_dest        Key of destination (dest)
     */
     bool
     Adjacent(const KeyType & key_src, const KeyType & key_dest)
@@ -103,11 +98,10 @@ public:
         return false; /** Not found */
     }
 
-    /** \brief  Add a vertex
+    /** Add a vertex, if a graph not have the vertex with specified value already
 
-        Add a vertex, if a graph not have the vertex with specified value already.
-        \return return the key of vertex if added successfully; otherwise return -1
-        \param  value_of_vertex     value of vertex
+        \return     Return the key of vertex if added successfully; otherwise return -1
+        \param[in]  value_of_vertex     Value of vertex
     */
     KeyType
     AddVertex(const ValueType & value_of_vertex)
@@ -120,12 +114,11 @@ public:
         return key_of_vertex;
     }
 
-    /** \brief  Add an edge
+    /** Add an edge to connect two vertices
 
-        Add an edge connects two vertices.
-        \param  key_src     key of source (src)
-        \param  key_dest    key of destination (dest)
-        \param  weight      weight of the edge
+        \param[in]  key_src         Key of source (src)
+        \param[in]  key_dest        Key of destination (dest)
+        \param[in]  weight          Weight of the edge
     */
     void
     AddEdge(const KeyType & key_src, const KeyType & key_dest, const WeightType & weight = WeightDefaultValue)
@@ -136,12 +129,12 @@ public:
         ++graph_.at(key_src).edges_size;
     }
 
-    /** \brief  Get a key of the vertex with specified value
+    /** Get a key of the vertex with specified value from a graph
 
-        Get a key of the vertex with specified value from a graph.
         If failed to add, return the size of graph which is an invalid key (maximum key + 1).
-        \return return the key of vertex if added successfully; otherwise return the size of graph
-        \param  value_of_vertex     value of vertex
+
+        \return     Return the key of vertex if added successfully; otherwise return the size of graph
+        \param[in]  value_of_vertex     Value of vertex
     */
     KeyType
     GetVertexKey(const ValueType & value_of_vertex)
@@ -155,43 +148,39 @@ public:
         return GetVertexCount();
     }
 
-    /** \brief  Get a value of the vertex with specified key
+    /** Get a value of the vertex with specified key from a graph
 
-        Get a value of the vertex with specified key from a graph.
-        \return return the value
-        \param  key_of_vertex   key of vertex
+        \return     Return the value
+        \param[in]  key_of_vertex       Key of vertex
     */
     inline
     ValueType
     GetVertexValue(const KeyType & key_of_vertex)
     { return graph_.at(key_of_vertex).value; }
 
-    /** \brief  Set a value of the vertex with specified key
+    /** Set a value of the vertex with specified key from a graph
 
-        Set a value of the vertex with specified key from a graph.
-        \param  key_of_vertex       key of vertex
-        \param  value_of_vertex     value of vertex
+        \param[in]  key_of_vertex       Key of vertex
+        \param[in]  value_of_vertex     Value of vertex
     */
     inline
     void
     SetVertexValue(const KeyType & key_of_vertex, const ValueType & value_of_vertex)
     { graph_.at(key_of_vertex).value = value_of_vertex; }
 
-    /** \brief  Get a count of vertices
+    /** Get a count of vertices
 
-        Get a count of vertices
-        \return count of vertices
+        \return     Count of vertices
     */
     inline
     SizeType
     GetVertexCount(void)
     { return graph_.size(); }
 
-    /** \brief  Get a count of edges
+    /** Get a count of edges
 
-        Get a count of edges
-        \return count of edges
-        \param  key_of_vertex       key of vertex
+        \return     Count of edges
+        \param[in]  key_of_vertex       Key of vertex
     */
     inline
     SizeType

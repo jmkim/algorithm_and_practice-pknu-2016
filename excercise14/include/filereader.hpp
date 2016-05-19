@@ -185,4 +185,4 @@ public:
     }
 };
 
-} /* ns: algorithm */
+} /** ns: algorithm */
