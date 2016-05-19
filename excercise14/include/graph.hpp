@@ -17,6 +17,12 @@
 namespace algorithm
 {
 
+/** \brief Graph class
+
+    Undirected, weighted graph class.
+    TODO: Vertex deletion is not implemented
+    TODO: Edge deletion is not implemented
+*/
 template<
     class       ValueType,                            /**< vertex value type; operator== should be defined */
     class       WeightType            = unsigned int, /**< weight type */
