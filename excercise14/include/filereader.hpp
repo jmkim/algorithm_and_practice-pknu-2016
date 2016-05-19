@@ -6,6 +6,9 @@
  *
  */
 
+#ifndef ALGORITHM_FILEREADER_HPP_
+#define ALGORITHM_FILEREADER_HPP_ 1
+
 /** Includes */
 #include <string>
 #include <fstream> /** File stream */
@@ -229,3 +232,5 @@ public:
 };
 
 } /** ns: algorithm */
+
+#endif /** ! ALGORITHM_FILEREADER_HPP_ */

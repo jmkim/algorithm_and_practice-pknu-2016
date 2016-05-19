@@ -7,6 +7,9 @@
  *
  */
 
+#ifndef ALGORITHM_GRAPH_HPP_
+#define ALGORITHM_GRAPH_HPP_ 1
+
 /** Includes */
 #include <cstddef> /** To define size_t */
 
@@ -189,3 +192,5 @@ public:
 };
 
 } /** ns: algorithm */
+
+#endif /** ! ALGORITHM_GRAPH_HPP_ */
