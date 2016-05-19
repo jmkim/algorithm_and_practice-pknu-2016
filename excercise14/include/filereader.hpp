@@ -37,6 +37,7 @@ public:
     typedef std::istream        InputStreamType;        /**< Common input stream type */
     typedef std::ifstream       FileInputStreamType;    /**< File input stream type */
     typedef std::stringstream   StringInputStreamType;  /**< String input stream type */
+    typedef std::regex          RegexType;              /**< Regular expression pattern type */
 
 private:
     FileInputStreamType         stream_;    /**< File stream */
@@ -230,6 +231,22 @@ public:
             ReadLine(string);
             callback(string);
         }
+    }
+
+    /** Regular expression match operation
+
+        \note   Experimental
+
+        \return     Return true if match exists; otherwise return false
+        http://en.cppreference.com/w/cpp/regex/regex_match
+    */
+    bool
+    RegexMatch(StringType & out_result, const StringType & string, const StringType & regex_pattern)
+    {
+        RegexType pattern(regex_pattern);
+        bool r = regex_match(string, pattern);
+
+        return (r.ready() == true && r.empty() == true && r.size() == 0) != true;
     }
 };
 
