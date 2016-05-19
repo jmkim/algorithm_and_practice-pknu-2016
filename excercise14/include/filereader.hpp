@@ -65,6 +65,9 @@ private:
 
 public:
     /** Constructor */
+    FileReader(void)
+    { }
+
     FileReader(const StringType & filename)
     { Open(filename); }
 
