@@ -39,7 +39,7 @@ public:
 private:
     FileInputStreamType         stream_;    /**< File stream */
 
-    /** Test whether a character matches with one of delims
+    /** Test whether the character matches with one of delims
 
         \note   If the number of delimiters is N, then the time complexity is O(N).
 
@@ -60,6 +60,58 @@ private:
         return false;
     }
 
+public:
+    /** Constructor */
+    FileReader(const StringType & filename)
+    { Open(filename); }
+
+    /** Destructor */
+    ~FileReader(void)
+    { Close(filename); }
+
+    /** Open a file and associates it with the stream
+        
+        \param[in]  filename    Path of the file
+    */
+    void
+    Open(const StringType & filename)
+    { stream_.open(filename); } 
+
+    /** Close the associated file */
+    void
+    Close(void)
+    { stream_.close(); }
+
+    /** Close and re-open the associated file
+
+        \param[in]  filename    Path of the file
+    */
+    void
+    Reopen(const StringType & filename)
+    {
+        Close();
+        Open(filename);
+    }
+
+    /** Test whether the stream has an associated file
+
+        \return     Return true if the stream has an associated file;
+                    otherwise return false
+    */
+    inline
+    bool
+    IsOpen(void)
+    { return stream_.is_open(); }
+
+    /** Test whether the stream reached to End-of-file
+    
+        \return     Return true if the stream reached to EOF; otherwise return false
+    */
+    inline
+    bool
+    IsEOF(void)
+    { return stream_.eof(); }
+
     /** Read a file until specific delimiter
 
         \note   If the length of each line in input stream is M
@@ -77,20 +129,11 @@ private:
         out_string.clear();
 
         CharType ch;
-        while(stream.eof() != true && IsDelimiter(ch = stream.get(), delims) != true)
+        while(IsEOF() != true && IsDelimiter(ch = stream.get(), delims) != true)
             out_string += ch;
 
         return out_string.length();
     }
-
-public:
-    /** Constructor */
-    FileReader(const StringType & file_path)
-    { stream_.open(file_path); }
-
-    /** Destructor */
-    ~FileReader(void)
-    { stream_.close(); }
 
     /** Read a line
 
@@ -157,7 +200,7 @@ public:
         `
             bool
             term_condition(InputStreamType & stream)
-            { return stream.eof() == true; }
+            { return IsEOF(); }
         '.
 
         \note   Experimental
@@ -166,14 +209,14 @@ public:
         \param[in]  term_condition  Function which have a termination condition;
                                     if the loop reached to terminate condition,
                                     term_condition should return true to escape out
-                                    (Optional, default value is: `return stream.eof() == true;')
+                                    (Optional, default value is: `return IsEOF;')
     */
     void
     Parse(std::function<void(StringType &)> & callback,
           std::function<bool(InputStreamType &)> & term_condition =
           [] (InputStreamType & stream)
           -> bool
-          { return stream.eof() == true; }
+          { return IsEOF(); }
     )
     {
         while(term_condition(stream_) != true)
