@@ -1,6 +1,18 @@
+/**
+ *
+ *  Graph
+ *
+ *  Undirected, weighted graph
+ *  https://github.com/kdzlvaids/algorithm_and_practice-pknu-2016
+ *
+ */
+
+/** Includes */
+#include <cstddef> /** To define size_t */
+
+/** STL containers */
 #include <vector>
 #include <forward_list>
-#include <algorithm>
 
 namespace algorithm
 {
@@ -38,10 +50,10 @@ public:
                 ValueType           value;      /**< value of vertex */
                 std::forward_list<
                     std::pair<const KeyType, WeightType>
-                > edges;    /**< edges of vertex
-                                \param  const KeyType   key_dest
-                                \param  WeightType      weight
-                            */
+                > edges;                        /**< edges of vertex
+                                                    \param  const KeyType   key_dest
+                                                    \param  WeightType      weight
+                                                */
                 SizeType            edges_size; /**< count of edges; forward_list not support size() function */
 
         /** Constructor */
@@ -181,4 +193,4 @@ public:
     { return graph_.at(key_of_vertex).edges_size; }
 };
 
-} /** ns:algorithm */
+} /** ns: algorithm */
