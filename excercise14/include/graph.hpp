@@ -11,11 +11,9 @@
 #define ALGORITHM_GRAPH_HPP_ 1
 
 /** Includes */
-#include <cstddef> /** To define size_t */
-
-/** STL containers */
-#include <vector>
-#include <forward_list>
+#include <cstddef>          /** size_t definition */
+#include <vector>           /** Containers */
+#include <forward_list>     /** Containers */
 
 namespace algorithm
 {

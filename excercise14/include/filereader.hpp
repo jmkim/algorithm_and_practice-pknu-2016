@@ -11,13 +11,12 @@
 
 /** Includes */
 #include <string>
-#include <fstream> /** File stream */
-#include <sstream> /** String stream */
+#include <fstream>      /** File stream */
+#include <sstream>      /** String stream */
 #include <functional>
-
-/** STL containers */
-#include <array>
-#include <vector>
+#include <regex>        /** Regular expressions */
+#include <array>        /** Containers */
+#include <vector>       /** Containers */
 
 namespace algorithm
 {
