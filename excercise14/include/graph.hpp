@@ -63,7 +63,7 @@ public:
     };
 
 private:
-    std::vector<VertexNode> graph_; /* Graph */
+    std::vector<VertexNode> graph_; /**< graph */
 
 public:
     /** \brief  Test whether there is an edge from the vertices src to dest
@@ -78,11 +78,11 @@ public:
     {
         for(auto & edge : graph_.at(key_src)->edges)
         {
-            if(IsKeyEqual(edge.first, key_dest) == true) /* Found */
+            if(IsKeyEqual(edge.first, key_dest) == true) /** Found */
                 return true;
         }
 
-        return false; /* Not found */
+        return false; /** Not found */
     }
 
     /** \brief  Add a vertex
@@ -181,4 +181,4 @@ public:
     { return graph_.at(key_of_vertex).edges_size; }
 };
 
-} /* ns:algorithm */
+} /** ns:algorithm */
