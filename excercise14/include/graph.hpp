@@ -22,6 +22,7 @@ namespace algorithm
 
     \note   Vertex deletion is not implemented
     \note   Edge deletion is not implemented
+    \note   Cannot use double as WeightType
 */
 template<
     class       ValueType,                            /**< Vertex value type; operator== should be defined */
@@ -127,7 +128,7 @@ public:
     AddEdge(const KeyType & key_src, const KeyType & key_dest, const WeightType & weight = WeightDefaultValue)
     {
         graph_.at(key_src).edges.push_front(
-            std::make_pair<const KeyType, WeightType> (key_dest, weight)
+            std::make_pair<const KeyType, WeightType> (KeyType(key_dest), WeightType(weight))
         );
         ++graph_.at(key_src).edges_size;
     }
