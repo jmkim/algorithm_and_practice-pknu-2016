@@ -54,7 +54,7 @@ private:
     bool
     IsDelimiter(const CharType & ch, const DelimsType & delims)
     {
-        for(CharType & delim : delims)
+        for(const CharType & delim : delims)
         {
             if(ch == delim)
                 return true;
@@ -233,6 +233,7 @@ public:
         }
     }
 
+#if 0
     /** Regular expression match operation
 
         \note   Experimental
@@ -248,6 +249,7 @@ public:
 
         return (r.ready() == true && r.empty() == true && r.size() == 0) != true;
     }
+#endif
 };
 
 } /** ns: algorithm */

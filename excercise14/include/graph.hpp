@@ -42,6 +42,7 @@ public:
     */
     bool
     IsKeyEqual(const KeyType & key_first, const KeyType & key_second)
+    const
     { return key_first == key_second; }
 
     /** Vertex class
@@ -74,7 +75,8 @@ public:
         */
         bool
         IsValueEqual(const ValueType & value)
-        { return this.value == value; }
+        const
+        { return this->value == value; }
     };
 
 private:
@@ -157,6 +159,7 @@ public:
     inline
     ValueType
     GetVertexValue(const KeyType & key_of_vertex)
+    const
     { return graph_.at(key_of_vertex).value; }
 
     /** Set a value of the vertex with specified key from a graph
@@ -176,6 +179,7 @@ public:
     inline
     SizeType
     GetVertexCount(void)
+    const
     { return graph_.size(); }
 
     /** Get a count of edges
@@ -186,6 +190,7 @@ public:
     inline
     SizeType
     GetVertexEdgeCount(const KeyType & key_of_vertex)
+    const
     { return graph_.at(key_of_vertex).edges_size; }
 };
 
