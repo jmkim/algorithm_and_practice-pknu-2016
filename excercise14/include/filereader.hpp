@@ -135,7 +135,7 @@ public:
         out_string.clear();
 
         CharType ch;
-        while(IsEOF() != true && IsDelimiter(ch = stream.get(), delims) != true)
+        while(stream.eof() != true && IsDelimiter(ch = stream.get(), delims) != true)
             out_string += ch;
 
         return out_string.length();
