@@ -23,7 +23,6 @@ namespace algorithm
 
 /** File reader */
 template<
-    std::streamsize StreamSize  = 1000,                             /**< Stream unit size (word, line, etc.)*/
     class   StringType          = std::string,                      /**< Char array type */
     class   StringArrayType     = std::vector<StringType>,          /**< Array of Char array type */
     class   DelimsType          = StringType                        /**< List of delimiters type (Char array type, should be iterable) */
