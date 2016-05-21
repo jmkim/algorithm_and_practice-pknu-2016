@@ -11,9 +11,9 @@
 #define ALGORITHM_GRAPH_HPP_ 1
 
 /** Includes */
-#include <cstddef>          /** size_t definition */
-#include <vector>           /** Containers */
-#include <forward_list>     /** Containers */
+#include <cstddef>      /** size_t definition */
+#include <vector>       /** Containers */
+#include <map>          /** Containers */
 
 namespace algorithm
 {
@@ -32,8 +32,11 @@ template<
 class Graph
 {
 public:
-    typedef size_t              SizeType;
-    typedef unsigned int        KeyType;        /**< Key type, used to access an array */
+    typedef size_t                              SizeType;
+    typedef std::map<const KeyType, WeightType> EdgeType;   /**< Edges of vertex
+                                                                \param  KeyType     key_dest
+                                                                \param  WeightType  weight
+                                                            */
 
     /** Test if two keys are equal
 
@@ -54,19 +57,13 @@ public:
     {
         const   KeyType             key;        /**< Key of vertex; same with index in graph_ */
                 ValueType           value;      /**< Value of vertex */
-                std::forward_list<
-                    std::pair<const KeyType, WeightType>
-                > edges;                        /**< Edges of vertex
-                                                    \param  KeyType     key_dest
-                                                    \param  WeightType  weight
-                                                */
-                SizeType            edges_size; /**< Count of edges; forward_list not support size() function */
+                EdgeType            edges;
+                //SizeType            edges_size; /**< Count of edges; forward_list not support size() function */
 
         /** Constructor */
         VertexNode(const KeyType & key, const ValueType & value)
         : key(key)
         , value(value)
-        , edges_size(0)
         { }
 
         /** Test if two values are equal
@@ -127,10 +124,9 @@ public:
     void
     AddEdge(const KeyType & key_src, const KeyType & key_dest, const WeightType & weight = WeightDefaultValue)
     {
-        graph_.at(key_src).edges.push_front(
+        graph_.at(key_src).edges.insert(
             std::make_pair<const KeyType, WeightType> (KeyType(key_dest), WeightType(weight))
         );
-        ++graph_.at(key_src).edges_size;
     }
 
     /** Get a key of the vertex with specified value from a graph
@@ -192,7 +188,7 @@ public:
     SizeType
     GetVertexEdgeCount(const KeyType & key_of_vertex)
     const
-    { return graph_.at(key_of_vertex).edges_size; }
+    { return graph_.at(key_of_vertex).edges.size(); }
 };
 
 } /** ns: algorithm */
