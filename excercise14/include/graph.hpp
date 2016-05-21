@@ -77,7 +77,7 @@ public:
         { return this->value == value; }
     };
 
-private:
+protected:
     std::vector<VertexNode> graph_; /**< Graph */
 
 public:
