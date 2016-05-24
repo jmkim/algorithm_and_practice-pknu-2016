@@ -30,24 +30,25 @@ namespace algorithm
 template<
     class           ValueType,                              /**< Vertex value type; operator== should be defined */
     class           WeightType      = unsigned int,         /**< Weight type */
-    WeightType      WeightInitValue = UINT_MAX,             /**< Initial value for weight (should not use this value as data) */
     class           KeyType         = unsigned int,         /**< Key type, used to access an array */
     class           KeyArrayType    = std::vector<KeyType>  /**< Array of Key type */
 >
 class AdjacencyMatrix
 {
 public:
-    typedef size_t      SizeType;
+    typedef size_t          SizeType;
 
 protected:
     const   SizeType        size_;
-            WeightType **   edges_;     /**< Edges */
-            ValueType *     vertices_;  /**< Vertices */
+    const   WeightType      init_value_;    /**< Initial value for weight (should not use this value as data) */
+            WeightType **   edges_;         /**< Edges */
+            ValueType *     vertices_;      /**< Vertices */
 
 public:
     /** Constructor */
-    AdjacencyMatrix(const SizeType & size_of_matrix)
+    AdjacencyMatrix(const SizeType & size_of_matrix, const WeightType & init_value)
     : size_(size_of_matrix)
+    , init_value_(init_value)
     {
         edges_ = new WeightType *[size_];
         for(KeyType i = 0; i < size_; ++i)
@@ -55,7 +56,7 @@ public:
             edges_[i] = new WeightType[size_];
 
             for(KeyType j = 0; j < size_; ++j)
-                edges_[i][j] = WeightInitValue;
+                edges_[i][j] = init_value;
         }
     }
 
@@ -79,7 +80,7 @@ public:
     bool
     IsEdgeExist(const KeyType & key_src, const KeyType & key_dest)
     const
-    { return edges_[key_src][key_dest] != WeightInitValue; }
+    { return edges_[key_src][key_dest] != init_value_; }
 
     /** Get a key of the vertex with specific value
 
@@ -164,7 +165,8 @@ public:
     CountOfEdges(const KeyType & key_of_vertex)
     {
         KeyArrayType dummy;
-        return ListOfEdges(dummy, key_of_vertex); }
+        return ListOfEdges(dummy, key_of_vertex);
+    }
 
     /** Get the list of edges
 
@@ -181,7 +183,7 @@ public:
         for(KeyType key = 0; key < size_; ++key)
         {
             weight = edges_[key_of_vertex][key];
-            if(weight != WeightInitValue)
+            if(weight != init_value_)
                 out_edges.push_back(weight);
         }
 
