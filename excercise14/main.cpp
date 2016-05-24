@@ -174,7 +174,7 @@ main(const int argc, const char * argv[])
             /** Get a name of the city for starting point */
 
             std::cout   << "Starting point: ";
-            std::cin    >> name_depart;
+            std::getline(std::cin, name_depart);
             if(tree.find(name_depart) == tree.end()) /** Not found */
             {
                 std::cout << "Error: City named '" << name_depart << "' not found." << std::endl;
@@ -185,7 +185,7 @@ main(const int argc, const char * argv[])
             /** Get a name of the city for destination */
 
             std::cout   << "Destination: ";
-            std::cin    >> name_dest;
+            std::getline(std::cin, name_dest);
             if(tree.find(name_dest) == tree.end()) /** Not found */
             {
                 std::cout << "Error: City named '" << name_dest << "' not found." << std::endl;
