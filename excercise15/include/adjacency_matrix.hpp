@@ -49,16 +49,6 @@ public:
     AdjacencyMatrix(void)
     { edges_.fill(WeightInitValue); }
 
-    /** Add an edge to connect two vertices
-
-        \param[in]  key_src         Key of source (src)
-        \param[in]  key_dest        Key of destination (dest)
-        \param[in]  weight          Weight of the edge
-    */
-    void
-    AddEdge(const KeyType & key_src, const KeyType & key_dest, const WeightType & weight)
-    { edges_.at(key_src).at(key_dest) = weight; }
-
     /** Test whether there is an edge from the vertices src to dest
 
         \return     Return true if the edge exists; otherwise return false
