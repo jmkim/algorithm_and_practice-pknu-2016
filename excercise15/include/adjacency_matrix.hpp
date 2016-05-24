@@ -144,6 +144,16 @@ public:
     SetEdgeWeight(const KeyType & key_src, const KeyType & key_dest, const WeightType & weight)
     { edges_[key_src][key_dest] = weight; }
 
+    /** Get a count of vertices
+
+        \return     Count of vertices
+    */
+    inline
+    SizeType
+    CountOfVertices(void)
+    const
+    { return size_; }
+
     /** Get a count of edges
 
         \return     Count of edges
