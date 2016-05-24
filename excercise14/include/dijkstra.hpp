@@ -1,8 +1,10 @@
 /**
  *
- *  Graph with Dijkstra algorithm
+ *  Dijkstra's algorithm
  *
- *  An inherited class for searching the shortest path
+ *  Shortest path searching algorithm,
+ *  using Adjacency list
+ *
  *  https://github.com/kdzlvaids/algorithm_and_practice-pknu-2016
  *
  */
@@ -11,7 +13,7 @@
 #define ALGORITHM_DIJKSTRA_HPP_ 1
 
 /** Includes */
-#include "graph.hpp"
+#include "adjacency_list.hpp"
 #include <deque>
 #include <map>
 #include <set>
@@ -20,9 +22,9 @@
 namespace algorithm
 {
 
-/** Graph with Dijkstra algorithm
+/** Shortest path searching algorithm
 
-    \note   Depends deeply with algorithm::Graph
+    \note   Depends deeply with algorithm::AdjacencyList
 */
 template<
     class       ValueType,                                  /**< Vertex value type; operator== should be defined */
@@ -31,33 +33,31 @@ template<
     class       KeyType             = unsigned int,         /**< Key type */
     class       KeyArrayType        = std::deque<KeyType>   /**< Array of Key type */
 >
-class Dijkstra : public Graph<ValueType, WeightType, WeightDefaultValue, KeyType, KeyArrayType>
+class Dijkstra : public AdjacencyList<ValueType, WeightType, WeightDefaultValue, KeyType, KeyArrayType>
 {
 public:
-    /** Get a shortest distance with Dijkstra algorithm
+    /** Get the shortest distance
 
-        Overrides GetShortestPath(const KeyType &, const KeyType &, KeyArrayType &)
-
-        \return     Distance
+        \return     Distance of the shortest path
         \param[in]  key_src     Key of source (src)
         \param[in]  key_dest    Key of destination (dest)
     */
     WeightType
-    GetShortestPath(const KeyType & key_src, const KeyType & key_dest)
+    ShortestDistance(const KeyType & key_src, const KeyType & key_dest)
     {
         KeyArrayType dummy; /** Dummy array for calling */
         return GetShortestPath(key_src, key_dest, dummy);
     }
 
-    /** Get a shortest distance with Dijkstra algorithm
+    /** Get the shortest path
 
-        \return     Distance
+        \return     Distance of the shortest path
+        \param[out] out_path    Array to store the path (Optional)
         \param[in]  key_src     Key of source (src)
         \param[in]  key_dest    Key of destination (dest)
-        \param[out] out_path    Array to store the path (Optional)
     */
     WeightType
-    GetShortestPath(const KeyType & key_src, const KeyType & key_dest, KeyArrayType & out_path)
+    ShortestPath(KeyArrayType & out_path, const KeyType & key_src, const KeyType & key_dest)
     {
         std::map<KeyType, WeightType>   edge_distance_;         /**< Record distance from key_src */
         std::map<KeyType, KeyType>      edge_src_;              /**< Record source of edge (`from' vertex) */
@@ -98,7 +98,7 @@ public:
 
             vertex_determined_.insert(key);
 
-            for(auto & edge : Graph<ValueType, WeightType, WeightDefaultValue, KeyType, KeyArrayType>::graph_.at(key).edges)
+            for(auto & edge : AdjacencyList<ValueType, WeightType, WeightDefaultValue, KeyType, KeyArrayType>::vertices_.at(key).edges)
             {
                 KeyType     k   = edge.first;
                 WeightType  w   = edge.second;
@@ -138,6 +138,9 @@ public:
                 }
             }
         }
+
+
+        /** Push the path into out_path */
 
         KeyType key = key_dest;
         while(key != key_src)

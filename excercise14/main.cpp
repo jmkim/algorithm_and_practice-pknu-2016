@@ -157,7 +157,7 @@ main(const int argc, const char * argv[])
         SizeType num_edges = 0;
 
         for(CityKeyType vk = 0; vk < graph.CountOfVertices(); ++vk)
-            num_edges += graph.CountOfEdgeOfVertices(vk);
+            num_edges += graph.CountOfEdges(vk);
 
         std::cout << "Count of edges: " << num_edges << std::endl;
     }
@@ -206,7 +206,7 @@ main(const int argc, const char * argv[])
 
             std::deque<CityKeyType> path;
 
-            WeightType      distance    = graph.GetShortestPath(key_depart, key_dest, path);
+            WeightType      distance    = graph.ShortestPath(path, key_depart, key_dest);
 
 
             /** Print the shortest path */

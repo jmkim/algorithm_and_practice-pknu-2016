@@ -1,14 +1,16 @@
 /**
  *
- *  Graph
+ *  Adjacency List
  *
- *  Undirected, weighted graph
+ *  Weighted graph,
+ *  implementation with adjacency list
+ *
  *  https://github.com/kdzlvaids/algorithm_and_practice-pknu-2016
  *
  */
 
-#ifndef ALGORITHM_GRAPH_HPP_
-#define ALGORITHM_GRAPH_HPP_ 1
+#ifndef ALGORITHM_ADJACENCYLIST_HPP_
+#define ALGORITHM_ADJACENCYLIST_HPP_ 1
 
 /** Includes */
 #include <cstddef>      /** size_t definition */
@@ -18,7 +20,7 @@
 namespace algorithm
 {
 
-/** Undirected, weighted graph class
+/** Graph implementation with adjacency list
 
     \note   Vertex deletion is not implemented
     \note   Edge deletion is not implemented
@@ -31,7 +33,7 @@ template<
     class       KeyType             = unsigned int,         /**< Key type, used to access an array */
     class       KeyArrayType        = std::vector<KeyType>  /**< Array of Key type */
 >
-class Graph
+class AdjacencyList
 {
 public:
     typedef size_t                              SizeType;
@@ -40,26 +42,15 @@ public:
                                                                 \param  WeightType  weight
                                                             */
 
-    /** Test if two keys are equal
-
-        \return     Return true if two keys are equal; otherwise return false
-        \param[in]  key_first       First key to compare
-        \param[in]  key_second      Second key to compare
-    */
-    bool
-    IsKeyEqual(const KeyType & key_first, const KeyType & key_second)
-    const
-    { return key_first == key_second; }
-
     /** Vertex class
 
         Each vertex has an array for its edges as a member.
     */
     struct VertexNode
     {
-        const   KeyType             key;        /**< Key of vertex; same with index in graph_ */
+        const   KeyType             key;        /**< Key of vertex; same with index in vertices_ */
                 ValueType           value;      /**< Value of vertex */
-                EdgeType            edges;
+                EdgeType            edges;      /**< Edges */
                 //SizeType            edges_size; /**< Count of edges; forward_list not support size() function */
 
         /** Constructor */
@@ -67,23 +58,13 @@ public:
         : key(key)
         , value(value)
         { }
-
-        /** Test if two values are equal
-
-            \return     Return true if two values are equal; otherwise return false
-            \param[in]  value       Value to compare
-        */
-        bool
-        IsValueEqual(const ValueType & value)
-        const
-        { return this->value == value; }
     };
 
 protected:
-    std::vector<VertexNode> graph_; /**< Graph */
+    std::vector<VertexNode> vertices_; /**< Vertices */
 
 public:
-    /** Add a vertex, if a graph not have the vertex with specific value already
+    /** Add a vertex, if a list not have the vertex with specific value already
 
         \return     Return the key of vertex if added successfully; otherwise return -1
         \param[in]  value_of_vertex     Value of vertex
@@ -94,7 +75,7 @@ public:
         KeyType key_of_vertex = GetVertexKey(value_of_vertex);
 
         if(key_of_vertex == CountOfVertices()) /** Not found */
-            graph_.push_back(VertexNode(key_of_vertex, value_of_vertex));
+            vertices_.push_back(VertexNode(key_of_vertex, value_of_vertex));
 
         return key_of_vertex;
     }
@@ -108,7 +89,7 @@ public:
     void
     AddEdge(const KeyType & key_src, const KeyType & key_dest, const WeightType & weight = WeightDefaultValue)
     {
-        graph_.at(key_src).edges.insert(
+        vertices_.at(key_src).edges.insert(
             std::make_pair<const KeyType, WeightType> (KeyType(key_dest), WeightType(weight))
         );
     }
@@ -124,7 +105,7 @@ public:
     const
     {
         try
-        { graph_.at(key_of_vertex); } /** .at() throws exception */
+        { vertices_.at(key_of_vertex); } /** .at() throws exception */
         catch(std::out_of_range & e)
         { return false; /** key_of_vertex is over the maximum bound */ }
 
@@ -141,21 +122,21 @@ public:
     bool
     IsEdgeExist(const KeyType & key_src, const KeyType & key_dest)
     const
-    { return graph_.at(key_src).edges.find(key_dest) != graph_.at(key_src).edges.end(); }
+    { return vertices_.at(key_src).edges.find(key_dest) != vertices_.at(key_src).edges.end(); }
 
     /** Get a key of the vertex with specific value
 
-        If failed to add, return the size of graph which is an invalid key (maximum key + 1).
+        If failed to add, return the size of list which is an invalid key (maximum key + 1).
 
-        \return     Return the key of vertex if added successfully; otherwise return the size of graph
+        \return     Return the key of vertex if added successfully; otherwise return the size of list
         \param[in]  value_of_vertex     Value of vertex
     */
     KeyType
     GetVertexKey(const ValueType & value_of_vertex)
     {
-        for(const VertexNode & vertex : graph_)
+        for(const VertexNode & vertex : vertices_)
         {
-            if(vertex.IsValueEqual(value_of_vertex) == true)
+            if(vertex.value == value_of_vertex)
                 return vertex.key;
         }
 
@@ -171,7 +152,7 @@ public:
     ValueType
     GetVertexValue(const KeyType & key_of_vertex)
     const
-    { return graph_.at(key_of_vertex).value; }
+    { return vertices_.at(key_of_vertex).value; }
 
     /** Set a value of the vertex with specific key
 
@@ -181,7 +162,7 @@ public:
     inline
     void
     SetVertexValue(const KeyType & key_of_vertex, const ValueType & value_of_vertex)
-    { graph_.at(key_of_vertex).value = value_of_vertex; }
+    { vertices_.at(key_of_vertex).value = value_of_vertex; }
 
     /** Get a weight of the edge
 
@@ -193,7 +174,7 @@ public:
     WeightType
     GetEdgeWeight(const KeyType & key_src, const KeyType & key_dest)
     const
-    { return graph_.at(key_src).edges.at(key_dest); }
+    { return vertices_.at(key_src).edges.at(key_dest); }
 
     /** Set a weight of the edge
 
@@ -204,7 +185,7 @@ public:
     inline
     void
     SetEdgeWeight(const KeyType & key_src, const KeyType & key_dest, const WeightType & weight)
-    { graph_.at(key_src).edges.at(key_dest) = weight; }
+    { vertices_.at(key_src).edges.at(key_dest) = weight; }
 
     /** Get a count of vertices
 
@@ -214,7 +195,7 @@ public:
     SizeType
     CountOfVertices(void)
     const
-    { return graph_.size(); }
+    { return vertices_.size(); }
 
     /** Get a count of edges
 
@@ -223,9 +204,9 @@ public:
     */
     inline
     SizeType
-    CountOfEdgeOfVertices(const KeyType & key_of_vertex)
+    CountOfEdges(const KeyType & key_of_vertex)
     const
-    { return graph_.at(key_of_vertex).edges.size(); }
+    { return vertices_.at(key_of_vertex).edges.size(); }
 
     /** Get the list of edges
 
@@ -238,7 +219,7 @@ public:
     {
         out_edges.clear();
 
-        for(auto & edge : graph_.at(key_of_vertex).edges)
+        for(auto & edge : vertices_.at(key_of_vertex).edges)
             out_edges.push_back(edge);
 
         return out_edges.size();
@@ -247,4 +228,4 @@ public:
 
 } /** ns: algorithm */
 
-#endif /** ! ALGORITHM_GRAPH_HPP_ */
+#endif /** ! ALGORITHM_ADJACENCYLIST_HPP_ */
