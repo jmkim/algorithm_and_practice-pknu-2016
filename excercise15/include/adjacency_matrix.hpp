@@ -14,6 +14,7 @@
 
 /** Includes */
 #include <cstddef>      /** size_t definition */
+#include <climits>      /** UINT_MAX definition */
 #include <vector>       /** Containers */
 #include <array>        /** Containers */
 
@@ -30,7 +31,7 @@ template<
     size_t          MatrixSize,
     class           ValueType,                              /**< Vertex value type; operator== should be defined */
     class           WeightType      = unsigned int,         /**< Weight type */
-    WeightType      WeightInitValue = 0,                    /**< Initial value for weight (should not use this value as data) */
+    WeightType      WeightInitValue = UINT_MAX,             /**< Initial value for weight (should not use this value as data) */
     class           KeyType         = unsigned int,         /**< Key type, used to access an array */
     class           KeyArrayType    = std::vector<KeyType>  /**< Array of Key type */
 >
