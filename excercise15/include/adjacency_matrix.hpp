@@ -15,8 +15,8 @@
 /** Includes */
 #include <cstddef>      /** size_t definition */
 #include <climits>      /** UINT_MAX definition */
+#include <algorithm>    /** fill_n definition */
 #include <vector>       /** Containers */
-#include <array>        /** Containers */
 
 namespace algorithm
 {
@@ -28,7 +28,6 @@ namespace algorithm
     \note   Cannot use double as WeightType
 */
 template<
-    size_t          MatrixSize,
     class           ValueType,                              /**< Vertex value type; operator== should be defined */
     class           WeightType      = unsigned int,         /**< Weight type */
     WeightType      WeightInitValue = UINT_MAX,             /**< Initial value for weight (should not use this value as data) */
@@ -38,16 +37,37 @@ template<
 class AdjacencyMatrix
 {
 public:
-    typedef size_t  SizeType;
+    typedef size_t      SizeType;
 
 protected:
-    std::array<ValueType, MatrixSize>                           vertices_;  /**< Vertices */
-    std::array<std::array<WeightType, MatrixSize>, MatrixSize>  edges_;     /**< Edges */
+    const   SizeType        size_;
+            WeightType **   edges_;     /**< Edges */
+            ValueType *     vertices_;  /**< Vertices */
 
 public:
     /** Constructor */
-    AdjacencyMatrix(void)
-    { edges_.fill(WeightInitValue); }
+    AdjacencyMatrix(const SizeType & size_of_matrix)
+    : size_(size_of_matrix)
+    {
+        edges_ = new WeightType *[size_];
+        for(KeyType i = 0; i < size_; ++i)
+        {
+            edges_[i] = new WeightType[size_];
+
+            for(KeyType j = 0; j < size_; ++j)
+                edges_[i][j] = WeightInitValue;
+        }
+    }
+
+    /** Destructor */
+    ~AdjacencyMatrix(void)
+    {
+        for(KeyType i = 0; i < size_; ++i)
+            delete[] edges_[i];
+
+        delete edges_;
+    }
+
 
     /** Test whether there is an edge from the vertices src to dest
 
@@ -59,7 +79,7 @@ public:
     bool
     IsEdgeExist(const KeyType & key_src, const KeyType & key_dest)
     const
-    { return edges_.at(key_src).at(key_dest) != WeightInitValue; }
+    { return edges_[key_src][key_dest] != WeightInitValue; }
 
     /** Get a key of the vertex with specific value
 
@@ -71,13 +91,13 @@ public:
     KeyType
     GetVertexKey(const ValueType & value_of_vertex)
     {
-        for(KeyType key = 0; key < MatrixSize; ++key)
+        for(KeyType key = 0; key < size_; ++key)
         {
-            if(vertices_.at(key) == value_of_vertex)
+            if(vertices_[key] == value_of_vertex)
                 return key;
         }
 
-        return (KeyType)MatrixSize;
+        return size_;
     }
 
     /** Get a value of the vertex with specific key
@@ -89,7 +109,7 @@ public:
     ValueType
     GetVertexValue(const KeyType & key_of_vertex)
     const
-    { return vertices_.at(key_of_vertex); }
+    { return vertices_[key_of_vertex]; }
 
     /** Set a value of the vertex with specific key
 
@@ -99,7 +119,7 @@ public:
     inline
     void
     SetVertexValue(const KeyType & key_of_vertex, const ValueType & value_of_vertex)
-    { vertices_.at(key_of_vertex) = value_of_vertex; }
+    { vertices_[key_of_vertex] = value_of_vertex; }
 
     /** Get a weight of the edge
 
@@ -111,7 +131,7 @@ public:
     WeightType
     GetEdgeWeight(const KeyType & key_src, const KeyType & key_dest)
     const
-    { return edges_.at(key_src).at(key_dest); }
+    { return edges_[key_src][key_dest]; }
 
     /** Set a weight of the edge
 
@@ -122,7 +142,7 @@ public:
     inline
     void
     SetEdgeWeight(const KeyType & key_src, const KeyType & key_dest, const WeightType & weight)
-    { edges_.at(key_src).at(key_dest) = weight; }
+    { edges_[key_src][key_dest] = weight; }
 
     /** Get a count of edges
 
@@ -132,7 +152,9 @@ public:
     inline
     SizeType
     CountOfEdges(const KeyType & key_of_vertex)
-    { return ListOfEdges(KeyArrayType(), key_of_vertex); }
+    {
+        KeyArrayType dummy;
+        return ListOfEdges(dummy, key_of_vertex); }
 
     /** Get the list of edges
 
@@ -145,8 +167,10 @@ public:
     {
         out_edges.clear();
 
-        for(auto & weight : edges_.at(key_of_vertex))
+        WeightType weight;
+        for(KeyType key = 0; key < size_; ++key)
         {
+            weight = edges_[key_of_vertex][key];
             if(weight != WeightInitValue)
                 out_edges.push_back(weight);
         }
