@@ -99,7 +99,7 @@ main(const int argc, const char * argv[])
 
         PrStringType line;
 
-        for(KeyType i = 0; i < count_of_edges; ++i)
+        for(PrKeyType i = 0; i < count_of_edges; ++i)
         {
             if(fstream.ReadLine(line) <= 0 || line.at(0) == '#' || std::isspace(line.at(0)) == true)
             {
