@@ -16,7 +16,7 @@
 #include "../excercise14/include/filereader.hpp"
 
 /** Flags */
-#define FLAG_DO_PRINT_INFO
+#define FLAG_PRINT_INFO
 
 /** Type definitions */
 typedef char            PrCharType;
@@ -55,8 +55,8 @@ main(const int argc, const char * argv[])
         /** Print the flags (which is applied in compile time) */
 
         std::cout   << "Enabled flags: "
-#ifdef              FLAG_DO_PRINT_INFO
-                    << "DO_PRINT_INFO "
+#ifdef              FLAG_PRINT_INFO
+                    << "PRINT_INFO "
 #endif
                     << std::endl;
     }
@@ -85,10 +85,10 @@ main(const int argc, const char * argv[])
             }
         }
 
-#ifdef FLAG_DO_PRINT_INFO
+#ifdef FLAG_PRINT_INFO
         std::cout << "Count of vertices defined in file: "  << count_of_vertices    << std::endl;
         std::cout << "Count of edges defined in file: "     << count_of_edges       << std::endl;
-#endif /** ! FLAG_DO_PRINT_INFO */
+#endif /** ! FLAG_PRINT_INFO */
     }
 
 
@@ -121,7 +121,7 @@ main(const int argc, const char * argv[])
             }
         }
 
-#ifdef FLAG_DO_PRINT_INFO
+#ifdef FLAG_PRINT_INFO
         std::cout << "Count of vertices: " << graph.CountOfVertices() << std::endl;
 
 
@@ -146,7 +146,7 @@ main(const int argc, const char * argv[])
         }
 
         std::cout << "Count of edges: " << num_edges << std::endl;
-#endif /** ! FLAG_DO_PRINT_INFO */
+#endif /** ! FLAG_PRINT_INFO */
     }
 
 
@@ -173,10 +173,10 @@ main(const int argc, const char * argv[])
             }
         }
 
-#ifdef FLAG_DO_PRINT_INFO
+#ifdef FLAG_PRINT_INFO
         std::cout << "Starting point: " << starting_point << std::endl;
         std::cout << "Clicking count: " << clicking_count << std::endl;
-#endif /** ! FLAG_DO_PRINT_INFO */
+#endif /** ! FLAG_PRINT_INFO */
     }
 
 
@@ -211,7 +211,7 @@ main(const int argc, const char * argv[])
         }
 
 
-#ifdef FLAG_DO_PRINT_INFO
+#ifdef FLAG_PRINT_INFO
         /** Print the probability matrix */
 
         printf("       ");
@@ -231,7 +231,7 @@ main(const int argc, const char * argv[])
             }
             printf("\n");
         }
-#endif /** ! FLAG_DO_PRINT_INFO */
+#endif /** ! FLAG_PRINT_INFO */
     }
 
 
