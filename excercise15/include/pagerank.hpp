@@ -11,6 +11,9 @@
 
 /** Includes */
 #include "adjacency_matrix.hpp"
+#include <vector>
+#include <map>
+#include <tuple>
 
 namespace algorithm
 {
@@ -34,9 +37,7 @@ protected:
     GraphType *     probability_;   /**< Graph for store probability */
     WeightType *    solution_;      /**< Array for store solution */
 
-    KeyType         start_;         /**< Starting point */
-    SizeType        count_;         /**< Clicking count */
-    bool            cached_;
+    std::map<std::tuple<KeyType, KeyType, SizeType>, double> cache_; /**< 3-dimension tree cache */
 
     /** Calculate the probability
 
@@ -45,16 +46,29 @@ protected:
         \param[in]  weight      Weight for PageRank
     */
     void
-    CalcProbability(const KeyType & start, const SizeType & count, const WeightType & weight = 1.0)
+    CalcProbability(const KeyType & start, const SizeType & count, const KeyType & key = start, const SizeType & step = 1, const WeightType & weight = 1.0)
     {
-        if(count == 0)
-            solution_[start] += weight;
+        if(step >  count) return; 
+        if(step == count)
+        {
+            solution_[key] += weight;
+        }
         else
         {
-            for(KeyType key = 0; key < probability_->CountOfVertices(); ++key)
+            for(KeyType i = 0; i < probability_->CountOfVertices(); ++i)
             {
-                if(probability_->IsEdgeExist(start, key))
-                    CalcProbability(key, count - 1, probability_->GetEdgeWeight(start, key) * weight);
+                /** TODO: Implement cache */
+                if(probability_->IsEdgeExist(key, i))
+                {
+                    if(step < cache_.size() && cache_.at(step).IsEdgeExist(start, i))
+                        solution_[key] += cache_.at(step).GetEdgeWeight(start, i);
+                    else
+                    {
+                        if(step > cache_.size())
+                            cache_.
+                        CalcProbability(start, count - 1, i, step + 1, probability_->GetEdgeWeight(key, i) * weight);
+                    }
+                }
             }
         }
     }
@@ -83,15 +97,10 @@ public:
     SizeType
     GetProbability(WeightArrayType & out_array, const KeyType & start, const SizeType & count)
     {
-        if(cached_ != true || start != start_ || count != count_)
-        {
-            for(KeyType key = 0; key < probability_->CountOfVertices(); ++key)
-                solution_[key] = 0.0;
+        for(KeyType key = 0; key < probability_->CountOfVertices(); ++key)
+            solution_[key] = 0.0;
 
-            CalcProbability(start, count);
-
-            cached_ = true;
-        }
+        CalcProbability(start, count);
 
         out_array.clear();
 
