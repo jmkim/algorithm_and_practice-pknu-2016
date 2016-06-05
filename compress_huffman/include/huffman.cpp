@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include <map>
 #include "huffman.hpp"
 
@@ -9,10 +10,14 @@ void
 Huffman
 ::CollectRuns(std::ifstream & f)
 {
+    typedef     std::map<MetaSymbolType, unsigned int>  CacheType;
+    typedef     CacheType::iterator                     CacheIterType;
+
     char        raw;                /**<   signed char (std::ifstream::read() need signed char ptr) */
     SymbolType  symbol;             /**< unsigned char (ascii range is 0 to 255) */
     SymbolType  next_symbol;
     SizeType    run_len = 1;
+    CacheType   cache;              /**< Caching a position of the run in the vector(runs_) */
 
     if(! f.eof())
     {
@@ -28,16 +33,20 @@ Huffman
                 ++run_len;
             else
             {
-                /** Insert pair into runs_;
+                /** Insert the pair into runs_;
                     key:    pair(symbol, run_len)
                     value:  appearance frequency of key
                 */
-                MetaSymbolType meta_symbol = std::make_pair(symbol, run_len);
+                MetaSymbolType  meta_symbol = std::make_pair(symbol, run_len);
+                CacheIterType   cache_iter = cache.find(meta_symbol);   /** Get the position from cache */
 
-                if(runs_.find(meta_symbol) == runs_.end())
-                    runs_.insert(std::make_pair(meta_symbol, 1));   /** First appreance; freq is 1 */
+                if(cache_iter == cache.end())
+                {
+                    runs_.push_back(Run(meta_symbol, 1));           /** First appreance; freq is 1 */
+                    cache.emplace(meta_symbol, runs_.size() - 1);   /** Cache the position */
+                }
                 else
-                    ++runs_.at(meta_symbol);                        /** Add freq */
+                    ++runs_.at(cache_iter->second);                 /** Add freq */
 
                 run_len = 1;
             }
@@ -46,13 +55,18 @@ Huffman
         }
 
         /** Process the remaining symbol */
-        MetaSymbolType meta_symbol = std::make_pair(symbol, run_len);
+        MetaSymbolType  meta_symbol = std::make_pair(symbol, run_len);
+        CacheIterType   cache_iter = cache.find(meta_symbol);       /** Get the position from cache */
+        Run             run(meta_symbol, 1);
 
-        if(runs_.find(meta_symbol) == runs_.end())
-            runs_.insert(std::make_pair(meta_symbol, 1));
+        if(cache_iter == cache.end())
+        {
+            runs_.push_back(Run(meta_symbol, 1));                   /** First appreance; freq is 1 */
+            cache.emplace(meta_symbol, runs_.size() - 1);           /** Cache the position */
+        }
         else
-            ++runs_.at(meta_symbol);
-    }
+            ++runs_.at(cache_iter->second);                         /** Add freq */
+   }
 }
 
 void
@@ -62,5 +76,5 @@ Huffman
     fprintf(f, "SYM LENG FREQ\n");  /** Header of data */
 
     for(auto run : runs_)
-        fprintf(f, " %02x %4d %d\n", run.first.first, run.first.second, run.second);
+        fprintf(f, " %02x %4d %d\n", run.symbol, run.run_len, run.freq);
 }
