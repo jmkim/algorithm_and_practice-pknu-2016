@@ -2,7 +2,7 @@
 #define ALGORITHM_HUFFMAN_H_ 1
 
 #include <vector>
-#include <utility>
+#include <functional>
 
 namespace algorithm
 {
@@ -17,36 +17,66 @@ public:
 
     struct Run
     {
-        const   SymbolType          symbol;
-        const   SizeType            run_len;
-                SizeType            freq;
+        SymbolType          symbol;
+        SizeType            run_len;
+        SizeType            freq;
+
+        Run *               left;
+        Run *               right;
 
         Run(const SymbolType & symbol, const SizeType & run_len, const SizeType & freq = 0)
         : symbol    (symbol)
         , run_len   (run_len)
         , freq      (freq)
+        , left      (nullptr)
+        , right     (nullptr)
         { }
 
         Run(const MetaSymbolType & meta_symbol, const SizeType & freq = 0)
         : symbol    (meta_symbol.first)
         , run_len   (meta_symbol.second)
         , freq      (freq)
+        , left      (nullptr)
+        , right     (nullptr)
         { }
 
         Run(const Run & run)
         : symbol    (run.symbol)
         , run_len   (run.run_len)
         , freq      (run.freq)
+        , left      (run.left)
+        , right     (run.right)
         { }
+
+        Run(Run * left, Run * right)
+        : symbol    (0)
+        , run_len   (0)
+        , freq      (left->freq + right->freq)
+        , left      (left)
+        , right     (right)
+        { }
+
+        inline
+        Run &
+        operator=(Run run)
+        {
+            this->symbol    = run.symbol;
+            this->run_len   = run.run_len;
+            this->freq      = run.freq;
+
+            return *this;
+        }
 
         inline
         bool
         operator==(const Run & rhs)
+        const
         { return symbol == rhs.symbol && run_len == rhs.run_len; }
 
         inline
         bool
         operator!=(const Run & rhs)
+        const
         { return ! (*this == rhs); }
 
         inline
@@ -84,44 +114,43 @@ public:
         }
 
         inline
-        Run &
-        operator=(Run run)
-        {
-            std::swap(*this, run);
-            return *this;
-        }
-
-        inline
         bool
         operator<(const Run & rhs)
+        const
         { return (this->freq < rhs.freq); }
 
         inline
         bool
         operator>(const Run & rhs)
+        const
         { return (this->freq > rhs.freq); }
 
         inline
         bool
         operator<=(const Run & rhs)
+        const
         { return ! operator>(rhs); }
 
         inline
         bool
         operator>=(const Run & rhs)
+        const
         { return ! operator<(rhs); }
     };
 
-    typedef std::vector<Run> HeapType;
+    typedef std::vector<Run>    RunArrayType;
+    typedef Run *               HuffmanTreeType;
 
 private:
-    HeapType runs_;
+    RunArrayType        runs_;
+    HuffmanTreeType     root_;
 
 public:
     void CollectRuns(std::ifstream &);
     void PrintAllRuns(FILE * = stdout);
-    void Heapify(HeapType &);
     void CreateHuffmanTree(void);
+    void PrintHuffmanTree(FILE * = stdout);
+    void PreOrderTraverse(Run *, const int &, std::function<void(Run *, const int &)>);
 };
 
 } /** ns: algorithm */

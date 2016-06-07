@@ -4,6 +4,7 @@
 #include <map>
 #include <utility>
 #include "huffman.hpp"
+#include "heap.hpp"
 
 using namespace algorithm;
 
@@ -80,25 +81,63 @@ Huffman
         fprintf(f, " %02x %4d %d\n", run.symbol, run.run_len, run.freq);
 }
 
-void
-Huffman
-::Heapify(HeapType & heap)
-{
-    for(int i = heap.size() - 1; i > 0; --i)
-    {
-        for(int j = i; j > 0; j = (j - 1) / 2)
-        {
-            if( heap.at(i) < heap.at((j - 1) / 2) ) /* Minimum heap */
-            {
-                std::swap( heap.at(i), heap.at((j - 1) / 2) );
-            }
-        }
-    }
-}
 
 void
 Huffman
 ::CreateHuffmanTree(void)
 {
-    Heapify(runs_);
+    Heap<Run>   heap;
+    for(auto run : runs_)
+        heap.Push(run);
+    
+
+    while(heap.size() > 1)
+    {
+        Run * left  = new Run(heap.Peek());
+        heap.Pop();
+
+        Run * right = new Run(heap.Peek());
+        heap.Pop();
+
+        Run temp(left, right);
+        heap.Push(temp);
+    }
+
+    root_ = new Run(heap.Peek());
+    heap.Pop();
+}
+
+void
+Huffman
+::PrintHuffmanTree(FILE * f)
+{
+    PreOrderTraverse(root_, 0,
+    [&] (Run * node, const int & depth)
+    {
+        for(int i = 0; i < depth; ++i)
+            fprintf(f, " ");
+        if(node == nullptr)
+            fprintf(f, "null\n");
+        else
+        {
+            fprintf(f, "%02x:%d:%d:%d %d\n"
+                        , node->symbol
+                        , node->run_len
+                        , node->freq
+                        , 0
+                        , 0);
+        }
+    }
+    );
+}
+
+void
+Huffman
+::PreOrderTraverse(Run * node, const int & depth, std::function<void(Run *, const int &)> callback)
+{
+    callback(node, depth);
+    if(node == nullptr) return;
+
+    PreOrderTraverse(node->left,  depth + 1, callback);
+    PreOrderTraverse(node->right, depth + 1, callback);
 }

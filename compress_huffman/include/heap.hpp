@@ -13,72 +13,63 @@ template<
     typename ElementCompareFunc = std::less<ElementType>,
     typename HeapType           = std::vector<ElementType>
 >
-class Heap
+class Heap : public HeapType
 {
-protected:
-//    HeapType heap_;
-
-public:
-    HeapType heap_;
-
+private:
     void
-    Heapify(void)
+    Heapify(const int pos, const int depth)
     {
-        for(int i = heap_.size() - 1; i > 0; --i)
+        if(depth == 0)
+            return;
+
+        if(2 * pos + 1 > this->size() - 1)
+            return;
+        else if(ElementCompareFunc()(this->at(2 * pos + 1), this->at(pos)))
         {
-            for(int j = i; j > 0; j = (j - 1) / 2)
-            {
-                if(ElementCompareFunc()( heap_.at(i), heap_.at((j - 1) / 2) ))
-                {
-                    std::swap( heap_.at(i), heap_.at((j - 1) / 2) );
-                }
-            }
+            std::swap(this->at(2 * pos + 1), this->at(pos));
+            Heapify(2 * pos + 1, depth - 1);
+            Heapify(pos, depth);
+        }
+        else if(2 * pos + 2 > this->size() - 1)
+            return;
+        else if(ElementCompareFunc()(this->at(2 * pos + 2), this->at(pos)))
+        {
+            std::swap(this->at(2 * pos + 2), this->at(pos));
+            Heapify(2 * pos + 2, depth - 1);
+            Heapify(pos, depth);
         }
     }
 
+public:
     void
     Push(const ElementType & element)
     {
-        heap_.push_back(element);
+        this->push_back(element);
 
-        for(int i = heap_.size() - 1; i > 0; i = (i - 1) / 2)
+        for(int i = this->size() - 1; i > 0; i = (i - 1) / 2)
         {
-            if(ElementCompareFunc()( heap_.at(heap_.size() - 1), heap_.at((i - 1) / 2) ))
-                std::swap(heap_.at(heap_.size() - 1), heap_.at((i - 1) / 2));
+            if(ElementCompareFunc()(this->at(i), this->at((i - 1) / 2)))
+                std::swap(this->at(i), this->at((i - 1) / 2));
         }
     }
 
     void
     Pop(void)
     {
-        int i = 0;
-        std::swap(heap_.at(i), heap_.at(heap_.size() - 1));
-        heap_.pop_back();
+        std::swap(this->at(0), this->at(this->size() - 1));
+        this->pop_back();
 
-        if(2 * i + 2 < heap_.size()) /* Have two child nodes */
-        {
-            if(heap_.at(i) < heap_.at(2 * i + 1) && heap_.at(2 * i + 1) >= heap_.at(2 * i + 2))
-            {
-                std::swap(heap_.at(i), heap_.at(2 * i + 1));
-                i = 2 * i + 1;
-            }
-            else if(heap_.at(i) < heap_.at(2 * i + 2))
-            {
-                std::swap(heap_.at(i), heap_.at(2 * i + 2));
-                i = 2 * i + 2;
-            }
-        }
-        else if(2 * i + 1 < heap_.size() && heap_.at(i) < heap_.at(2 * i + 1)) /* Have one leaf node */
-        {
-            std::swap(heap_.at(i), heap_.at(2 * i + 1));
-            i = 2 * i + 1;
-        }
+        int depth = 0;
+        for(int i = 0, j = 0; j < this->size(); j += ((i == 0) ? ++i : (i *= 2)))
+            ++depth;
+
+        Heapify(0, depth);
     }
 
     ElementType
     Peek(void)
     const
-    { return heap_.back(); }
+    { return this->front(); }
 };
 
 }

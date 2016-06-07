@@ -34,7 +34,7 @@ main(const int argc, const char * argv[])
     huffman.CollectRuns(f);
     huffman.PrintAllRuns(stdout);
     huffman.CreateHuffmanTree();
-    huffman.PrintAllRuns(stdout);
+    huffman.PrintHuffmanTree(stdout);
 
     f.close();
 
