@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <map>
+#include <utility>
 #include "huffman.hpp"
 
 using namespace algorithm;
@@ -77,4 +78,27 @@ Huffman
 
     for(auto run : runs_)
         fprintf(f, " %02x %4d %d\n", run.symbol, run.run_len, run.freq);
+}
+
+void
+Huffman
+::Heapify(HeapType & heap)
+{
+    for(int i = heap.size() - 1; i > 0; --i)
+    {
+        for(int j = i; j > 0; j = (j - 1) / 2)
+        {
+            if( heap.at(i) < heap.at((j - 1) / 2) ) /* Minimum heap */
+            {
+                std::swap( heap.at(i), heap.at((j - 1) / 2) );
+            }
+        }
+    }
+}
+
+void
+Huffman
+::CreateHuffmanTree(void)
+{
+    Heapify(runs_);
 }

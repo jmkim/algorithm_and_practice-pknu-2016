@@ -33,6 +33,8 @@ main(const int argc, const char * argv[])
     Huffman huffman;
     huffman.CollectRuns(f);
     huffman.PrintAllRuns(stdout);
+    huffman.CreateHuffmanTree();
+    huffman.PrintAllRuns(stdout);
 
     f.close();
 

@@ -2,6 +2,7 @@
 #define ALGORITHM_HUFFMAN_H_ 1
 
 #include <vector>
+#include <utility>
 
 namespace algorithm
 {
@@ -81,14 +82,46 @@ public:
             operator--();
             return temp;
         }
+
+        inline
+        Run &
+        operator=(Run run)
+        {
+            std::swap(*this, run);
+            return *this;
+        }
+
+        inline
+        bool
+        operator<(const Run & rhs)
+        { return (this->freq < rhs.freq); }
+
+        inline
+        bool
+        operator>(const Run & rhs)
+        { return (this->freq > rhs.freq); }
+
+        inline
+        bool
+        operator<=(const Run & rhs)
+        { return ! operator>(rhs); }
+
+        inline
+        bool
+        operator>=(const Run & rhs)
+        { return ! operator<(rhs); }
     };
 
+    typedef std::vector<Run> HeapType;
+
 private:
-    std::vector<Run> runs_;
+    HeapType runs_;
 
 public:
     void CollectRuns(std::ifstream &);
     void PrintAllRuns(FILE * = stdout);
+    void Heapify(HeapType &);
+    void CreateHuffmanTree(void);
 };
 
 } /** ns: algorithm */
