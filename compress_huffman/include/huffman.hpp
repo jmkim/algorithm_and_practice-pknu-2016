@@ -63,6 +63,8 @@ public:
             this->symbol    = run.symbol;
             this->run_len   = run.run_len;
             this->freq      = run.freq;
+            this->left      = run.left;
+            this->right     = run.right;
 
             return *this;
         }
