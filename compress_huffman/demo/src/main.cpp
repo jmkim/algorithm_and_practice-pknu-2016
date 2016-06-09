@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "include/huffman.hpp"
+#include "huffman.hpp"
 
 using namespace algorithm;
 
