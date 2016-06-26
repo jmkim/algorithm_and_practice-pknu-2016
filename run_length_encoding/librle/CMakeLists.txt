@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.4)
 
-project(libhuffman C CXX)
+project(librle C CXX)
 
 # We need C++ 11
 if(${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.1)
@@ -17,7 +17,7 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/build/lib)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # Create a library
-add_library(huffman ${PROJECT_SOURCE_DIR}/lib/huffman.cpp)
+add_library(rle ${PROJECT_SOURCE_DIR}/lib/rle.cpp)
 
 # Make sure the compiler can find include files for our library
-target_include_directories(huffman PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(rle PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
